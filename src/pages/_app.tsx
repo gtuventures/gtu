@@ -3,7 +3,7 @@ import {
   extendTheme,
   ThemeConfig,
 } from "@chakra-ui/react";
-// import { Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import Navbar from "../components/navbar";
 import { type AppProps } from "next/app";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
@@ -15,7 +15,7 @@ import { Analytics } from "@vercel/analytics/react";
 require("dotenv").config();
 
 
-// const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 const supabaseUrl = "https://yjiwgellliymqmxejgee.supabase.co";
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY ?? "";
 
@@ -52,8 +52,9 @@ export default function App({
         </Head>
         <ChakraProvider theme={theme}>
           <AuthContextProvider>
-            
+            <div className={inter.className}>
               <Navbar />
+            </div>
             <Component {...pageProps} />
           </AuthContextProvider>
         </ChakraProvider>

@@ -54,8 +54,9 @@ export default function App({
           <AuthContextProvider>
             <div className={inter.className}>
               <Navbar />
+
+              <Component {...pageProps} />
             </div>
-            <Component {...pageProps} />
           </AuthContextProvider>
         </ChakraProvider>
       </SessionContextProvider>

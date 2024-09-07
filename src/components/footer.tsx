@@ -82,7 +82,7 @@ export default function LargeWithLogoCentered() {
               md: "flex-start",
             }}
           >
-            <ListHeader>Company</ListHeader>
+            <ListHeader>Company </ListHeader>
             <Box as="a" href={"/aboutus"}>
               About Us
             </Box>

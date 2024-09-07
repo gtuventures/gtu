@@ -1,83 +1,104 @@
-import React from 'react';
+import React from "react";
+import { Box, Heading, Text, VStack } from "@chakra-ui/react";
 
-function PrivacyPolicy() {
-    return (
-      <>
-        <h1>Privacy Policy</h1>
-        <b>Effective Date: 03/03/24</b>
-        <p>
-          At Company, accessible from vigyasa.com, one of our main
-          priorities is the privacy of our visitors. This Privacy Policy
-          document contains types of information that are collected and recorded
-          by Company and how we use it.
-        </p>
-        <p>
-          We collect students' data and use it for the betterment of the
-          students and to provide them with the best possible schools and
-          coaching classes nearer to them. We use the data to provide them
-          relevant ads. We collect this data through cookies and the data that
-          the user provides us.
-        </p>
-        <h2>Log Files</h2>
-        <p>
-          Company follows a standard procedure of using log files. These files
-          log visitors when they visit websites. All hosting companies do this
-          as part of hosting services' analytics. The information collected by
-          log files includes internet protocol addresses, browser type, Internet
-          Service Provider, date and time stamp, referring/exit pages, and
-          possibly the number of clicks. This information is not linked to any
-          personally identifiable information. The purpose of the information is
-          to analyze trends, administer the site, track users' movement on the
-          website, and gather demographic information.
-        </p>
-        <h2>Cookies and Web Beacons</h2>
-        <p>
-          Like any other website, Company uses 'cookies'. These cookies are used
-          to store information, including visitors' preferences and the pages on
-          the website that the visitor accessed or visited. The information is
-          used to optimize the users' experience by customizing our web page
-          content based on visitors' browser type and/or other information.
-        </p>
-        <p>
-          We collect data from institutions through the
-          platform.vigyasa.com, which they upload, and we showcase this
-          data to students to promote their quality of education.
-        </p>
-        <p>
-          Any data uploaded by users, if there is any misleading and copyrighted
-          content, will be the sole responsibility of the user. The platform
-          will have the right to remove the content in this scenario. There will
-          be a person in our company who will decide and analyze the conditions
-          and make decisions, and the user will have to understand the terms
-          regarding it. In case of any dispute, the user will have to contact
-          the company and resolve the issue.
-        </p>
-        <b>your choices</b>
-        <p>
-          You have the right to access, update, and delete your data. You can
-          also opt out of receiving our promotional messages. You can do this by
-          contacting us at the email address provided below.
-        </p>
-        <b>Data Retention</b>
-        <p>
-          We will retain your information for as long as your account is active
-          or as needed to provide you services. We will retain and use your
-          information as necessary to comply with our legal obligations, resolve
-          disputes, and enforce our agreements.
-        </p>
-        <b>Security</b>
-        <p>
-          We are committed to protecting your data. We implement appropriate
-          security measures to protect your data from unauthorized access and
-          disclosure. However, no method of transmission over the internet is
-            100% secure. Therefore, while we strive to protect your data, we cannot
-            guarantee its absolute security.</p>
-            <b>contact us</b>
-            <p>For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at</p>
-        <p>mail : janiharsh794@gmail.com</p>
+const PrivacyPolicy = () => {
+  return (
+    <Box p={10} bg="gray.50">
+      <VStack
+        spacing={6}
+        align="stretch"
+        maxW="900px"
+        mx="auto"
+        bg="white"
+        p={8}
+        boxShadow="lg"
+        rounded="md"
+      >
+        <Heading as="h1" size="xl" color="blue.600" textAlign="center" mb={4}>
+          Privacy Policy
+        </Heading>
 
-      </>
-    );
-}
+        <Text fontSize="lg" color="gray.700">
+          At Ramyantra Financial Services, your privacy is of utmost importance
+          to us. This privacy policy outlines the types of personal information
+          we collect, how we use it, and the steps we take to safeguard your
+          data.
+        </Text>
+
+        <Heading as="h2" size="lg" color="blue.600">
+          Information We Collect
+        </Heading>
+        <Text fontSize="lg" color="gray.600">
+          We collect personal information that you provide to us directly, such
+          as your name, contact details, and any other information you choose to
+          provide when inquiring about our services. Additionally, we may
+          collect certain data automatically when you interact with our website,
+          including IP addresses, browser types, and other analytics data.
+        </Text>
+
+        <Heading as="h2" size="lg" color="blue.600">
+          How We Use Your Information
+        </Heading>
+        <Text fontSize="lg" color="gray.600">
+          The information we collect is used to:
+        </Text>
+        <Text fontSize="lg" color="gray.600" pl={4}>
+          - Provide and improve our financial services <br />
+          - Respond to your inquiries and communicate with you <br />
+          - Personalize your experience on our website <br />- Ensure compliance
+          with legal obligations
+        </Text>
+
+        <Heading as="h2" size="lg" color="blue.600">
+          Data Security
+        </Heading>
+        <Text fontSize="lg" color="gray.600">
+          We take appropriate measures to protect your personal data from
+          unauthorized access, alteration, or disclosure. However, no method of
+          transmission over the Internet is completely secure, and we cannot
+          guarantee the absolute security of your data.
+        </Text>
+
+        <Heading as="h2" size="lg" color="blue.600">
+          Third-Party Disclosure
+        </Heading>
+        <Text fontSize="lg" color="gray.600">
+          We do not sell, trade, or transfer your personal information to third
+          parties without your consent, except where required by law or in the
+          case of business transfers, mergers, or acquisitions.
+        </Text>
+
+        <Heading as="h2" size="lg" color="blue.600">
+          Cookies
+        </Heading>
+        <Text fontSize="lg" color="gray.600">
+          Our website uses cookies to enhance user experience and gather
+          information about traffic and interaction. You can choose to disable
+          cookies through your browser settings, but this may limit certain
+          functionalities of our site.
+        </Text>
+
+        <Heading as="h2" size="lg" color="blue.600">
+          Your Consent
+        </Heading>
+        <Text fontSize="lg" color="gray.600">
+          By using our site, you consent to our privacy policy. We may update
+          this policy from time to time, and any changes will be reflected on
+          this page.
+        </Text>
+
+        <Heading as="h2" size="lg" color="blue.600">
+          Contact Us
+        </Heading>
+        <Text fontSize="lg" color="gray.600">
+          If you have any questions regarding this privacy policy, you can
+          contact us at: <br />
+          <strong>Email:</strong> ramyantara.finserv@gmail.com <br />
+          <strong>Phone:</strong> +91 9638387371
+        </Text>
+      </VStack>
+    </Box>
+  );
+};
 
 export default PrivacyPolicy;

@@ -18,7 +18,7 @@ require("dotenv").config();
 
 
 const inter = Inter({ subsets: ["latin"] });
-const supabaseUrl = "https://muxhijcpowgymwmneiqu.supabase.co";
+const supabaseUrl = "https://yjiwgellliymqmxejgee.supabase.co";
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY ?? "";
 
 export default function App({
@@ -31,7 +31,7 @@ export default function App({
     createPagesBrowserClient({ supabaseUrl, supabaseKey })
   );
   const config: ThemeConfig = {
-    initialColorMode: "dark",
+    initialColorMode: "light",
     useSystemColorMode: true,
   };
 
@@ -49,7 +49,7 @@ export default function App({
         <Analytics />
 
         <Head>
-          <title>Vigyasa</title>
+          <title>ramyantara</title>
           <meta property="og:title" content="Vigyasa" key="title" />
         </Head>
         <ChakraProvider theme={theme}>

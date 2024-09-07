@@ -1,197 +1,91 @@
-// "use client";
-import { Fragment } from "react";
+"use client";
+
 import {
-  Container,
-  FormControl,
-  FormLabel,
+  Box,
+  Heading,
+  Text,
+  Stack,
   Input,
   Textarea,
-  Stack,
   Button,
-  Heading,
-  useColorModeValue,
-  VStack,
-  Flex,
-  Text,
+  Container,
+  SimpleGrid,
+  HStack,
   Icon,
-  Divider,
+  VStack,
+  Link,
 } from "@chakra-ui/react";
-import supabase from "../../supabase";
-import { useForm } from "react-hook-form";
-import { useToast } from "@chakra-ui/react";
-import { GoLocation } from "react-icons/go";
-import { BsPhone } from "react-icons/bs";
-import { HiOutlineMail } from "react-icons/hi";
-import { useRouter } from "next/router";
+import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
+import { FaWhatsapp } from "react-icons/fa";
 
-const contactOptions = [
-  {
-    label: "Address",
-    value: "7518/gayatrinagar/Bhavanagar/Gujrat",
-    icon: GoLocation,
-  },
-  {
-    label: "PHONE NUMBER",
-    value: "+91 7984140706",
-    icon: BsPhone,
-  },
-  {
-    label: "EMAIL",
-    value: "founder@vigyasa.live",
-    icon: HiOutlineMail,
-  },
-];
-
-const Contact = () => {
-  const form = useForm();
-  const router = useRouter();
-  const toast = useToast();
-  const { register, handleSubmit } = form;
-  const onSubmit = async (data: any) => {
-    const { error } = await supabase.from("contactus").insert([{ ...data }]);
-    if (error) {
-      console.error("Error submitting feedback:", error);
-    } else {
-      handleSubmitt();
-    }
-  };
-
-  const handleSubmitt = () => {
-    toast({
-      title: "Thank you for your feedback 👍",
-      description:
-        "Your feedback is important to us. We will get back to you soon.",
-      status: "success",
-      duration: 3000,
-      isClosable: true,
-    });
-
-    router.push("/");
-  };
+export default function ContactUs() {
   return (
-    <Container maxW="7xl" py={10} px={{ base: 5, md: 8 }}>
-      <Stack spacing={10}>
-        <Flex align="center" justify="center" direction="column">
-          <Heading fontSize="4xl" mb={2}>
-            Contact Us
-          </Heading>
-          <Text fontSize="md" textAlign="center">
-            We are here to solve every issue you face 😊
-          </Text>
-        </Flex>
-        <Stack
-          spacing={{ base: 6, md: 0 }}
-          direction={{ base: "column", md: "row" }}
-          justify="space-between"
-        >
-          {contactOptions.map((option, index) => (
-            <Fragment key={index}>
-              <Stack
-                spacing={3}
-                direction="column"
-                justify="center"
-                alignItems="center"
-                px={3}
+    <Box p={4}>
+      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
+        <Heading fontSize={"3xl"}>Contact Us</Heading>
+        <Text color={"gray.600"} fontSize={"xl"}>
+          We're here to help. Reach out to us for any inquiries, support, or
+          information about our financial services.
+        </Text>
+      </Stack>
+
+      <Container maxW={"6xl"} mt={10}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+          {/* Contact Information */}
+          <VStack align={"start"} spacing={4}>
+            <Heading fontSize={"2xl"}>Get in Touch</Heading>
+            <HStack>
+              <Icon as={PhoneIcon} color={"green.500"} />
+              <Text fontSize={"lg"} fontWeight={600}>
+                Tushar Makwana (MBA, Finance)
+              </Text>
+              <Text fontSize={"lg"}>+91 9638387371</Text>
+            </HStack>
+
+            <HStack>
+              <Icon as={PhoneIcon} color={"green.500"} />
+              <Text fontSize={"lg"} fontWeight={600}>
+                Viraj Joshi
+              </Text>
+              <Text fontSize={"lg"}>+91 7383123133</Text>
+            </HStack>
+
+            <HStack>
+              <Icon as={EmailIcon} color={"green.500"} />
+              <Text fontSize={"lg"}>ramyantara.finserv@gmail.com</Text>
+            </HStack>
+
+            <HStack>
+              <Icon as={FaWhatsapp} color={"green.400"} />
+              <Link
+                href="https://wa.me/919638387371"
+                color="green.500"
+                fontSize={"lg"}
+                fontWeight={600}
+                isExternal
               >
-                <Icon as={option.icon} w={10} h={10} color="green.400" />
-                <Text fontSize="lg" fontWeight="semibold">
-                  {option.label}
-                </Text>
-                <Text fontSize="md" textAlign="center">
-                  {option.value}
-                </Text>
-              </Stack>
-              {contactOptions.length - 1 !== index && (
-                <Flex>
-                  <Divider orientation="vertical" />
-                </Flex>
-              )}
-            </Fragment>
-          ))}
-        </Stack>
-        <VStack
-          as="form"
-          spacing={8}
-          w="100%"
-          bg={useColorModeValue("white", "gray.700")}
-          rounded="lg"
-          boxShadow="lg"
-          p={{ base: 5, sm: 10 }}
-        >
-          <VStack spacing={4} w="100%">
-            <Stack
-              w="100%"
-              spacing={3}
-              direction={{ base: "column", md: "row" }}
-            >
-              <FormControl id="name">
-                <FormLabel>Name</FormLabel>
-                <Input
-                  {...register("Name", {
-                    required: true,
-                  })}
-                  name="Name"
-                  type="text"
-                  placeholder="Bahubali"
-                  rounded="md"
-                />
-              </FormControl>
-              <FormControl id="email">
-                <FormLabel>Email</FormLabel>
-                <Input
-                  {...register("Email", {
-                    required: true,
-                  })}
-                  name="Email"
-                  type="email"
-                  placeholder="test@test.com"
-                  rounded="md"
-                />
-              </FormControl>
-            </Stack>
-            <FormControl id="subject">
-              <FormLabel>Subject</FormLabel>
-              <Input
-                {...register("Subject", {
-                  required: true,
-                })}
-                name="Subject"
-                type="text"
-                placeholder="Are you available for freelance work?"
-                rounded="md"
-              />
-            </FormControl>
-            <FormControl id="message">
-              <FormLabel>Message</FormLabel>
-              <Textarea
-                {...register("Message", {
-                  required: true,
-                })}
-                name="Message"
-                size="lg"
-                placeholder="Enter your message"
-                rounded="md"
-              />
-            </FormControl>
+                Chat on WhatsApp
+              </Link>
+            </HStack>
+
+            <Text fontSize={"lg"} color={"gray.600"}>
+              Address: 316, Times Galaxy, Near Cinezza Multiplex, Nr. D Mart,
+              Ugat Canal Road, Jahangirpura 395005
+            </Text>
           </VStack>
-          <VStack w="100%">
-            <Button
-              onClick={handleSubmit(onSubmit)}
-              bg="green.300"
-              color="white"
-              _hover={{
-                bg: "green.500",
-              }}
-              rounded="md"
-              w={{ base: "100%", md: "max-content" }}
-            >
+
+          {/* Contact Form */}
+          <VStack spacing={4} align="start">
+            <Heading fontSize={"2xl"}>Send Us a Message</Heading>
+            <Input placeholder="Your Name" size="lg" />
+            <Input placeholder="Your Email" size="lg" />
+            <Textarea placeholder="Your Message" size="lg" />
+            <Button colorScheme="blue" size="lg">
               Send Message
             </Button>
           </VStack>
-        </VStack>
-      </Stack>
-    </Container>
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
-};
-
-export default Contact;
+}

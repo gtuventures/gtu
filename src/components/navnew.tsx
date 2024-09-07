@@ -13,26 +13,24 @@ function Navnew() {
   return (
     <Menu>
       <MenuButton as={Button} colorScheme="blue">
-        Explore 😎
+        Explore the site ⬇️
       </MenuButton>
       <MenuList>
         <Link href={"/form"}>
-          <MenuItem>
-           Fill the form
-          </MenuItem>
+          <MenuItem>Indices & Daily Level</MenuItem>
         </Link>
         <Link href={"/aboutus"}>
-          <MenuItem>
-            about us
-          </MenuItem>
+          <MenuItem>Foreign & Domestic Institutional Investors</MenuItem>
         </Link>
         <MenuDivider />
         <Link href={"/contactus"}>
+          <MenuItem>Grey Market Premium</MenuItem>
+        </Link>
+        <Link href={"/product"}> 
           <MenuItem>
-            contact us
+            <b>Our Products</b>
           </MenuItem>
         </Link>
-      
       </MenuList>
     </Menu>
   );

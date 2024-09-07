@@ -37,8 +37,7 @@ export default function CardWithIllustration() {
             Please check your inbox
           </Heading>
           <Text fontSize={"lg"} color={"gray.500"}>
-            Thank you for joining Vigyasa! we are an early age startup and
-            will try our best to serve your needs, Stay Tuned😊
+            Thank you for joining Us 🎉. We have sent you an email to verify
           </Text>
         </Stack>
         <Stack

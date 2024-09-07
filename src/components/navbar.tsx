@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+
 import {
   Box,
   Flex,
@@ -14,18 +15,22 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  useColorMode,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
+  MoonIcon,
+  SunIcon,
 } from "@chakra-ui/icons";
-import { useAuthContext } from "@/context";
 
-export default function Navbar() {
-  const { user } = useAuthContext();
+
+
+export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Box>
@@ -60,7 +65,10 @@ export default function Navbar() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            <Link href={"/"}> Vigyasa</Link>
+            <a href="/">
+              {" "}
+              <b>RamYantra</b>
+            </a>
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -74,48 +82,13 @@ export default function Navbar() {
           direction={"row"}
           spacing={6}
         >
-          {user && user.email ? (
-            <Button
-              as={Link}
-              href={"/profile"}
-              passHref
-              fontSize={"sm"}
-              fontWeight={400}
-              variant={"link"}
-            >
-              Profile
-            </Button>
-          ) : (
-            <>
-              <Button
-                as={Link}
-                href={"/login"}
-                passHref
-                fontSize={"sm"}
-                fontWeight={400}
-                variant={"link"}
-              >
-                Sign In
-              </Button>
-              <Button
-                as={Link}
-                href={"/signup"}
-                passHref
-                display={{ base: "none", md: "inline-flex" }}
-                fontSize={"sm"}
-                fontWeight={600}
-                color={"white"}
-                bg={"blue"}
-                _hover={{
-                  bg: "blue.300",
-                }}
-              >
-                Sign Up
-              </Button>
-            </>
-          )}
+          {" "}
+          <Button onClick={toggleColorMode} variant="outline">
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </Button>
         </Stack>
       </Flex>
+
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
@@ -135,10 +108,9 @@ const DesktopNav = () => {
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Box
-                as={Link}
-                href={navItem.href ?? "/form"}
-                passHref
+                as="a"
                 p={2}
+                href={navItem.href ?? "#"}
                 fontSize={"sm"}
                 fontWeight={500}
                 color={linkColor}
@@ -177,9 +149,8 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <Box
-      as={Link}
+      as="a"
       href={href}
-      passHref
       role={"group"}
       display={"block"}
       p={2}
@@ -234,9 +205,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
     <Stack spacing={4} onClick={children && onToggle}>
       <Box
         py={2}
-        as={Link}
-        href={href ?? "/form"}
-        passHref
+        as="a"
+        href={href ?? "#"}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
@@ -271,8 +241,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Box as={Link} key={child.label} href={child.href} passHref>
-                <Box py={2}>{child.label}</Box>
+              <Box as="a" key={child.label} py={2} href={child.href}>
+                {child.label}
               </Box>
             ))}
         </Stack>
@@ -290,22 +260,78 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Feel up the forms",
+    label: "Indices & Daily Level",
     children: [
       {
-        label: "Feel up the forms our representative will contact you soon",
-        subLabel: "Just some of your basic details and we will contact you soon",
-        href: "/form",
-      }
+        label: "Indices & Daily Level",
+        subLabel: "All the indices and daily levels",
+        href: "/",
+      },
+      {
+        label: "Foreign & Domestic Institutional Investors",
+        subLabel: "Foreign & Domestic Institutional Investors",
+        href: "/",
+      },
+
+      {
+        label: "Grey Market Premium",
+        subLabel: "Know the Grey Market Premium",
+        href: "/",
+      },
     ],
   },
- 
+  {
+    label: "Our Products & Services",
+    children: [
+      {
+        label: "Equity",
+        subLabel: "Expert assistance in equity investments",
+        href: "#",
+      },
+      {
+        label: "Insurance",
+        subLabel: "Comprehensive insurance solutions",
+        href: "#",
+      },
+      {
+        label: "Bonds",
+        subLabel: "Secure your future with bonds",
+        href: "#",
+      },
+      {
+        label: "PMS/AIF",
+        subLabel:
+          "Portfolio Management Services & Alternative Investment Funds",
+        href: "#",
+      },
+      {
+        label: "Currency",
+        subLabel: "Currency trading and investment solutions",
+        href: "#",
+      },
+      {
+        label: "Commodities",
+        subLabel: "Trade in commodities with expert guidance",
+        href: "#",
+      },
+      {
+        label: "Mutual Funds",
+        subLabel: "Diversify your portfolio with mutual funds",
+        href: "#",
+      },
+      {
+        label: "Loans & FD",
+        subLabel: "Loans and fixed deposits for stable growth",
+        href: "#",
+      },
+    ],
+  },
   {
     label: "About Us",
     href: "/aboutus",
   },
   {
-    label: "contactus",
+    label: "Contact Us",
     href: "/contactus",
   },
 ];

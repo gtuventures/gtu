@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Aboutus from "../components/aboutus";
-import { useAuthContext } from "@/context";
+import Navnew from "../components/navnew";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import Footer from "../components/footer";
-import NavNev from "../components/navnew";
-
+import Product from "../components/Product";
+import Image from "next/image";
+import Info from "../components/info";
 import {
   Box,
   Button,
@@ -16,28 +16,28 @@ import {
   IconProps,
   Stack,
   Text,
-  useColorModeValue,
   AspectRatio,
+  useColorMode,
 } from "@chakra-ui/react";
 
 export default function Home() {
-  const { user } = useAuthContext();
+
   return (
     <>
       <NextSeo
-        title="vigyasa"
+        title="RamYantra"
         description="Let's start learning early with vigyasa"
         openGraph={{
-          url: "https://www.vigyasa.live/",
-          title: "Let's promote Education quality",
-          description: "Home page of vigyasa",
+          url: "https://blobimageshikshafinder.blob.core.windows.net/shikshafinder/yantramaya.png",
+          title: "yantramaya",
+          description: "Home page of yantramaya",
           images: [
             {
-              url: "",
-              alt: "vigyasa == happy students",
+              url: "https://blobimageshikshafinder.blob.core.windows.net/shikshafinder/yantramaya.png",
+              alt: "Yantra Maya",
             },
           ],
-          site_name: "vigyasa.live",
+          site_name: "http://WWW.RAMYANTARA.COM",
           type: "website",
         }}
       />
@@ -48,7 +48,6 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-
       <Container maxW={"7xl"}>
         <Stack
           align={"center"}
@@ -75,56 +74,37 @@ export default function Home() {
                   zIndex: -1,
                 }}
               >
-                vigyasa
+                Ramyantra
               </Text>
               <br />
-              <link rel="stylesheet" href="/login" />
-              <Text as={"span"} color={"blue.400"} fontSize="4xl">
-                Curiosity Sparks Knowledge ignites
+              <Text as={"span"} color={"blue.400"}>
+                Finance made easier !
               </Text>
             </Heading>
             <Text>
-              Here at vigyasa We belive to teach <b>by inspiring Curiosity</b>{" "}
-              in to the brains of students so that they can learn by questioning
-              and can ignite their knowledge. We are a combination of{" "}
-              <b>JEE NEET Foundation classes</b> and carrier counselling for
-              better future of students. There are many exams like
-              <b> KVPY and NTSE</b>
-              which are very important for students to get scholarship and to
-              get into good colleges but many of you are not aware of these
-              exams so we are here to help you with that.
+              <b>Ramyantra Financial Services</b> provides top-notch financial
+              solutions, specializing in equity, insurance, bonds, PMS/AIF,
+              currency, commodities, mutual funds, and loans & fixed deposits.
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: "column", sm: "row" }}
             >
-              {user && user.email ? (
-                <NavNev />
-              ) : (
-                <Link href="/signup">
-                  <Button
-                    rounded={"full"}
-                    size={"lg"}
-                    fontWeight={"normal"}
-                    px={6}
-                    colorScheme={"blue"}
-                    _hover={{ bg: "blue.500" }}
-                  >
-                    Get started
-                  </Button>
-                </Link>
-              )}
-              <Link href="/aboutus" target="_blank">
-                {" "}
+              <Navnew />
+              <a
+                href="https://diy.sharekhan.com/app/Account/Register?grpcd=10651&type=fr&grpid=11040&fbclid=PAAabdnX-9xgCg5sB2Ieo2tDUdhuJi-_6mmQUOyg1jTwNVz-GigtR9D87wlcg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   rounded={"full"}
                   size={"lg"}
                   fontWeight={"normal"}
                   px={6}
                 >
-                  About vigyasa
+                  Know About ShareKhan
                 </Button>
-              </Link>
+              </a>
             </Stack>
           </Stack>
           <Flex
@@ -138,11 +118,12 @@ export default function Home() {
               w={"100%"}
               h={"100%"}
               position={"absolute"}
-              top={"-20%"}
+              top={"-30%"}
               left={0}
               zIndex={-1}
-              color={useColorModeValue("red.50", "red.400")}
+              color={"blue.400"}
             />
+
             <Box
               position={"relative"}
               height={"auto"}
@@ -151,20 +132,21 @@ export default function Home() {
               width={"full"}
               overflow={"hidden"}
             >
-              <AspectRatio ratio={16 / 9}>
-                <iframe
-                  width="600"
-                  height="400"
-                  src="https://www.youtube.com/embed/Q8PYzXn4HSs?si=LWLz21eFgabVquDp"
-                  title="vigyasa video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                ></iframe>
-              </AspectRatio>
+              <Image
+                src="/x0jWYq6aSku1T9dV2CFF7w.webp"
+                alt="ramyantra image"
+                width={600}
+                height={300}
+              />
             </Box>
           </Flex>
         </Stack>
-      </Container>
-      <Aboutus />
+      </Container>{" "}
+      <br />
+      <Info />
+      <br />
+      <Product/>
+      <br />
       <Footer />
     </>
   );

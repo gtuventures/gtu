@@ -52,9 +52,8 @@ export default function App({
         </Head>
         <ChakraProvider theme={theme}>
           <AuthContextProvider>
-            <div className={inter.className}>
+            
               <Navbar />
-            </div>
             <Component {...pageProps} />
           </AuthContextProvider>
         </ChakraProvider>

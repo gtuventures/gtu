@@ -3,7 +3,7 @@ import {
   extendTheme,
   ThemeConfig,
 } from "@chakra-ui/react";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import Navbar from "../components/navbar";
 import { type AppProps } from "next/app";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
@@ -12,12 +12,10 @@ import { useState } from "react";
 import AuthContextProvider from "@/context";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
-// const { BlobServiceClient } = require("@azure/storage-blob");
-// const { v1: uuidv1 } = require("uuid");
 require("dotenv").config();
 
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 const supabaseUrl = "https://yjiwgellliymqmxejgee.supabase.co";
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY ?? "";
 

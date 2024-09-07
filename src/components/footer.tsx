@@ -112,12 +112,7 @@ export default function LargeWithLogoCentered() {
             <Box as="a" href={"#"}>
               Terms of Service
             </Box>
-            <Box as="a" href={"#"}>
-              Law Enforcement
-            </Box>
-            <Box as="a" href={"#"}>
-              Status
-            </Box>
+          
           </Stack>
           <Stack
             align={{

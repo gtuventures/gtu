@@ -47,7 +47,7 @@ export default function SignupCard() {
         password,
 
         options: {
-          emailRedirectTo: "https://ramyantra.vercel.app/addimage",
+          emailRedirectTo: "https://ramyantra.vercel.app/deleteimg",
           data: {
             firstName,
             lastName,

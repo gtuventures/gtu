@@ -27,7 +27,7 @@ export default function Home() {
     <>
       <NextSeo
         title="RamYantra"
-        description="Let's start learning early with vigyasa"
+        description="RamYantra Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
         openGraph={{
           url: "https://blobimageshikshafinder.blob.core.windows.net/shikshafinder/yantramaya.png",
           title: "yantramaya",
@@ -44,8 +44,8 @@ export default function Home() {
       />
       <Head>
         <meta
-          name="Vigyasa"
-          content="vigyasa,Vigyan + Jigyasa,Let's learn by questioning Curiosity sparks knowledge ignites,Jee Neet Foundation classes,Carrier counselling with jigyasa"
+          name="Ramyantra"
+          content="Ramyantra Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>

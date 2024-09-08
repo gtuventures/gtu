@@ -158,15 +158,11 @@ export default function SignupCard() {
         <Text>
           By continuing you agree to our{" "}
           <a
-            href="https://platform.shikshafinder.com/privacypolicy"
+            href="https://ramyantra.vercel.app/privacypolicy"
             // style={{color: "blue"}}
           >
             Privacy Policy
           </a>{" "}
-          &{" "}
-          <a href="https://platform.shikshafinder.com/termsofservice">
-            Terms of Service
-          </a>
         </Text>
       </Stack>
     </Flex>

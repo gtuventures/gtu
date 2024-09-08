@@ -17,8 +17,45 @@ import {
 } from "@chakra-ui/react";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import { FaWhatsapp } from "react-icons/fa";
+import supabase from "../../supabase";
+import { useForm, Controller } from "react-hook-form";
+import { useToast } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 export default function ContactUs() {
+  const form = useForm();
+  const toast = useToast();
+  const router = useRouter();
+  const { register, handleSubmit, control, watch } = form;
+
+  function handleSubmitt() {
+    toast({
+      title: "Form submitted!",
+      description: "Thank you for your Form",
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+    });
+
+    router.push("/");
+  }
+  const onSubmit = async (data: any) => {
+    const { error } = await supabase.from("contactus").insert([{ ...data }]);
+
+    if (error) {
+      console.error("Error submitting Form:", error);
+      toast({
+        title: "Error",
+        description: error.message,
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    } else {
+      handleSubmitt();
+    }
+  };
+
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
@@ -77,10 +114,26 @@ export default function ContactUs() {
           {/* Contact Form */}
           <VStack spacing={4} align="start">
             <Heading fontSize={"2xl"}>Send Us a Message</Heading>
-            <Input placeholder="Your Name" size="lg" />
-            <Input placeholder="Your Email" size="lg" />
-            <Textarea placeholder="Your Message" size="lg" />
-            <Button colorScheme="blue" size="lg">
+            <Input
+              {...register("name", { required: true })}
+              placeholder="Your Name"
+              size="lg"
+            />
+            <Input
+              {...register("mobile", { required: true })}
+              placeholder="Your Mobile Number"
+              size="lg"
+            />
+            <Textarea
+              {...register("information", { required: true })}
+              placeholder="Your Message"
+              size="lg"
+            />
+            <Button
+              colorScheme="blue"
+              size="lg"
+              onClick={handleSubmit(onSubmit)}
+            >
               Send Message
             </Button>
           </VStack>

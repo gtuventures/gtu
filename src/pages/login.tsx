@@ -27,8 +27,8 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
+  const Router = useRouter();
   const Signin = async () => {
-    const Router = useRouter();
     if (!email || !password) {
       toast({
         title: "Error.",
@@ -45,10 +45,7 @@ export default function Login() {
         password,
       });
 
-      setTimeout(() => {
-        Router.reload();
-      }, 2000);
-      router.push("/dashboard");
+      router.push("/addimage");
     } catch (error) {
       console.log(error);
     }

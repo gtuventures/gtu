@@ -8,11 +8,15 @@ import {
   Stack,
   Button,
   Image,
+  useColorModeValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function RamyantraSection() {
+      const bgColor = useColorModeValue("blue.50", "blue.800");
+
   return (
-    <Box bg={"blue.50"} py={10}>
+    <Box bg={bgColor} py={10}>
       <Container maxW={"6xl"}>
         <Stack
           align={"center"}
@@ -44,17 +48,20 @@ export default function RamyantraSection() {
               partner in wealth management and financial growth.
             </Text>
             <Stack direction={"row"} spacing={4}>
-              <Button
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"normal"}
-                px={6}
-                colorScheme={"blue"}
-                bg={"blue.600"}
-                _hover={{ bg: "blue.700" }}
-              >
-                Learn More
-              </Button>
+              <Link href="/">
+                {" "}
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                  colorScheme={"blue"}
+                  bg={"blue.600"}
+                  _hover={{ bg: "blue.700" }}
+                >
+                  Learn More
+                </Button>
+              </Link>
               <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6}>
                 Contact Us
               </Button>

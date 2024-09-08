@@ -47,7 +47,7 @@ export default function SignupCard() {
         password,
 
         options: {
-          emailRedirectTo: "https://www.vigyasa.live/onbording",
+          emailRedirectTo: "https://ramyantra.vercel.app/addimage",
           data: {
             firstName,
             lastName,

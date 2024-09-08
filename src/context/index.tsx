@@ -36,19 +36,7 @@ export const AuthContextProvider = ({ children }: any) => {
       const {
         data: { user },
       } = await supabase.auth.getUser();
-      if (user) {
-        setUser(user);
-        const { data, error } = await supabase
-          .from("Student")
-          .select("*")
-          .eq("user_id", user.id)
-          .single();
-
-        setUserStore(data);
-        if (data == null) {
-          router.push("/form");
-        }
-      }
+  setUserStore(user);
     } catch (error) {
       console.log(error);
     } finally {

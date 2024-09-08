@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import Product from "../components/Product";
 import Image from "next/image";
 import Info from "../components/info";
+import Consultancy from "../components/consultancy";
 import {
   Box,
   Button,
@@ -146,6 +147,8 @@ export default function Home() {
       <Info />
       <br />
       <Product/>
+      <br />
+      <Consultancy />
       <br />
       <Footer />
     </>

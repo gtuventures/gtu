@@ -26,8 +26,6 @@ import {
   SunIcon,
 } from "@chakra-ui/icons";
 
-
-
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
@@ -333,5 +331,9 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Contact Us",
     href: "/contactus",
+  },
+  {
+    label: "Other Services",
+    href: "/otherservices",
   },
 ];

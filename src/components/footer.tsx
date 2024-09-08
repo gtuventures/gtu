@@ -86,7 +86,7 @@ export default function LargeWithLogoCentered() {
             <Box as="a" href={"/aboutus"}>
               About Us
             </Box>
-            
+
             {/* <Box as="a" href={"#"}>
               Careers
             </Box> */}
@@ -112,7 +112,6 @@ export default function LargeWithLogoCentered() {
             <Box as="a" href={"#"}>
               Terms of Service
             </Box>
-          
           </Stack>
           <Stack
             align={{
@@ -123,21 +122,26 @@ export default function LargeWithLogoCentered() {
           >
             {" "}
             <ListHeader>Follow Us</ListHeader>
-            <Box as="a" href={"#"}>
+            {/* <Box as="a" href={"#"}>
               Facebook
             </Box>
             <Box as="a" href={"#"}>
               Twitter
-            </Box>
-            <Box as="a" href={"#"}>
+            </Box> */}
+            {/* <Box as="a" href={"#"}>
               Dribbble
-            </Box>
-            <Box as="a" href={"#"}>
+            </Box> */}
+            <Box
+              as="a"
+              href={
+                "https://www.instagram.com/ramyantara_finserv?igsh=eGpvYzl6YXhoZXBn"
+              }
+            >
               Instagram
             </Box>
-            <Box as="a" href={"#"}>
+            {/* <Box as="a" href={"#"}>
               LinkedIn
-            </Box>
+            </Box> */}
           </Stack>
         </SimpleGrid>
       </Container>

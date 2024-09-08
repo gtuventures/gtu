@@ -11,7 +11,6 @@ import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
 import { useState } from "react";
 import AuthContextProvider from "@/context";
 import Head from "next/head";
-import { Analytics } from "@vercel/analytics/react";
 require("dotenv").config();
 
 
@@ -44,7 +43,7 @@ export default function App({
         supabaseClient={supabaseClient}
         initialSession={pageProps.initialSession}
       >
-        <Analytics />
+        {/* <Analytics /> */}
 
         <Head>
           <title>ramyantara</title>

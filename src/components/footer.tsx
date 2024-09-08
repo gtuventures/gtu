@@ -109,9 +109,6 @@ export default function LargeWithLogoCentered() {
             <Box as="a" href={"/privacypolicy"}>
               Privacy Policy
             </Box>
-            <Box as="a" href={"#"}>
-              Terms of Service
-            </Box>
           </Stack>
           <Stack
             align={{

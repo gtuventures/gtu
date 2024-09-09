@@ -32,7 +32,7 @@ const AboutUs = () => {
         </Text>
         <Text fontSize="lg" color="gray.700" mb={2}>
           - With us, your financial future is in safe hands. Our team of
-          professionals, led by Tushar Makwana and Viraj Joshi, ensures that you
+          professionals, led by Tushar Makwana, ensures that you
           receive top-quality service.
         </Text>
       </Box>

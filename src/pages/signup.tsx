@@ -47,7 +47,7 @@ export default function SignupCard() {
         password,
 
         options: {
-          emailRedirectTo: "https://ramyantra.vercel.app/deleteimg",
+          emailRedirectTo: "https://ramyantara.com/",
           data: {
             firstName,
             lastName,
@@ -158,7 +158,7 @@ export default function SignupCard() {
         <Text>
           By continuing you agree to our{" "}
           <a
-            href="https://ramyantra.vercel.app/privacypolicy"
+            href="https://ramyantara.com/"
             // style={{color: "blue"}}
           >
             Privacy Policy

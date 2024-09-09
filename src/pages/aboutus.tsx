@@ -12,7 +12,7 @@ const AboutUs = () => {
         </Heading>
         <Text fontSize="lg" mt={4} color="gray.600">
           Welcome to Ramyantara Financial Services, where we provide one of the
-          best financial services in Ahmedabad.
+          best financial services in Surat.
         </Text>
       </Flex>
 

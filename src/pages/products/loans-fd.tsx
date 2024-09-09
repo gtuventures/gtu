@@ -26,7 +26,7 @@ export default function LoansFDBlog() {
       {/* Image Placeholder */}
       <Box mt={8}>
         <Image
-          src="https://images.unsplash.com/photo-1593672715438-d88a70629abe?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with actual image URL
+          src="https://images.unsplash.com/photo-1564052269004-c0878d752c92?q=80&w=2058&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with actual image URL
           alt="Loans and Fixed Deposits"
           borderRadius="lg"
           objectFit="cover"

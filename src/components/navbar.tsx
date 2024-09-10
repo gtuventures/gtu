@@ -340,6 +340,6 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Other Services",
-    href: "/otherservices",
+    href: "/otherservice",
   },
 ];

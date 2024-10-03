@@ -1,17 +1,18 @@
-// // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-// import type { NextApiRequest, NextApiResponse } from 'next'
-// import * as fs from 'fs';
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from 'next'
+import * as fs from 'fs';
+export const runtime = "edge";
 
 
-// type Data = {
-//   name: string
-// }
+type Data = {
+  name: string
+}
 
-// export default function handler(
-//   req: NextApiRequest,
-//   res: NextApiResponse<Data>
-// ) {
-//   fs.readFile('state.json', 'utf8', function(err, data) {
-//     if (err) throw err;
-//     res.status(200).json(JSON.parse(data));
-//   },);}
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  fs.readFile('state.json', 'utf8', function(err, data) {
+    if (err) throw err;
+    res.status(200).json(JSON.parse(data));
+  },);}

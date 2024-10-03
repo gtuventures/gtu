@@ -66,14 +66,13 @@ const Index = () => {
               maxW="600px"
               lineHeight={1.2}
             >
-              Get started with ramyantara from home page 🫡
+              Get started with  from home page 🫡
             </chakra.h1>
 
             <Stack direction={{ base: "column", md: "row" }} spacing={3}>
               <Button
                 leftIcon={<BsInstagram />}
                 as={Link}
-                href="https://www.instagram.com/ramyantara_finserv?igsh=eGpvYzl6YXhoZXBn"
                 rounded="md"
                 color="white"
                 bg="purple.500"

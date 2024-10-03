@@ -11,7 +11,7 @@ import Head from "next/head";
 require("dotenv").config();
 
 const inter = Inter({ subsets: ["latin"] });
-const supabaseUrl = "https://yjiwgellliymqmxejgee.supabase.co";
+const supabaseUrl = "https://oiuovvagjsuvseayiluc.supabase.co";
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY ?? "";
 
 export default function App({
@@ -42,22 +42,22 @@ export default function App({
         {/* <Analytics /> */}
 
         <Head>
-          <title>ramyantara.com</title>
+          <title>gtuventures.com</title>
           <meta
-            name="Ramyantara.com"
-            content="ramyantara Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds & NCDs, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
+            name="gtuventures.com"
+            content="GTU Ventures is a startup accelerator that helps founders build successful companies."
           />
-          <meta
+          {/* <meta
             name="google-site-verification"
             content="OKVnDKVN_aY9YQ3zNgp35ZIC0Q6tbbEHulOUKOSMna8"
-          />
+          /> */}
         </Head>
         <ChakraProvider theme={theme}>
           <AuthContextProvider>
             <div className={inter.className}>
-              <Navbar />
+              {/* <Navbar /> */}
               <Component {...pageProps} />
-              <Footer />
+              {/* <Footer /> */}
             </div>
           </AuthContextProvider>
         </ChakraProvider>

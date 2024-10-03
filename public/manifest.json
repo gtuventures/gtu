@@ -4,9 +4,9 @@
     "display": "fullscreen",
     "scope": "/",
     "start_url": "/",
-    "name": "ramyantara",
-    "short_name": "ramyantara",
-    "description": "ramyantara Financial Services",
+    "name": "GTU Ventures",
+    "short_name": "GTU Ventures",
+    "description": "GTU Ventures",
     "icons": [
         {
             "src": "/icon-384x384.png",

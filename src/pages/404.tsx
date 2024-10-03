@@ -78,7 +78,7 @@ const Index = () => {
                 bg="purple.500"
                 _hover={{ bg: "purple.600" }}
               >
-                Instagram Community
+                Instagram 
               </Button>
               <Button
                 leftIcon={<AiOutlineHome />}

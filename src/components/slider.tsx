@@ -7,54 +7,116 @@ import {
   Text,
   Heading,
   IconButton,
+  Spinner,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"; // Import arrow icons
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import supabase from "../../supabase";
 
-const slides = [
-  {
-    image: "/incubation.jpeg",
-    title: "Welcome to Our World",
-    description: "Discover amazing experiences waiting for you.",
-  },
-  {
-    image: "/incub.jpeg",
-    title: "Explore Nature",
-    description: "Immerse yourself in breathtaking landscapes.",
-  },
-  {
-    image: "/incub2.jpeg",
-    title: "Urban Adventures",
-    description: "Uncover the secrets of vibrant city life.",
-  },
-];
+// Initialize the Supabase client
 
 export default function ImageCarousel() {
+  const [slides, setSlides] = React.useState<
+    { image: string; title: string; description: string }[]
+  >([]);
   const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState<string | null>(null);
+
+  // Fetch images from Supabase bucket
+  const fetchImages = async () => {
+    try {
+      const { data, error } = await supabase.storage.from("slider2").list();
+
+      if (error) throw error;
+
+      if (data && data.length > 0) {
+        const imageSlides = data.map((file) => ({
+          image: supabase.storage.from("slider2").getPublicUrl(file.name).data
+            .publicUrl,
+          title: file.metadata?.title || "Default Title", // Add title if available in metadata
+          description: file.metadata?.description || "Default Description", // Add description if available
+        }));
+
+        setSlides(imageSlides);
+      } else {
+        setError("No images found in the slider2 bucket.");
+      }
+    } catch (err) {
+      setError("Error fetching images.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  React.useEffect(() => {
+    fetchImages();
+  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
 
   const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+    );
   };
 
+  if (loading) {
+    return <Spinner size="xl" color="blue.500" />;
+  }
+
+  if (error) {
+    return (
+      <Alert status="error">
+        <AlertIcon />
+        {error}
+      </Alert>
+    );
+  }
+
+  if (slides.length === 0) {
+    return (
+      <Alert status="info">
+        <AlertIcon />
+        No slides to display.
+      </Alert>
+    );
+  }
+
   return (
-    <Box maxW={{ base: "sm", sm: "md", md: "lg", lg: "xl", xl: "2xl" }} mx="auto" py={4}>
+    <Box
+      maxW={{ base: "sm", sm: "md", md: "lg", lg: "xl", xl: "2xl" }}
+      mx="auto"
+      py={4}
+    >
       <Text fontSize="2xl" fontWeight="bold" textAlign="center" mb={4}>
         Events By GTU Ventures
       </Text>
 
-      <Box position="relative" borderRadius="md" overflow="hidden">
-        <Image
-          src={slides[currentIndex].image}
-          alt={`Slide ${currentIndex + 1}`}
-          objectFit="cover"
-          width="100%"
-          height="400px" // Fixed height for the image
-          transition="transform 0.6s ease-in-out" // Smooth transition for slide change
-          transform={`translateX(${currentIndex * -100}%)`} // Slide movement
-        />
+      <Box
+        position="relative"
+        borderRadius="md"
+        overflow="hidden"
+        height="400px"
+      >
+        {slides.map((slide, index) => (
+          <Image
+            key={index}
+            src={slide.image}
+            alt={`Slide ${index + 1}`}
+            objectFit="cover"
+            width="100%"
+            height="400px"
+            position="absolute"
+            top="0"
+            left="0"
+            transition="opacity 0.6s ease-in-out"
+            opacity={index === currentIndex ? 1 : 0}
+          />
+        ))}
 
         <Box
           position="absolute"
@@ -69,9 +131,12 @@ export default function ImageCarousel() {
           justifyContent="center"
           alignItems="center"
           p={4}
-          transition="opacity 0.4s ease-in-out" // Smooth transition for text
         >
-          <Heading color="white" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} mb={2}>
+          <Heading
+            color="white"
+            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+            mb={2}
+          >
             {slides[currentIndex].title}
           </Heading>
           <Text color="white" fontSize={{ base: "sm", md: "md", lg: "lg" }}>
@@ -94,14 +159,12 @@ export default function ImageCarousel() {
             aria-label="Previous Slide"
             icon={<AiOutlineLeft />}
             onClick={handlePrevious}
-            isDisabled={currentIndex === 0}
             variant="outline"
           />
           <IconButton
             aria-label="Next Slide"
             icon={<AiOutlineRight />}
             onClick={handleNext}
-            isDisabled={currentIndex === slides.length - 1}
             variant="outline"
           />
         </Box>
@@ -117,14 +180,12 @@ export default function ImageCarousel() {
           aria-label="Previous Slide"
           icon={<AiOutlineLeft />}
           onClick={handlePrevious}
-          isDisabled={currentIndex === 0}
           variant="outline"
         />
         <IconButton
           aria-label="Next Slide"
           icon={<AiOutlineRight />}
           onClick={handleNext}
-          isDisabled={currentIndex === slides.length - 1}
           variant="outline"
         />
       </Box>

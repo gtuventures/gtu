@@ -1,14 +1,14 @@
 import { ChakraProvider, extendTheme, ThemeConfig } from "@chakra-ui/react";
 import { Inter } from "next/font/google";
-import Navbar from "../components/navbar";
 import { type AppProps } from "next/app";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
 import { useState } from "react";
 import AuthContextProvider from "@/context";
-import Footer from "../components/footer";
 import Head from "next/head";
 require("dotenv").config();
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const supabaseUrl = "https://oiuovvagjsuvseayiluc.supabase.co";
@@ -47,17 +47,14 @@ export default function App({
             name="gtuventures.com"
             content="GTU Ventures is a startup accelerator that helps founders build successful companies."
           />
-          {/* <meta
-            name="google-site-verification"
-            content="OKVnDKVN_aY9YQ3zNgp35ZIC0Q6tbbEHulOUKOSMna8"
-          /> */}
+      
         </Head>
         <ChakraProvider theme={theme}>
           <AuthContextProvider>
             <div className={inter.className}>
-              {/* <Navbar /> */}
+              <Navbar />
               <Component {...pageProps} />
-              {/* <Footer /> */}
+              <Footer />
             </div>
           </AuthContextProvider>
         </ChakraProvider>

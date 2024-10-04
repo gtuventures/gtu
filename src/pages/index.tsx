@@ -65,31 +65,7 @@ export default function Component() {
 
   return (
     <Flex direction="column" minH="100vh">
-      <Box as="header" bg="purple.600" color="white" boxShadow="md">
-  <Flex align="center" justify="space-between" px={{ base: 4, md: 8, lg: 12 }} py={4}>
-    <Link href="#" display="flex" alignItems="center" gap={2}>
-      <Icon as={FiTwitter} boxSize={6} />
-      <Heading as="span" size="lg" fontWeight="bold">
-        GTU Ventures
-      </Heading>
-    </Link>
-    <Flex display={{ base: "none", md: "flex" }} gap={6} align="center">
-      <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
-        About Us
-      </Link>
-      <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
-        Our Services
-      </Link>
-      <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
-        Contact Us
-      </Link>
-    </Flex>
-    <Button variant="outline" display={{ base: "flex", md: "none" }}>
-      <Icon as={FiMenu} boxSize={6} />
-    </Button>
-  </Flex>
-</Box>
-
+     
 
       <Box as="main" flex="1">
         {/* Hero Section */}
@@ -226,42 +202,15 @@ export default function Component() {
                   </Button>
                 </VStack>
               </Box>
-              <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">
-                <Heading as="h3" size="lg">
-                  GTU Ventures
-                </Heading>
-                <Text mt={4}>123 Main Street, Anytown USA</Text>
-                <Text mt={2}>Phone: (123) 456-7890</Text>
-                <Text mt={2}>Email: info@gtuventures.com</Text>
-                <Heading as="h3" size="lg" mt={8}>
-                  Follow Us
-                </Heading>
-                <Flex mt={4} gap={4} justify="center">
-                  <Link href="#">
-                    <Icon as={FiTwitter} boxSize={6} />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FiLinkedin} boxSize={6} />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FiInstagram} boxSize={6} />
-                  </Link>
-                </Flex>
-              </Box>
+
+              
+             
             </Flex>
           </Box>
         </Box>
       </Box>
 
-      <Box as="footer" bg="gray.100" py={6} color="gray.600">
-        <Flex justify="space-between" px={4}>
-          <Text>&copy; 2024 GTU Ventures. All rights reserved.</Text>
-          <Flex gap={4}>
-            <Link href="#">Privacy Policy</Link>
-            <Link href="#">Terms of Service</Link>
-          </Flex>
-        </Flex>
-      </Box>
+     
     </Flex>
   );
 }

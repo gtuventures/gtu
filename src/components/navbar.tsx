@@ -1,345 +1,137 @@
-"use client";
-
 import {
   Box,
-  Flex,
-  Text,
-  IconButton,
   Button,
-  Stack,
-  Collapse,
+  Flex,
+  Heading,
   Icon,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  useColorModeValue,
-  useBreakpointValue,
+  Link,
   useDisclosure,
-  useColorMode,
+  Drawer,
+  DrawerBody,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  VStack,
+  Divider,
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  MoonIcon,
-  SunIcon,
-} from "@chakra-ui/icons";
+import { FiMenu } from "react-icons/fi";
+import { FiTwitter } from "react-icons/fi";
 
 export default function WithSubnavigation() {
-  const { isOpen, onToggle } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box>
+    <Box as="header" bg="purple.600" color="white" boxShadow="md">
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
-        minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
-        align={"center"}
+        align="center"
+        justify="space-between"
+        px={{ base: 4, md: 8, lg: 12 }}
+        py={4}
       >
-        <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
+        <Link href="#" display="flex" alignItems="center" gap={2}>
+          {/* <Image src={"./hihb.png"}/> */}
+          <Heading as="span" size="lg" fontWeight="bold">
+            GTU Ventures
+          </Heading>
+        </Link>
+
+        {/* Desktop Links */}
+        <Flex display={{ base: "none", md: "flex" }} gap={6} align="center">
+          <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
+            About Us
+          </Link>
+          <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
+            Our Services
+          </Link>
+          <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
+            Contact Us
+          </Link>
+        </Flex>
+
+        {/* Mobile Menu Button */}
+        <Button
+          variant="outline"
           display={{ base: "flex", md: "none" }}
+          onClick={onOpen}
         >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-          >
-            <a href="/">
-              {" "}
-              <b>ramyantara</b>
-            </a>
-          </Text>
+          <Icon as={FiMenu} boxSize={6} />
+        </Button>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
-          </Flex>
-        </Flex>
-
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
-          {" "}
-          <Button onClick={toggleColorMode} variant="outline">
-            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-          </Button>
-        </Stack>
+        {/* Mobile Sidebar */}
+        <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+          <DrawerOverlay />
+          <DrawerContent bg="purple.600" color="white">
+            <DrawerCloseButton />
+            <DrawerHeader borderBottomWidth="1px">
+              <Heading size="md" fontWeight="bold">
+                GTU Ventures
+              </Heading>
+            </DrawerHeader>
+            <DrawerBody>
+              <VStack align="start" spacing={6} mt={4}>
+                <Link
+                  href="#"
+                  w="full"
+                  textAlign="center"
+                  py={3}
+                  fontWeight="semibold"
+                  bg="purple.500"
+                  borderRadius="md"
+                  _hover={{ bg: "purple.400" }}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="#"
+                  w="full"
+                  textAlign="center"
+                  py={3}
+                  fontWeight="semibold"
+                  bg="purple.500"
+                  borderRadius="md"
+                  _hover={{ bg: "purple.400" }}
+                >
+                  Our Services
+                </Link>
+                <Link
+                  href="#"
+                  w="full"
+                  textAlign="center"
+                  py={3}
+                  fontWeight="semibold"
+                  bg="purple.500"
+                  borderRadius="md"
+                  _hover={{ bg: "purple.400" }}
+                >
+                  Contact Us
+                </Link>
+              </VStack>
+              <Divider mt={6} borderColor="purple.300" />
+              <VStack align="start" spacing={4} mt={6}>
+                <Heading size="sm" fontWeight="bold">
+                  Follow Us
+                </Heading>
+                <Flex gap={3}>
+                  <Button
+                    as="a"
+                    href="#"
+                    bg="twitter.500"
+                    color="white"
+                    borderRadius="full"
+                    size="sm"
+                    _hover={{ bg: "twitter.400" }}
+                    leftIcon={<Icon as={FiTwitter} />}
+                  >
+                    Twitter
+                  </Button>
+                  {/* Add more social buttons as needed */}
+                </Flex>
+              </VStack>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
       </Flex>
-
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
     </Box>
   );
 }
-
-const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
-
-  return (
-    <Stack direction={"row"} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <Box
-                as="a"
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Box>
-            </PopoverTrigger>
-
-            {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={"xl"}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={"xl"}
-                minW={"sm"}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
-        </Box>
-      ))}
-    </Stack>
-  );
-};
-
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
-  return (
-    <Box
-      as="a"
-      href={href}
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ bg: useColorModeValue("blue.50", "gray.900") }}
-    >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text
-            transition={"all .3s ease"}
-            _groupHover={{ color: "blue.400" }}
-            fontWeight={500}
-          >
-            {label}
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          <Icon color={"blue.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Box>
-  );
-};
-
-const MobileNav = () => {
-  return (
-    <Stack
-      bg={useColorModeValue("white", "gray.800")}
-      p={4}
-      display={{ md: "none" }}
-    >
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
-      ))}
-    </Stack>
-  );
-};
-
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure();
-
-  return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Box
-        py={2}
-        as="a"
-        href={href ?? "#"}
-        justifyContent="space-between"
-        alignItems="center"
-        _hover={{
-          textDecoration: "none",
-        }}
-      >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
-        >
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={"all .25s ease-in-out"}
-            transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
-          />
-        )}
-      </Box>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={"solid"}
-          borderColor={useColorModeValue("gray.200", "gray.700")}
-          align={"start"}
-        >
-          {children &&
-            children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Box>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
-  );
-};
-
-interface NavItem {
-  label: string;
-  subLabel?: string;
-  children?: Array<NavItem>;
-  href?: string;
-}
-
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: "Indices & Daily Level",
-    children: [
-      {
-        label: "Indices & Daily Level",
-        subLabel: "All the indices and daily levels",
-        href: "/indices",
-      },
-      {
-        label: "Foreign & Domestic Institutional Investors",
-        subLabel: "Foreign & Domestic Institutional Investors",
-        href: "/foreign",
-      },
-
-      {
-        label: "IPOs",
-        subLabel: "Know More About IPOs",
-        href: "/greymarket",
-      },
-
-      {
-        label: "Suggestions on Stocks",
-        subLabel: "Pick the best stocks",
-        href: "/watchlist",
-      },
-    ],
-  },
-  {
-    label: "Our Products & Services",
-    children: [
-      {
-        label: "Equity",
-        subLabel: "Expert assistance in equity investments",
-        href: "/products/equity-investment",
-      },
-      {
-        label: "Insurance",
-        subLabel: "Comprehensive insurance solutions",
-        href: "/products/insurance-solutions",
-      },
-      {
-        label: "Bonds & NCDs",
-        subLabel: "Secure your future with bonds",
-        href: "/products/bond-investments",
-      },
-      {
-        label: "PMS/AIF",
-        subLabel:
-          "Portfolio Management Services & Alternative Investment Funds",
-        href: "/products/pms-aif-services",
-      },
-      {
-        label: "Currency",
-        subLabel: "Currency trading and investment solutions",
-        href: "/products/currency-trading",
-      },
-      {
-        label: "Commodities",
-        subLabel: "Trade in commodities with expert guidance",
-        href: "/products/commodities-trading",
-      },
-      {
-        label: "Mutual Funds",
-        subLabel: "Diversify your portfolio with mutual funds",
-        href: "/products/mutual-funds",
-      },
-      {
-        label: "Loans & FD",
-        subLabel: "Loans and fixed deposits for stable growth",
-        href: "/products/loans-fd",
-      },
-    ],
-  },
-  {
-    label: "About Us",
-    href: "/aboutus",
-  },
-  {
-    label: "Contact Us",
-    href: "/contactus",
-  },
-  {
-    label: "Other Services",
-    href: "/otherservice",
-  },
-];

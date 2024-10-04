@@ -44,7 +44,7 @@ export default function Login() {
         email,
         password,
       });
-
+      router.push("/addimage");
     } catch (error) {
       toast({
         title: "Error.",
@@ -83,7 +83,7 @@ export default function Login() {
           <Stack spacing={4}>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" onChange={(e) => setEmail(e.target.value)} />
+              <Input type="email" onChange={(e) => setEmail(e.target.value)}  color={"-moz-initial"}/>
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
@@ -109,10 +109,10 @@ export default function Login() {
                 onClick={Signin}
                 loadingText="Submitting"
                 size="lg"
-                bg={"blue.400"}
+                bg={"purple.600"}
                 color={"white"}
                 _hover={{
-                  bg: "blue.500",
+                  bg: "purple.500",
                 }}
               >
                 SignIn

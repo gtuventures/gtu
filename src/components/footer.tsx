@@ -8,6 +8,7 @@ import {
   Text,
   Flex,
   useColorModeValue,
+  Image, // Import Image component
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { FiTwitter, FiLinkedin, FiInstagram } from "react-icons/fi";
@@ -19,9 +20,12 @@ export default function LargeWithLogoCentered() {
   return (
     <>
       <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">
-        <Heading as="h3" size="lg" textAlign="center">
-          GTU Ventures
-        </Heading>
+   
+        {/* Image Section */}
+        <Flex justify="center" my={4}>
+          <Image src="/hihb.png" alt="GTU Ventures" maxW="100%" />
+        </Flex>
+
         <Text mt={4} textAlign="center">
           GTU, AIC
         </Text>
@@ -56,7 +60,13 @@ export default function LargeWithLogoCentered() {
           px={4}
           direction={{ base: "column", md: "row" }}
         >
+          {/* Left side Image in Footer */}
+          <Flex align="center" mb={{ base: 4, md: 0 }}>
+            <Image src="/path/to/hihb.png" alt="GTU Ventures" boxSize="50px" />
+          </Flex>
+
           <Text>&copy; 2024 GTU Ventures. All rights reserved.</Text>
+
           <Flex gap={4} mt={{ base: 4, md: 0 }}>
             <Link href="#">Privacy Policy</Link>
             <Link href="#">Terms of Service</Link>

@@ -17,12 +17,12 @@ const slides = [
     description: "Discover amazing experiences waiting for you.",
   },
   {
-    image: "/incubation.jpeg",
+    image: "/incub.jpeg",
     title: "Explore Nature",
     description: "Immerse yourself in breathtaking landscapes.",
   },
   {
-    image: "/incubation.jpeg",
+    image: "/incub2.jpeg",
     title: "Urban Adventures",
     description: "Uncover the secrets of vibrant city life.",
   },

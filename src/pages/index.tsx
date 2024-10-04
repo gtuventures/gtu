@@ -65,8 +65,6 @@ export default function Component() {
 
   return (
     <Flex direction="column" minH="100vh">
-     
-
       <Box as="main" flex="1">
         {/* Hero Section */}
         <Box bg="purple.500" color="white" py={{ base: 12, md: 36, lg: 31 }}>
@@ -105,11 +103,9 @@ export default function Component() {
         {/* Image Carousel Section */}
 
         <ImageCarousel />
-        
+
         {/* Startup Stats Section */}
         <StartupStats />
-
-
 
         {/* About Us Section */}
         <Box id="about" py={{ base: 12, md: 24, lg: 32 }}>
@@ -174,14 +170,33 @@ export default function Component() {
             </Flex>
           </Box>
         </Box>
-
-        {/* Contact Section */}
         <Box id="contact" py={{ base: 12, md: 24, lg: 32 }}>
           <Box textAlign="center" px={{ base: 8, md: 95 }}>
             <Heading as="h2" size="xl" fontWeight="bold">
               Contact Us
             </Heading>
             <Flex direction={{ base: "column", md: "row" }} gap={8} mt={8}>
+              {/* Left Side Image for Medium and Larger Screens */}
+              <Flex
+                display={{ base: "none", md: "flex" }} // Hide on small screens
+                flex="1"
+                justify="center"
+                align="center"
+              >
+                <Box flex="1" maxW={{ base: "100%", md: "450px" }}>
+                  <Image
+                    src="/contact.jpeg"
+                    alt="GTU Ventures"
+                    rounded="lg"
+                    objectFit="cover"
+                    width="100%"
+                    height="auto"
+                  />
+                </Box>
+                {/* Adjust the size as needed */}
+              </Flex>
+
+              {/* Contact Form */}
               <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">
                 <VStack as="form" spacing={4} onSubmit={handleSubmit(onSubmit)}>
                   <Input
@@ -195,22 +210,19 @@ export default function Component() {
                   <Textarea
                     placeholder="Message"
                     rows={4}
-                    {...register("message", { required: "Message is required" })} // Register the textarea with validation
+                    {...register("message", {
+                      required: "Message is required",
+                    })} // Register the textarea with validation
                   />
                   <Button type="submit" colorScheme="purple" width="full">
                     Submit
                   </Button>
                 </VStack>
               </Box>
-
-              
-             
             </Flex>
           </Box>
         </Box>
       </Box>
-
-     
     </Flex>
   );
 }

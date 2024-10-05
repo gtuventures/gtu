@@ -1,5 +1,6 @@
 import { useState } from "react";
 import supabase from "../../supabase";
+import Link from "next/link";
 import {
   Box,
   Heading,
@@ -146,11 +147,27 @@ export default function IndependentImageUploader() {
       >
         Submit All Images
       </Button>
+
       <Alert status="warning">
         <AlertIcon />
         If Image is not uploaded, then please signin again and try because the
         session might have expired.
       </Alert>
+      <Link href={"/deleteimg"}>
+        <Button mt={5} colorScheme="blue" width="full">
+          Delete Images page ↗️
+        </Button>
+      </Link>
+      <Link href={"/contactAdmin"}>
+        <Button mt={5} colorScheme="blue" width="full">
+          Contct Admin ↗️
+        </Button>
+      </Link>
+      <Link href={"/formdetails"}>
+        <Button mt={5} colorScheme="blue" width="full">
+          Form Details ↗️
+        </Button>
+      </Link>
     </Box>
   );
 }

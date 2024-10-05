@@ -116,7 +116,7 @@ const StartupsPage = () => {
               <Text color="pastelBlue.600">
                 <strong>Drive:</strong>
                 <ChakraLink href={startup.drive} isExternal>
-                &nbsp;  Open Drive ↗️
+                  &nbsp; Open Drive ↗️
                 </ChakraLink>
               </Text>
             </Stack>

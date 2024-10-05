@@ -148,10 +148,10 @@ export default function ManageImages() {
       </Box>
       <Box p={5} borderWidth="1px" borderRadius="md" maxW="600px" mx="auto">
         {" "}
-        <Link href="/addimage">
+        <Link href="/formdetails">
           {" "}
           <Button mt={3} colorScheme="blue">
-            Add Images
+            Form Details
           </Button>
         </Link>
       </Box>

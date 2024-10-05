@@ -82,7 +82,7 @@ export default function IndependentImageUploader() {
       if (error) {
         throw error;
       } else {
-        Router.push("/");
+        Router.push("/deleteimg");
       }
 
       console.log("Image URLs inserted into database:", imageUrls);

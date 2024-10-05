@@ -69,20 +69,20 @@ export default function Component() {
   return (
     <>
       <NextSeo
-        title="LD College Of Engineering"
-        description="LDCE is one of the oldest engineering colleges in Gujarat, India. It is located in Ahmedabad. It is affiliated with Gujarat Technological University. It is also known as L.D. College of Engineering."
+        title="GTU Ventures"
+        description="GTU Ventures provides investment, advisory, and consulting services to help startups and small businesses succeed."
         openGraph={{
-          url: "ldce.ac.in",
-          title: "LD College Of Engineering",
+          url: "gtuventures.com",
+          title: "gtuventures.com",
           description:
-            "LDCE is one of the oldest engineering colleges in Gujarat, India. It is located in Ahmedabad. It is affiliated with Gujarat Technological University. It is also known as L.D. College of Engineering.",
+            "GTU Ventures provides investment, advisory, and consulting services to help startups and small businesses succeed.",
           images: [
             {
               url: "https://shorturl.at/ftAH0",
-              alt: "LD College of Engineering Ahmedabad",
+              alt: "GTU Ventures",
             },
           ],
-          site_name: "LD College Of Engineering",
+          site_name: "gtuventures.com",
           type: "website",
         }}
       />

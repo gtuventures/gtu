@@ -169,7 +169,7 @@ function formm() {
                     shadow="sm"
                     focusBorderColor="brand.400"
                     {...register("discription", {
-                      required: "Enter Description",
+                      required: true,
                     })}
                     fontSize={{
                       sm: "sm",
@@ -309,7 +309,7 @@ function formm() {
                     (Tick as Many)
                   </FormLabel>
                   <Controller
-                    name="Standard"
+                    name="support"
                     control={control}
                     rules={{ required: "Enter standard" }}
                     render={({ field }) => (

@@ -44,8 +44,8 @@ export default function WithSubnavigation() {
           <Link href="/startupform" fontWeight="semibold" _hover={{ color: "purple.300" }}>
             Register Now
           </Link>
-          <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
-            Contact Us
+          <Link href="/login" fontWeight="semibold" _hover={{ color: "purple.300" }}>
+            Admin Login
           </Link>
         </Flex>
 
@@ -95,7 +95,7 @@ export default function WithSubnavigation() {
                   Register now
                 </Link>
                 <Link
-                  href="#"
+                  href="/login"
                   w="full"
                   textAlign="center"
                   py={3}
@@ -104,7 +104,7 @@ export default function WithSubnavigation() {
                   borderRadius="md"
                   _hover={{ bg: "purple.400" }}
                 >
-                  Contact Us
+                  Admin Login
                 </Link>
               </VStack>
               <Divider mt={6} borderColor="purple.300" />

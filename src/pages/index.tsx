@@ -78,7 +78,7 @@ export default function Component() {
             "GTU Ventures provides investment, advisory, and consulting services to help startups and small businesses succeed.",
           images: [
             {
-              url: "https://shorturl.at/ftAH0",
+              url: "https://gtu-e09.pages.dev/hihb.png",
               alt: "GTU Ventures",
             },
           ],

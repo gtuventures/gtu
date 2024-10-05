@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
-
+import { Image } from "@chakra-ui/react";
 export default function WithSubnavigation() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -29,10 +29,10 @@ export default function WithSubnavigation() {
         px={{ base: 4, md: 8, lg: 12 }}
         py={4}
       >
-        <Link href="#" display="flex" alignItems="center" gap={2}>
-          {/* <Image src={"./hihb.png"}/> */}
+        <Link href="/" display="flex" alignItems="center" gap={2}>
+          
           <Heading as="span" size="lg" fontWeight="bold">
-            GTU Ventures
+                <Image src={"/ventures.png"} alt="GTU Ventures" height={35} width={140} />
           </Heading>
         </Link>
 

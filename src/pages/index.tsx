@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import ImageCarousel from "../components/slider";
 import { FiBriefcase } from "react-icons/fi";
-import StartupStats from "./StartupStats";
+import StartupStats from "../components/StartupStats";
 import { useForm } from "react-hook-form"; // Import useForm from react-hook-form
 import supabase from "../../supabase";
 import { useEffect, useState } from "react";
@@ -233,7 +233,7 @@ export default function Component() {
                       {...register("name", { required: "Name is required" })} // Register the input with validation
                     />
                     <Input
-                      placeholder="Email"
+                      placeholder="Email / Mobile Number"
                       {...register("email", { required: "Email is required" })} // Register the input with validation
                     />
                     <Textarea

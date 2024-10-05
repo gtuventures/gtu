@@ -304,27 +304,69 @@ function formm() {
                 </FormControl>{" "}
                 <br />
                 <FormControl isRequired>
-                  <FormLabel>Standard </FormLabel>
+                  <FormLabel>
+                    Which of the following Support would you like to avail?
+                    (Tick as Many)
+                  </FormLabel>
                   <Controller
                     name="Standard"
                     control={control}
-                    defaultValue={["ten", "science", "Commerce", "Arts"]}
                     rules={{ required: "Enter standard" }}
                     render={({ field }) => (
                       <CheckboxGroup {...field}>
                         <HStack spacing="24px" wrap="wrap">
-                          <Checkbox value="Kg">Kinder Garden</Checkbox>
-                          <Checkbox value="ten">1-10</Checkbox>
-                          <Checkbox value="science">11-12 Science</Checkbox>
-                          <Checkbox value="Commerce">11-12 Commerce</Checkbox>
-                          <Checkbox value="Arts">11-12 Arts</Checkbox>
+                          <Checkbox value="Infrastructure support">
+                            Infrastructure support
+                          </Checkbox>
+                          <Checkbox value="market surveys">
+                            Pre-incubation services (market surveys, gap
+                            analysis, identification of target markets)
+                          </Checkbox>
+                          <Checkbox
+                            value="Business planning and forming a company
+"
+                          >
+                            Business planning and forming a company
+                          </Checkbox>
+                          <Checkbox value="training">
+                            Training to develop business skills
+                          </Checkbox>
+                          <Checkbox value="Accounting, legal and other related services">
+                            Accounting, legal and other related services
+                          </Checkbox>
+                          <Checkbox
+                            value="Market research, sales and marketing
+"
+                          >
+                            Market research, sales and marketing
+                          </Checkbox>
+                          <Checkbox value="Networking">
+                            Networking with other entrepreneurs
+                          </Checkbox>
+                          <Checkbox
+                            value="Advice on development of new products and services
+"
+                          >
+                            Advice on development of new products and services
+                          </Checkbox>
+                          <Checkbox
+                            value="Advice on development of new products and services
+"
+                          >
+                            {" "}
+                          </Checkbox>
+
+                          <Checkbox value="Advice on recruitment of staff and personnel management">
+                            Advice on recruitment of staff and personnel
+                            management
+                          </Checkbox>
                         </HStack>
                       </CheckboxGroup>
                     )}
                   />
                 </FormControl>
                 <br />
-                <FormControl as="fieldset">
+                {/* <FormControl as="fieldset">
                   <FormLabel as="legend">Board</FormLabel>
                   <Controller
                     name="Board"
@@ -346,7 +388,7 @@ function formm() {
                     )}
                   />
                 </FormControl>
-                <br />
+                <br /> */}
                 <FormControl isRequired>
                   <FormLabel>Team Size</FormLabel>
                   <Input
@@ -356,7 +398,7 @@ function formm() {
                   />
                 </FormControl>
                 <br />
-                <FormControl as="fieldset">
+                {/* <FormControl as="fieldset">
                   <FormLabel as="legend">Medium</FormLabel>
                   <Controller
                     name="medium"
@@ -373,8 +415,8 @@ function formm() {
                       </CheckboxGroup>
                     )}
                   />
-                </FormControl>
-                <br />
+                </FormControl> */}
+                {/* <br /> */}
                 <FormControl>
                   <FormLabel> Funding agency name</FormLabel>
                   {/* <Text fontSize="xs">if any</Text> */}

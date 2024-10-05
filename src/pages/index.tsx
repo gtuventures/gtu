@@ -11,17 +11,14 @@ import {
   VStack,
   useToast,
 } from "@chakra-ui/react";
-import PreLoader from "../components/PreLoader";
-import ImageCarousel from "../components/slider"
-import {
-  FiBriefcase
-  
-} from "react-icons/fi";
+import ImageCarousel from "../components/slider";
+import { FiBriefcase } from "react-icons/fi";
 import StartupStats from "./StartupStats";
 import { useForm } from "react-hook-form"; // Import useForm from react-hook-form
 import supabase from "../../supabase";
 import { useEffect, useState } from "react";
 import { NextSeo } from "next-seo";
+import PreLoader from "../components/pre";
 
 export default function Component() {
   const toast = useToast(); // Initialize useToast
@@ -29,18 +26,16 @@ export default function Component() {
 
   const onSubmit = async (data: any) => {
     console.log(data); // Log form data
-  
+
     // Insert data into Supabase
     const { error } = await supabase
-      .from('contactus') // Name of your table
-      .insert([
-        { name: data.name, email: data.email, message: data.message },
-      ]);
-  
+      .from("contactus") // Name of your table
+      .insert([{ name: data.name, email: data.email, message: data.message }]);
+
     if (error) {
-      console.error('Error inserting data:', error.message);
+      console.error("Error inserting data:", error.message);
       toast({
-        title:error.message,
+        title: error.message,
         description: "There was an issue sending your message.",
         status: "error",
         duration: 5000,
@@ -55,7 +50,7 @@ export default function Component() {
         duration: 5000,
         isClosable: true,
       });
-  
+
       // Reset form after submission
       reset();
     }
@@ -262,7 +257,15 @@ export default function Component() {
   );
 }
 
-const ServiceCard = ({ icon, title, description }: { icon: any; title: string; description: string; }) => (
+const ServiceCard = ({
+  icon,
+  title,
+  description,
+}: {
+  icon: any;
+  title: string;
+  description: string;
+}) => (
   <Box
     bg="white"
     shadow="md"

@@ -44,7 +44,19 @@ export default function Login() {
         email,
         password,
       });
-      router.push("/addimage");
+
+      if (error) {
+        throw error;
+      }else{
+        toast({
+          title: "Success.",
+          description: "Logged in successfully",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+        router.push("/addimage");
+      }
     } catch (error) {
       toast({
         title: "Error.",

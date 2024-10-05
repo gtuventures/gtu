@@ -15,6 +15,7 @@ import {
   HStack,
   Text,
   Button,
+  Stack,
 } from "@chakra-ui/react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useEffect, useState } from "react";
@@ -83,8 +84,8 @@ export default function AdminPanel() {
               {contacts.map((contact) => (
                 <Tr key={contact.id}>
                   <Td>{contact.name}</Td>
-                  <Td>{contact.mobile}</Td>
-                  <Td>{contact.information}</Td>
+                  <Td>{contact.email}</Td>
+                  <Td>{contact.message}</Td>
                   <Td>
                     <HStack spacing={4}>
                       <Text>{contact.mobile}</Text>
@@ -106,13 +107,15 @@ export default function AdminPanel() {
         </Container>
       </Box>
       <br />
-      <Link href="/cc">
-        <Button>Consulatancy</Button>
-      </Link>
-      <br />
-      <Link href="/signout">
-        <Button>Signout</Button>
-      </Link>
+      <Stack pt={6} direction={"row"}>
+        <Link href="/">
+          <Button>Home Page</Button>
+        </Link>
+        {/* <br /> */}
+        <Link href="/signout">
+          <Button>Signout</Button>
+        </Link>
+      </Stack>
     </>
   );
 }

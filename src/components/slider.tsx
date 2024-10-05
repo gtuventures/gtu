@@ -110,7 +110,8 @@ export default function ImageCarousel() {
         {slides.map((slide, index) => (
           <Image
             key={index}
-            src={slide.image}
+            src={`<!-- wsrv.nl/lichtenstein.jpg -->
+<img src="//wsrv.nl/?url=${slide.image}">`}
             alt={`Slide ${index + 1}`}
             objectFit="cover"
             width="100%"
@@ -137,8 +138,11 @@ export default function ImageCarousel() {
           alignItems="center"
           p={4}
         >
-        
-          <Text color="white" fontSize={{ base: "md", md: "lg", lg: "lg" }} as={"b"}>
+          <Text
+            color="white"
+            fontSize={{ base: "md", md: "lg", lg: "lg" }}
+            as={"b"}
+          >
             GTU Events
           </Text>
         </Box>
@@ -151,7 +155,7 @@ export default function ImageCarousel() {
           variant="outline"
           position="absolute"
           top="50%"
-          left="-50px"  // Arrow positioned outside of the image
+          left="-50px" // Arrow positioned outside of the image
           transform="translateY(-50%)"
           zIndex="1"
         />
@@ -162,7 +166,7 @@ export default function ImageCarousel() {
           variant="outline"
           position="absolute"
           top="50%"
-          right="-50px"  // Arrow positioned outside of the image
+          right="-50px" // Arrow positioned outside of the image
           transform="translateY(-50%)"
           zIndex="1"
         />

@@ -38,11 +38,11 @@ export default function WithSubnavigation() {
 
         {/* Desktop Links */}
         <Flex display={{ base: "none", md: "flex" }} gap={6} align="center">
-          <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
+          <Link href="/aboutus" fontWeight="semibold" _hover={{ color: "purple.300" }}>
             About Us
           </Link>
-          <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
-            Our Services
+          <Link href="/startupform" fontWeight="semibold" _hover={{ color: "purple.300" }}>
+            Register Now
           </Link>
           <Link href="#" fontWeight="semibold" _hover={{ color: "purple.300" }}>
             Contact Us
@@ -71,7 +71,7 @@ export default function WithSubnavigation() {
             <DrawerBody>
               <VStack align="start" spacing={6} mt={4}>
                 <Link
-                  href="#"
+                  href="/aboutus"
                   w="full"
                   textAlign="center"
                   py={3}
@@ -83,7 +83,7 @@ export default function WithSubnavigation() {
                   About Us
                 </Link>
                 <Link
-                  href="#"
+                  href="/startupform"
                   w="full"
                   textAlign="center"
                   py={3}
@@ -92,7 +92,7 @@ export default function WithSubnavigation() {
                   borderRadius="md"
                   _hover={{ bg: "purple.400" }}
                 >
-                  Our Services
+                  Register now
                 </Link>
                 <Link
                   href="#"

@@ -61,9 +61,9 @@ export default function LargeWithLogoCentered() {
           direction={{ base: "column", md: "row" }}
         >
           {/* Left side Image in Footer */}
-          <Flex align="center" mb={{ base: 4, md: 0 }}>
-            <Image src="/path/to/hihb.png" alt="GTU Ventures" boxSize="50px" />
-          </Flex>
+          {/* <Flex align="center" mb={{ base: 4, md: 0 }}>
+            <Image src="/hihb.png" alt="GTU Ventures" boxSize="50px" />
+          </Flex> */}
 
           <Text>&copy; 2024 GTU Ventures. All rights reserved.</Text>
 

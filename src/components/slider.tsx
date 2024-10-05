@@ -10,10 +10,10 @@ import {
   Spinner,
   Alert,
   AlertIcon,
-  useInterval,  // Chakra UI useInterval
+  useInterval, // Chakra UI useInterval
 } from "@chakra-ui/react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import supabase from "../../supabase";  // Assuming you have a supabase setup
+import supabase from "../../supabase"; // Assuming you have a supabase setup
 
 export default function ImageCarousel() {
   const [slides, setSlides] = React.useState<
@@ -110,8 +110,8 @@ export default function ImageCarousel() {
         {slides.map((slide, index) => (
           <Image
             key={index}
-            src={`<!-- wsrv.nl/lichtenstein.jpg -->
-<img src="//wsrv.nl/?url=${slide.image}">`}
+            src={`
+//wsrv.nl/?url=${slide.image}`}
             alt={`Slide ${index + 1}`}
             objectFit="cover"
             width="100%"

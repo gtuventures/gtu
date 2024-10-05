@@ -30,22 +30,45 @@ export default function WithSubnavigation() {
         py={4}
       >
         <Link href="/" display="flex" alignItems="center" gap={2}>
-          
           <Heading as="span" size="lg" fontWeight="bold">
-                <Image src={"/ventures.png"} alt="GTU Ventures" height={35} width={140} />
+            <Image
+              src={"/ventures.png"}
+              alt="GTU Ventures"
+              height={35}
+              width={140}
+            />
           </Heading>
         </Link>
 
         {/* Desktop Links */}
         <Flex display={{ base: "none", md: "flex" }} gap={6} align="center">
-          <Link href="/aboutus" fontWeight="semibold" _hover={{ color: "purple.300" }}>
+          <Link
+            href="/aboutus"
+            fontWeight="semibold"
+            _hover={{ color: "purple.300" }}
+          >
             About Us
           </Link>
-          <Link href="/startupform" fontWeight="semibold" _hover={{ color: "purple.300" }}>
+          <Link
+            href="/startupform"
+            fontWeight="semibold"
+            _hover={{ color: "purple.300" }}
+          >
             Register Now
           </Link>
-          <Link href="/login" fontWeight="semibold" _hover={{ color: "purple.300" }}>
+          <Link
+            href="/login"
+            fontWeight="semibold"
+            _hover={{ color: "purple.300" }}
+          >
             Admin Login
+          </Link>
+          <Link
+            href="/teams"
+            fontWeight="semibold"
+            _hover={{ color: "purple.300" }}
+          >
+            Teams
           </Link>
         </Flex>
 
@@ -105,6 +128,18 @@ export default function WithSubnavigation() {
                   _hover={{ bg: "purple.400" }}
                 >
                   Admin Login
+                </Link>
+                <Link
+                  href="/teams"
+                  w="full"
+                  textAlign="center"
+                  py={3}
+                  fontWeight="semibold"
+                  bg="purple.500"
+                  borderRadius="md"
+                  _hover={{ bg: "purple.400" }}
+                >
+                  Teams
                 </Link>
               </VStack>
               <Divider mt={6} borderColor="purple.300" />

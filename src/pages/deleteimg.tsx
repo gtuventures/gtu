@@ -23,7 +23,6 @@ export default function ManageImages() {
     try {
       setLoading(true);
 
-      // Fetch all files in the "ramyantra" bucket
       const { data, error } = await supabase.storage.from("slider2").list();
 
       if (error) {

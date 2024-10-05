@@ -1,102 +1,173 @@
 import React from "react";
-import { Box, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Text, Link, Stack } from "@chakra-ui/react";
 
 const PrivacyPolicy = () => {
   return (
-    <Box p={10} bg="gray.50">
-      <VStack
-        spacing={6}
-        align="stretch"
-        maxW="900px"
-        mx="auto"
-        bg="white"
-        p={8}
-        boxShadow="lg"
-        rounded="md"
-      >
-        <Heading as="h1" size="xl" color="blue.600" textAlign="center" mb={4}>
-          Privacy Policy
-        </Heading>
+    <Box maxW="800px" mx="auto" p={5}>
+      <Heading as="h1" mb={4} fontSize="3xl" textAlign="center">
+        Privacy Policy
+      </Heading>
 
-        <Text fontSize="lg" color="gray.700">
-          At ramyantara Financial Services, your privacy is of utmost importance
-          to us. This privacy policy outlines the types of personal information
-          we collect, how we use it, and the steps we take to safeguard your
-          data.
-        </Text>
+      <Text mb={4}>
+        <strong>Effective Date:</strong> 5th October 2024
+      </Text>
 
-        <Heading as="h2" size="lg" color="blue.600">
-          Information We Collect
-        </Heading>
-        <Text fontSize="lg" color="gray.600">
-          We collect personal information that you provide to us directly, such
-          as your name, contact details, and any other information you choose to
-          provide when inquiring about our services. Additionally, we may
-          collect certain data automatically when you interact with our website,
-          including IP addresses, browser types, and other analytics data.
-        </Text>
+      <Text mb={4}>
+        GTU Incubation Center (“we,” “our,” or “us”) values your privacy. This
+        Privacy Policy outlines how we collect, use, and protect the personal
+        information you provide when using our website [Insert Website URL] (the
+        “Website”). By using this Website, you consent to the data practices
+        described in this policy.
+      </Text>
 
-        <Heading as="h2" size="lg" color="blue.600">
-          How We Use Your Information
-        </Heading>
-        <Text fontSize="lg" color="gray.600">
-          The information we collect is used to:
-        </Text>
-        <Text fontSize="lg" color="gray.600" pl={4}>
-          - Provide and improve our financial services <br />
-          - Respond to your inquiries and communicate with you <br />
-          - Personalize your experience on our website <br />- Ensure compliance
-          with legal obligations
-        </Text>
+      <Heading as="h2" size="lg" mt={6} mb={4}>
+        1. Information We Collect
+      </Heading>
 
-        <Heading as="h2" size="lg" color="blue.600">
-          Data Security
-        </Heading>
-        <Text fontSize="lg" color="gray.600">
-          We take appropriate measures to protect your personal data from
-          unauthorized access, alteration, or disclosure. However, no method of
-          transmission over the Internet is completely secure, and we cannot
-          guarantee the absolute security of your data.
+      <Stack spacing={3}>
+        <Text>
+          We collect various types of information to improve our services and
+          provide a better user experience. This includes:
         </Text>
+        <Text>
+          - <strong>Personal Information:</strong> Information that you
+          voluntarily provide, such as your name, email address, and any other
+          details you submit through contact forms or registration processes.
+        </Text>
+        <Text>
+          - <strong>Usage Data:</strong> We collect information about how you
+          interact with our website, including your IP address, browser type,
+          pages visited, time spent on pages, and other related statistics.
+        </Text>
+        <Text>
+          - <strong>Cookies:</strong> We use cookies to personalize your
+          experience and analyze website traffic. You can control the use of
+          cookies through your browser settings.
+        </Text>
+      </Stack>
 
-        <Heading as="h2" size="lg" color="blue.600">
-          Third-Party Disclosure
-        </Heading>
-        <Text fontSize="lg" color="gray.600">
-          We do not sell, trade, or transfer your personal information to third
-          parties without your consent, except where required by law or in the
-          case of business transfers, mergers, or acquisitions.
-        </Text>
+      <Heading as="h2" size="lg" mt={6} mb={4}>
+        2. How We Use Your Information
+      </Heading>
 
-        <Heading as="h2" size="lg" color="blue.600">
-          Cookies
-        </Heading>
-        <Text fontSize="lg" color="gray.600">
-          Our website uses cookies to enhance user experience and gather
-          information about traffic and interaction. You can choose to disable
-          cookies through your browser settings, but this may limit certain
-          functionalities of our site.
+      <Stack spacing={3}>
+        <Text>
+          We may use the information we collect for several purposes, including:
         </Text>
+        <Text>
+          - <strong>To provide and maintain our services:</strong> Your data
+          helps us to deliver relevant content and improve the overall
+          functionality of the website.
+        </Text>
+        <Text>
+          - <strong>To communicate with you:</strong> We may use your contact
+          information to send updates, respond to inquiries, and provide
+          relevant information regarding our services.
+        </Text>
+        <Text>
+          - <strong>For analytics and improvement:</strong> Usage data is
+          utilized to understand how our website is used, which allows us to
+          improve and optimize the user experience.
+        </Text>
+      </Stack>
 
-        <Heading as="h2" size="lg" color="blue.600">
-          Your Consent
-        </Heading>
-        <Text fontSize="lg" color="gray.600">
-          By using our site, you consent to our privacy policy. We may update
-          this policy from time to time, and any changes will be reflected on
-          this page.
-        </Text>
+      <Heading as="h2" size="lg" mt={6} mb={4}>
+        3. How We Share Your Information
+      </Heading>
 
-        <Heading as="h2" size="lg" color="blue.600">
-          Contact Us
-        </Heading>
-        <Text fontSize="lg" color="gray.600">
-          If you have any questions regarding this privacy policy, you can
-          contact us at: <br />
-          <strong>Email:</strong> ramyantara.finserv@gmail.com <br />
-          <strong>Phone:</strong> +91 9638387371
+      <Stack spacing={3}>
+        <Text>
+          We do not sell, trade, or rent your personal information to third
+          parties. We may share your data in the following situations:
         </Text>
-      </VStack>
+        <Text>
+          - <strong>With service providers:</strong> We may share your data with
+          trusted service providers to help operate our website and conduct our
+          business, provided that these parties agree to keep your information
+          confidential.
+        </Text>
+        <Text>
+          - <strong>As required by law:</strong> We may disclose your
+          information if required by law or if we believe that such action is
+          necessary to comply with legal processes or protect the rights,
+          property, or safety of GTU Incubation Center, our users, or the
+          public.
+        </Text>
+      </Stack>
+
+      <Heading as="h2" size="lg" mt={6} mb={4}>
+        4. Security of Your Information
+      </Heading>
+
+      <Text mb={4}>
+        We take reasonable measures to protect your personal information from
+        unauthorized access, use, or disclosure. However, no method of
+        transmission over the Internet or electronic storage is 100% secure, and
+        we cannot guarantee absolute security.
+      </Text>
+
+      <Heading as="h2" size="lg" mt={6} mb={4}>
+        5. Your Choices
+      </Heading>
+
+      <Stack spacing={3}>
+        <Text>
+          You have the following rights regarding your personal information:
+        </Text>
+        <Text>
+          - <strong>Opt-out:</strong> You may opt-out of receiving promotional
+          communications from us by following the unsubscribe instructions
+          included in those communications.
+        </Text>
+        <Text>
+          - <strong>Access and update:</strong> You can request access to or
+          correction of your personal information by contacting us at{" "}
+          <Link href="mailto:support@gtuventures.com" color="teal.500">
+            support@gtuventures.com
+          </Link>
+          .
+        </Text>
+      </Stack>
+
+      <Heading as="h2" size="lg" mt={6} mb={4}>
+        6. Links to Other Websites
+      </Heading>
+
+      <Text mb={4}>
+        Our Website may contain links to third-party websites. We are not
+        responsible for the privacy practices or the content of these sites. We
+        encourage users to review the privacy policies of any external sites
+        before providing personal information.
+      </Text>
+
+      <Heading as="h2" size="lg" mt={6} mb={4}>
+        7. Changes to This Privacy Policy
+      </Heading>
+
+      <Text mb={4}>
+        We reserve the right to update this Privacy Policy from time to time.
+        Any changes will be posted on this page with an updated effective date.
+        We encourage you to review this policy periodically to stay informed
+        about how we are protecting your information.
+      </Text>
+
+      <Heading as="h2" size="lg" mt={6} mb={4}>
+        8. Contact Us
+      </Heading>
+
+      <Text mb={4}>
+        If you have any questions about this Privacy Policy or your personal
+        information, please contact us at:
+      </Text>
+
+      <Text mb={4}>
+        <strong>GTU Incubation Center</strong>
+        <br />
+        Email:{" "}
+        <Link href="mailto:support@gtuventures.com" color="teal.500">
+          support@gtuventures.com
+        </Link>
+      </Text>
     </Box>
   );
 };

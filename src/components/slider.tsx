@@ -10,11 +10,10 @@ import {
   Spinner,
   Alert,
   AlertIcon,
+  useInterval,  // Chakra UI useInterval
 } from "@chakra-ui/react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import supabase from "../../supabase";
-
-// Initialize the Supabase client
+import supabase from "../../supabase";  // Assuming you have a supabase setup
 
 export default function ImageCarousel() {
   const [slides, setSlides] = React.useState<
@@ -54,6 +53,11 @@ export default function ImageCarousel() {
     fetchImages();
   }, []);
 
+  // Automatically move to the next slide every 3 seconds
+  useInterval(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  }, 3000); // Change slide every 3 seconds
+
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
@@ -91,6 +95,7 @@ export default function ImageCarousel() {
       maxW={{ base: "sm", sm: "md", md: "lg", lg: "xl", xl: "2xl" }}
       mx="auto"
       py={4}
+      position="relative"
     >
       <Text fontSize="2xl" fontWeight="bold" textAlign="center" mb={4}>
         Events By GTU Ventures
@@ -113,7 +118,7 @@ export default function ImageCarousel() {
             position="absolute"
             top="0"
             left="0"
-            transition="opacity 0.6s ease-in-out"
+            transition="opacity 1s ease-in-out" // Smooth transition
             opacity={index === currentIndex ? 1 : 0}
           />
         ))}
@@ -128,46 +133,39 @@ export default function ImageCarousel() {
           opacity="0.4"
           display="flex"
           flexDirection="column"
-          justifyContent="center"
+          justifyContent="end"
           alignItems="center"
           p={4}
         >
-          <Heading
-            color="white"
-            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-            mb={2}
-          >
-            {slides[currentIndex].title}
-          </Heading>
-          <Text color="white" fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-            {slides[currentIndex].description}
+        
+          <Text color="white" fontSize={{ base: "md", md: "lg", lg: "lg" }} as={"b"}>
+            GTU Events
           </Text>
         </Box>
 
         {/* Arrows for large screens */}
-        <Box
-          display={{ base: "none", lg: "flex" }}
+        <IconButton
+          aria-label="Previous Slide"
+          icon={<AiOutlineLeft />}
+          onClick={handlePrevious}
+          variant="outline"
           position="absolute"
           top="50%"
-          left="0"
-          right="0"
-          justifyContent="space-between"
+          left="-50px"  // Arrow positioned outside of the image
           transform="translateY(-50%)"
-          px={4}
-        >
-          <IconButton
-            aria-label="Previous Slide"
-            icon={<AiOutlineLeft />}
-            onClick={handlePrevious}
-            variant="outline"
-          />
-          <IconButton
-            aria-label="Next Slide"
-            icon={<AiOutlineRight />}
-            onClick={handleNext}
-            variant="outline"
-          />
-        </Box>
+          zIndex="1"
+        />
+        <IconButton
+          aria-label="Next Slide"
+          icon={<AiOutlineRight />}
+          onClick={handleNext}
+          variant="outline"
+          position="absolute"
+          top="50%"
+          right="-50px"  // Arrow positioned outside of the image
+          transform="translateY(-50%)"
+          zIndex="1"
+        />
       </Box>
 
       {/* Arrows for mobile view */}

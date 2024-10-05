@@ -16,7 +16,7 @@ const StatItem = ({
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const duration = 2000; // 2 seconds
+    const duration = 9000; // 9 seconds
     const steps = 60;
     const increment = value / steps;
     let current = 0;

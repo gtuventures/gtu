@@ -41,31 +41,33 @@ export default function Component() {
             gap={6}
             justify="center"
           >
-            {teamMembers.map((member) => (
-              <Flex
-                key={member.name}
-                direction="column"
-                align="center"
-                justify="center"
-                p={6}
-                bg="card"
-                rounded="lg"
-                textAlign="center"
-                boxShadow="sm"
-                w={{ base: "100%", md: "45%", lg: "30%" }}
-              >
-                <Avatar src={member.image} name={member.name} size="xl" />
-                <VStack spacing={2} mt={4}>
-                  <Heading as="h3" size="md">
-                    {member.name}
-                  </Heading>
-                  <Text color="muted">{member.role}</Text>
-                  <Text color="muted" fontSize="sm">
-                    {member.description}
-                  </Text>
-                </VStack>
-              </Flex>
-            ))}
+            {teamMembers.map((member) => 
+              member && (
+                <Flex
+                  key={member.name}
+                  direction="column"
+                  align="center"
+                  justify="center"
+                  p={6}
+                  bg="card"
+                  rounded="lg"
+                  textAlign="center"
+                  boxShadow="sm"
+                  w={{ base: "100%", md: "45%", lg: "30%" }}
+                >
+                  <Avatar  name={member.name} size="xl" />
+                  <VStack spacing={2} mt={4}>
+                    <Heading as="h3" size="md">
+                      {member.name}
+                    </Heading>
+                    <Text color="muted">{member.role}</Text>
+                    <Text color="muted" fontSize="sm">
+                      {member.description}
+                    </Text>
+                  </VStack>
+                </Flex>
+              )
+            )}
           </Flex>
         </Container>
       </Box>
@@ -76,45 +78,84 @@ export default function Component() {
 // Data for team members
 const teamMembers = [
   {
-    name: "John Doe",
-    role: "Founder & CEO",
+    name: "Dr. Tushar Panchal",
+    role: "Group CEO",
     description:
-      "John has over 15 years of experience in the startup ecosystem, having founded and scaled multiple successful companies.",
-    image: "/placeholder-user.jpg",
+      " Dr. Tushar Panchal is a.",
+    // image: "/placeholder-user.jpg",
   },
   {
-    name: "Jane Smith",
-    role: "Head of Investments",
+    name: "Mr. Mahavirsingh Makwana",
+    role: "Incubation Manager",
     description:
-      "Jane has a deep understanding of the venture capital landscape and a proven track record of identifying promising startups.",
-    image: "/placeholder-user.jpg",
+      "Mr. Mahavirsingh Makwana is a .",
+    // image: "/placeholder-user.jpg",
   },
   {
-    name: "Michael Johnson",
-    role: "Entrepreneur-in-Residence",
+    name: "Ms. Akanksha Gupta",
+    role: "OSD Incubation & Administrator",
     description:
       "Michael has founded and led multiple successful startups, and now shares his expertise with the next generation of entrepreneurs.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   {
-    name: "Emily Wilson",
-    role: "Head of Accelerator",
+    name: "Mr. Hemik D Mehta",
+    role: "Reginal Innovation & Start-up Coordinetor",
     description:
       "Emily has a wealth of experience in building and scaling accelerator programs, helping startups achieve their full potential.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   {
-    name: "David Lee",
-    role: "Mentor",
+    name: "Ms. Manali Patel",
+    role: "Incubation Associate",
     description:
       "David has over a decade of experience as a successful entrepreneur and angel investor, and now shares his expertise with our startups.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   {
-    name: "Sarah Chen",
-    role: "Operations Manager",
+    name: "Ms. Nidhi Chaudhari",
+    role: "Accountant",
     description:
       "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
+  },
+  ,
+  {
+    name: "Mr. Vishal Rathod ",
+    role: "Admin (Incubation)",
+    description:
+      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
+    // image: "/placeholder-user.jpg",
+  },
+  {
+    name: "Ms. Dhara Dabhi ",
+    role: "Office Assistant",
+    description:
+      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
+    // image: "/placeholder-user.jpg",
+  },
+
+  {
+    name: "Mr. Siddharaj Solanki",
+    role: "Office Assistant",
+    description:
+      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
+    // image: "/placeholder-user.jpg",
+  },
+
+  {
+    name: "Mr. Neelesh Sharma",
+    role: "Assistant Professor, DIC",
+    description:
+      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
+    // image: "/placeholder-user.jpg",
+  },
+
+  {
+    name: "Mr. Rakesh Nayi",
+    role: "Office Assistant",
+    description:
+      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
+    // image: "/placeholder-user.jpg",
   },
 ];

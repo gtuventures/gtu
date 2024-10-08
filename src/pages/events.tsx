@@ -1,108 +1,117 @@
-import { Box, Heading, Text, Image, VStack, HStack } from "@chakra-ui/react";
-import { Carousel } from "react-responsive-carousel"; // Install if needed
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Box, Heading, Text, Image, VStack, HStack } from "@chakra-ui/react";
+// import { Carousel } from "react-responsive-carousel"; // Install if needed
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-export default function Component() {
+// export default function Component() {
+//   return (
+//     <Box maxW="6xl" mx="auto" px={{ base: 4, md: 6 }} py={{ base: 12, md: 16 }}>
+//       <VStack spacing={4} mb={{ base: 8, md: 12 }} align="center">
+//         <Heading
+//           as="h2"
+//           fontSize={{ base: "3xl", md: "4xl" }}
+//           fontWeight="bold"
+//         >
+//           GTU Events
+//         </Heading>
+//         <Text
+//           color="gray.500"
+//           fontSize={{ base: "md", md: "lg" }}
+//           textAlign="center"
+//           maxW="md"
+//         >
+//           Check out our upcoming events and mark your calendars!
+//         </Text>
+//       </VStack>
+
+//       <Box position="relative">
+//         <Carousel
+//           autoPlay
+//           interval={5000}
+//           infiniteLoop
+//           showArrows
+//           showIndicators
+//           showStatus={false}
+//         >
+//           <CarouselItem
+//             imgSrc="./events/1.png"
+//             eventTitle="Startup Pitch Competition"
+//           />
+//           <CarouselItem
+//             imgSrc="./events/2M8A4937.JPG"
+//             eventTitle="Startup Pitch Competition"
+//           />
+//           <CarouselItem
+//             imgSrc="./events/20221018_184401.jpg"
+//             eventTitle="Startup Pitch Competition"
+//           />
+//           <CarouselItem
+//             imgSrc="./events/280942987_5341870742543407_7213921037135222906_n.jpg"
+//             eventTitle="Startup Pitch Competition"
+//           />
+//           <CarouselItem
+//             imgSrc="./events/aic.png"
+//             eventTitle="Startup Pitch Competition"
+//           />{" "}
+//           <CarouselItem
+//             imgSrc="./events/Digital.png"
+//             eventTitle="Startup Pitch Competition"
+//           />
+//           <CarouselItem
+//             imgSrc="./events/NSD.png"
+//             eventTitle="Startup Pitch Competition"
+//           />
+//           <CarouselItem
+//             imgSrc="./events/p2.jpg"
+//             eventTitle="Startup Pitch Competition"
+//           />
+//           <CarouselItem
+//             imgSrc="./events/piyush.jpg"
+//             eventTitle="Startup Pitch Competition"
+//           />
+//           <CarouselItem
+//             imgSrc="./events/s.png"
+//             eventTitle="Startup Pitch Competition"
+//           />
+//         </Carousel>
+//       </Box>
+//     </Box>
+//   );
+// }
+
+// function CarouselItem({ imgSrc, eventTitle }: {
+//     imgSrc: string;
+//     eventTitle: string;
+// }) {
+//   return (
+//     <Box position="relative">
+//       <Image
+//         src={imgSrc}
+//         alt={eventTitle}
+//         w="full"
+//         h={{ base: "400px", md: "500px" }}
+//         objectFit="cover"
+//       />
+//       <Box
+//         position="absolute"
+//         inset={0}
+//         bgGradient="linear(to-t, blackAlpha.700, transparent)"
+//         display="flex"
+//         alignItems="end"
+//         p={{ base: 4, md: 6 }}
+//       >
+//         <Heading as="h3" fontSize={{ base: "lg", md: "xl" }} color="white">
+//           {eventTitle}
+//         </Heading>
+//       </Box>
+//     </Box>
+//   );
+// }
+import React from 'react'
+
+function events() {
   return (
-    <Box maxW="6xl" mx="auto" px={{ base: 4, md: 6 }} py={{ base: 12, md: 16 }}>
-      <VStack spacing={4} mb={{ base: 8, md: 12 }} align="center">
-        <Heading
-          as="h2"
-          fontSize={{ base: "3xl", md: "4xl" }}
-          fontWeight="bold"
-        >
-          GTU Events
-        </Heading>
-        <Text
-          color="gray.500"
-          fontSize={{ base: "md", md: "lg" }}
-          textAlign="center"
-          maxW="md"
-        >
-          Check out our upcoming events and mark your calendars!
-        </Text>
-      </VStack>
-
-      <Box position="relative">
-        <Carousel
-          autoPlay
-          interval={5000}
-          infiniteLoop
-          showArrows
-          showIndicators
-          showStatus={false}
-        >
-          <CarouselItem
-            imgSrc="./events/1.png"
-            eventTitle="Startup Pitch Competition"
-          />
-          <CarouselItem
-            imgSrc="./events/2M8A4937.JPG"
-            eventTitle="Startup Pitch Competition"
-          />
-          <CarouselItem
-            imgSrc="./events/20221018_184401.jpg"
-            eventTitle="Startup Pitch Competition"
-          />
-          <CarouselItem
-            imgSrc="./events/280942987_5341870742543407_7213921037135222906_n.jpg"
-            eventTitle="Startup Pitch Competition"
-          />
-          <CarouselItem
-            imgSrc="./events/aic.png"
-            eventTitle="Startup Pitch Competition"
-          />{" "}
-          <CarouselItem
-            imgSrc="./events/Digital.png"
-            eventTitle="Startup Pitch Competition"
-          />
-          <CarouselItem
-            imgSrc="./events/NSD.png"
-            eventTitle="Startup Pitch Competition"
-          />
-          <CarouselItem
-            imgSrc="./events/p2.jpg"
-            eventTitle="Startup Pitch Competition"
-          />
-          <CarouselItem
-            imgSrc="./events/piyush.jpg"
-            eventTitle="Startup Pitch Competition"
-          />
-          <CarouselItem
-            imgSrc="./events/s.png"
-            eventTitle="Startup Pitch Competition"
-          />
-        </Carousel>
-      </Box>
-    </Box>
-  );
+    <div>events</div>
+  )
 }
 
-function CarouselItem({ imgSrc, eventTitle }: {
-    imgSrc: string;
-    eventTitle: string;
-}) {
-  return (
-    <Box position="relative">
-      <Image
-        src={imgSrc}
-        alt={eventTitle}
-        w="full"
-        h={{ base: "400px", md: "500px" }}
-        objectFit="cover"
-      />
-      <Box
-        position="absolute"
-        inset={0}
-        bgGradient="linear(to-t, blackAlpha.700, transparent)"
-        display="flex"
-        alignItems="end"
-        p={{ base: 4, md: 6 }}
-      >
-        <Heading as="h3" fontSize={{ base: "lg", md: "xl" }} color="white">
-          {eventTitle}
-        </Heading>
-      </Box>
-    </Box>
-  );
-}
+export default events

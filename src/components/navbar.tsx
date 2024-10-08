@@ -57,11 +57,11 @@ export default function WithSubnavigation() {
             Register Now
           </Link>
           <Link
-            href="/login"
+            href="/events"
             fontWeight="semibold"
             _hover={{ color: "purple.300" }}
           >
-            Admin Login
+            Events 
           </Link>
           <Link
             href="/teams"
@@ -118,7 +118,7 @@ export default function WithSubnavigation() {
                   Register now
                 </Link>
                 <Link
-                  href="/login"
+                  href="/events"
                   w="full"
                   textAlign="center"
                   py={3}
@@ -127,7 +127,7 @@ export default function WithSubnavigation() {
                   borderRadius="md"
                   _hover={{ bg: "purple.400" }}
                 >
-                  Admin Login
+                  events
                 </Link>
                 <Link
                   href="/teams"

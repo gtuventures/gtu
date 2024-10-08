@@ -33,15 +33,15 @@ export default function Component() {
           showStatus={false}
         >
           <CarouselItem
-            imgSrc="/placeholder.svg"
+            imgSrc="./events/1.png"
             eventTitle="Startup Pitch Competition"
           />
           <CarouselItem
-            imgSrc="/placeholder.svg"
+            imgSrc="./events/2M8A4937.JPG"
             eventTitle="Startup Pitch Competition"
           />
           <CarouselItem
-            imgSrc="/placeholder.svg"
+            imgSrc="./events/20221018_184401.jpg"
             eventTitle="Startup Pitch Competition"
           />
         </Carousel>

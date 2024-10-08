@@ -176,10 +176,10 @@ export default function Component() {
 
           {/* Image Carousel Section */}
 
-          <ImageCarousel />
 
           {/* Startup Stats Section */}
           <StartupStats />
+          <ImageCarousel />
 
           {/* About Us Section */}
           <Box id="about" py={{ base: 12, md: 24, lg: 32 }}>

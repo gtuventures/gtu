@@ -54,7 +54,12 @@ export default function Component() {
                 mentorship, and support startups need to succeed.
               </Text>
             </VStack>
-            <Box display="flex" justifyContent="center" mt={{ base: 6, lg: 0 }} m={4}>
+            <Box
+              display="flex"
+              justifyContent="center"
+              mt={{ base: 6, lg: 0 }}
+              m={4}
+            >
               <Image
                 src="/incub.webp"
                 width="475px"
@@ -73,8 +78,12 @@ export default function Component() {
             {/* Vision Section */}
             <Box w={{ base: "full", md: "50%" }} position="relative">
               <Image
-                src={showVision ? "/img.webp":"incub.webp" }
-                alt={showVision ? "Incubation Center Interior" : "Mission Image"}
+                src={
+                  showVision ? "/aic-gtu-gisc-1.jpeg" : "/about-aic-gisc.png"
+                }
+                alt={
+                  showVision ? "Incubation Center Interior" : "Mission Image"
+                }
                 boxSize="100%"
                 objectFit="cover"
               />
@@ -91,11 +100,20 @@ export default function Component() {
                 onClick={toggleView}
               >
                 <Flex align="center" mb={4}>
-                  <FaLightbulb className="w-8 h-8 text-yellow-500 mr-4"size={30} />
-                  <Heading as="h2" size="lg">Our Vision</Heading>
+                  <FaLightbulb
+                    className="w-8 h-8 text-yellow-500 mr-4"
+                    size={30}
+                  />
+                  <Heading as="h2" size="lg">
+                    Our Vision
+                  </Heading>
                 </Flex>
                 <Text color="gray.600">
-                  Our Vision is the creation and growth of new ideas through technology and business startups. We nurture the culture of innovative thinking and technology-led entrepreneurship to foster an entrepreneurial culture and contribute to social and national development.
+                  Our Vision is the creation and growth of new ideas through
+                  technology and business startups. We nurture the culture of
+                  innovative thinking and technology-led entrepreneurship to
+                  foster an entrepreneurial culture and contribute to social and
+                  national development.
                 </Text>
               </Box>
 
@@ -109,11 +127,16 @@ export default function Component() {
                 onClick={toggleView}
               >
                 <Flex align="center" mb={4}>
-                  <PiWatch className="w-8 h-8 text-blue-400 mr-4 " size={30}/>
-                  <Heading as="h2" size="lg">Our Mission</Heading>
+                  <PiWatch className="w-8 h-8 text-blue-400 mr-4 " size={30} />
+                  <Heading as="h2" size="lg">
+                    Our Mission
+                  </Heading>
                 </Flex>
                 <Text>
-                  To be the leading Incubator Center in the nation promoting entrepreneurship and creating innovative ideas to transform education, projects, and present them into successful business opportunities.
+                  To be the leading Incubator Center in the nation promoting
+                  entrepreneurship and creating innovative ideas to transform
+                  education, projects, and present them into successful business
+                  opportunities.
                 </Text>
               </Box>
             </Flex>
@@ -184,13 +207,26 @@ export default function Component() {
 
                       <Flex gap={4}>
                         {member.twitter && (
-                          <a href={member.twitter} target="_blank" rel="noopener noreferrer">
+                          <a
+                            href={member.twitter}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
                           </a>
                         )}
                         {member.linkedin && (
-                          <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                            <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Icon
+                              as={FaLinkedin}
+                              w={6}
+                              h={6}
+                              cursor="pointer"
+                            />
                           </a>
                         )}
                       </Flex>
@@ -265,13 +301,26 @@ export default function Component() {
 
                       <Flex gap={4}>
                         {member.twitter && (
-                          <a href={member.twitter} target="_blank" rel="noopener noreferrer">
+                          <a
+                            href={member.twitter}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
                           </a>
                         )}
                         {member.linkedin && (
-                          <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                            <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Icon
+                              as={FaLinkedin}
+                              w={6}
+                              h={6}
+                              cursor="pointer"
+                            />
                           </a>
                         )}
                       </Flex>

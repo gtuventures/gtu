@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   Box,
   Flex,
@@ -10,41 +13,25 @@ import {
   VStack,
   HStack,
   Button,
+  Fade,
+  Container,
+  Icon,
 } from "@chakra-ui/react";
-import { FaMountain } from "react-icons/fa";
+import { SunIcon, LockIcon } from "@chakra-ui/icons"; // Using Chakra UI icons
+import { FaMountain, FaLightbulb, FaRegClock } from "react-icons/fa";
+import { PiWatch } from "react-icons/pi"; // Import PiWatch icon
+import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import NextLink from "next/link";
 
 export default function Component() {
+  const [showVision, setShowVision] = useState(true);
+
+  const toggleView = () => {
+    setShowVision(!showVision);
+  };
+
   return (
     <Flex direction="column" minH="100vh">
-      {/* <Box
-        as="header"
-        px={{ base: 4, lg: 6 }}
-        h="14"
-        display="flex"
-        alignItems="center"
-      >
-        <NextLink href="#" passHref>
-          <ChakraLink display="flex" alignItems="center">
-            <FaMountain size="24px" />
-            <Text srOnly>GTU Ventures</Text>
-          </ChakraLink>
-        </NextLink>
-        <HStack ml="auto" spacing={{ base: 4, sm: 6 }}>
-          {["About", "Programs", "Success Stories", "Contact"].map((item) => (
-            <NextLink key={item} href="#" passHref>
-              <ChakraLink
-                fontSize="sm"
-                fontWeight="medium"
-                _hover={{ textDecoration: "underline" }}
-              >
-                {item}
-              </ChakraLink>
-            </NextLink>
-          ))}
-        </HStack>
-      </Box> */}
-
       <Box as="main" flex="1">
         {/* Section 1 */}
         <Box w="full" py={{ base: 12, md: 24, lg: 32 }}>
@@ -80,230 +67,307 @@ export default function Component() {
           </Flex>
         </Box>
 
-        {/* Section 2 */}
-        <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.100">
-          <VStack
-            align="center"
-            spacing={4}
-            textAlign="center"
-            px={{ base: 4, md: 6 }}
-          >
-            <Heading as="h2" fontSize={{ base: "3xl", sm: "5xl" }}>
-              Our Incubation Program
-            </Heading>
-            <Text
-              maxW="900px"
-              color="gray.600"
-              fontSize={{ base: "md", lg: "lg" }}
-            >
-              At GTU Ventures, we provide a comprehensive incubation program
-              that supports entrepreneurs at every stage of their journey. From
-              seed funding and mentorship to access to industry experts and
-              state-of-the-art facilities, our program is designed to help
-              startups thrive.
-            </Text>
-          </VStack>
+        {/* Vision & Mission Section */}
+        <Box w="full" h="100vh" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
+          <Flex direction={{ base: "column", md: "row" }} h="full">
+            {/* Vision Section */}
+            <Box w={{ base: "full", md: "50%" }} position="relative">
+              <Image
+                src={showVision ? "/img.webp":"incub.webp" }
+                alt={showVision ? "Incubation Center Interior" : "Mission Image"}
+                boxSize="100%"
+                objectFit="cover"
+              />
+            </Box>
 
-          <Flex
-            direction={{ base: "column", lg: "row" }}
-            maxW="5xl"
-            mx="auto"
-            py={12}
-            gap={12}
-            align="center"
-            m={{ base: 4,md : "auto"}}  // Add this line
-          >
-            <Image
-              src="/incub2.webp"
-              width="550px"
-              height="310px"
-              alt="Incubation Program"
-              borderRadius="xl"
-              objectFit="cover"
-              order={{ base: "initial", lg: "last" }}
-            />
-            <VStack align="flex-start" spacing={4}>
-              {[
-                {
-                  title: "Seed Funding",
-                  description:
-                    "Access to early-stage funding to kickstart your venture.",
-                },
-                {
-                  title: "Mentorship",
-                  description:
-                    "Guidance from experienced entrepreneurs and industry experts.",
-                },
-                {
-                  title: "Facilities",
-                  description:
-                    "State-of-the-art coworking spaces and labs to support your growth.",
-                },
-              ].map((item) => (
-                <Box key={item.title}>
-                  <Heading as="h3" fontSize="xl" fontWeight="bold">
-                    {item.title}
-                  </Heading>
-                  <Text color="gray.600">{item.description}</Text>
-                </Box>
-              ))}
-            </VStack>
-          </Flex>
-        </Box>
-
-        {/* Section 3 */}
-        <Box w="full" py={{ base: 12, md: 24, lg: 32 }}>
-          <VStack align="center" spacing={4} textAlign="center">
-            <Heading as="h2" fontSize={{ base: "3xl", sm: "5xl" }}>
-              Meet Our Team
-            </Heading>
-            <Text
-              maxW="900px"
-              color="gray.600"
-              fontSize={{ base: "md", lg: "lg" }}
-            >
-              Our team of experts is dedicated to helping startups succeed. With
-              backgrounds in entrepreneurship, business, and technology, they
-              provide the guidance and support needed to turn ideas into
-              thriving businesses.
-            </Text>
-          </VStack>
-
-          <Flex
-            maxW="5xl"
-            mx="auto"
-            py={12}
-            gap={12}
-            wrap="wrap"
-            justify="center"
-          >
-            {[
-              {
-                name: "Tushar sir",
-                role: "CEO",
-                avatar: "/placeholder-user.jpg",
-              },
-              {
-                name: "Jane Appleseed",
-                role: "Program Director",
-                avatar: "/placeholder-user.jpg",
-              },
-              {
-                name: "Mihir Shah Sir",
-                role: "Venture Advisor",
-                avatar: "/placeholder-user.jpg",
-              },
-            ].map((person) => (
-              <VStack key={person.name} align="center" spacing={4}>
-                <Avatar size="xl" src={person.avatar}>
-                  <AvatarBadge boxSize="1.25em" bg="green.500" />
-                </Avatar>
-                <Heading as="h3" fontSize="xl">
-                  {person.name}
-                </Heading>
-                <Text color="gray.600">{person.role}</Text>
-              </VStack>
-            ))}
-          </Flex>
-        </Box>
-
-        {/* Section 4 */}
-        <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.100">
-          <VStack align="center" spacing={4} textAlign="center">
-            <Heading as="h2" fontSize={{ base: "3xl", sm: "5xl" }}>
-              Success Stories
-            </Heading>
-            <Text
-              maxW="900px"
-              color="gray.600"
-              fontSize={{ base: "md", lg: "lg" }}
-            >
-              Hear from the entrepreneurs who have transformed their ideas into
-              thriving businesses with the support of GTU Ventures.
-            </Text>
-          </VStack>
-
-          <Flex
-            maxW="5xl"
-            mx="auto"
-            py={12}
-            gap={12}
-            wrap="wrap"
-            justify="center"
-          >
-            {[
-              {
-                name: "Acme Inc.",
-                story:
-                  "GTU Ventures' incubation program provided us with the resources and support we needed to turn our idea into a successful business. Their mentorship and access to funding were invaluable in our growth.",
-              },
-              {
-                name: "Startup XYZ",
-                story:
-                  "The GTU Ventures incubation program was a game-changer for our startup. The mentorship, networking opportunities, and access to state-of-the-art facilities helped us scale our business and achieve our goals.",
-              },
-            ].map((company) => (
-              <VStack
-                key={company.name}
-                align="flex-start"
-                spacing={4}
-                p={4}
-                bg="white"
-                borderRadius="lg"
-                boxShadow="lg"
-                maxW="md"
+            {/* Mission Section */}
+            <Flex direction="column" w={{ base: "full", md: "50%" }}>
+              <Box
+                flex="1"
+                p={8}
+                cursor="pointer"
+                transition="background-color 0.3s"
+                bg={showVision ? "white" : "gray.100"}
+                onClick={toggleView}
               >
-                <Box
-                  as="span"
-                  bg="gray.200"
-                  px={3}
-                  py={1}
-                  borderRadius="lg"
-                  fontSize="sm"
-                >
-                  Success Story
-                </Box>
-                <Heading as="h3" fontSize="2xl">
-                  {company.name}
-                </Heading>
-                <Text color="gray.600">{company.story}</Text>
-                <NextLink href="#" passHref>
-                  <Button as={ChakraLink} size="sm" colorScheme="purple">
-                    Read More
-                  </Button>
-                </NextLink>
-              </VStack>
-            ))}
+                <Flex align="center" mb={4}>
+                  <FaLightbulb className="w-8 h-8 text-yellow-500 mr-4"size={30} />
+                  <Heading as="h2" size="lg">Our Vision</Heading>
+                </Flex>
+                <Text color="gray.600">
+                  Our Vision is the creation and growth of new ideas through technology and business startups. We nurture the culture of innovative thinking and technology-led entrepreneurship to foster an entrepreneurial culture and contribute to social and national development.
+                </Text>
+              </Box>
+
+              <Box
+                flex="1"
+                p={8}
+                cursor="pointer"
+                transition="background-color 0.3s"
+                bg={!showVision ? "black" : "gray.800"}
+                color={!showVision ? "white" : "gray.300"}
+                onClick={toggleView}
+              >
+                <Flex align="center" mb={4}>
+                  <PiWatch className="w-8 h-8 text-blue-400 mr-4 " size={30}/>
+                  <Heading as="h2" size="lg">Our Mission</Heading>
+                </Flex>
+                <Text>
+                  To be the leading Incubator Center in the nation promoting entrepreneurship and creating innovative ideas to transform education, projects, and present them into successful business opportunities.
+                </Text>
+              </Box>
+            </Flex>
           </Flex>
         </Box>
-      </Box>
 
-      <Box
-        as="footer"
-        py={6}
-        borderTop="1px solid"
-        borderColor="gray.200"
-        display="flex"
-        flexDir={{ base: "column", sm: "row" }}
-        alignItems="center"
-        px={{ base: 4, md: 6 }}
-      >
-        <Text fontSize="xs" color="gray.500">
-          &copy; 2024 GTU Ventures. All rights reserved.
-        </Text>
-        <HStack ml={{ sm: "auto" }} spacing={{ base: 4, sm: 6 }}>
-          <NextLink href="#" passHref>
-            <ChakraLink fontSize="xs" _hover={{ textDecoration: "underline" }}>
-              Terms of Service
-            </ChakraLink>
-          </NextLink>
-          <NextLink href="#" passHref>
-            <ChakraLink fontSize="xs" _hover={{ textDecoration: "underline" }}>
-              Privacy Policy
-            </ChakraLink>
-          </NextLink>
-        </HStack>
+        {/* Section 2: Board of Directors */}
+        <Box w="full" py={{ base: 12, md: 24, lg: 32 }}>
+          <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
+            <Heading as="h2" size="xl" textAlign="center" mb={8}>
+              Board of Directors
+            </Heading>
+            <Flex
+              direction={{ base: "column", md: "row" }}
+              wrap="wrap"
+              gap={6}
+              justify="center"
+            >
+              {boardMembers.map((member) =>
+                member ? (
+                  <Box
+                    key={member.name}
+                    position="relative"
+                    width={{ base: "100%", md: "45%", lg: "30%" }}
+                    borderRadius="lg"
+                    overflow="hidden"
+                    boxShadow="md"
+                    role="group"
+                    textAlign="center"
+                  >
+                    <Flex justify="center" my={6}>
+                      <Avatar
+                        size="xl"
+                        name={member.name}
+                        src={member.image}
+                        mx="auto"
+                      />
+                    </Flex>
+
+                    <VStack spacing={2} mt={2} mb={6}>
+                      <Heading as="h3" size="md">
+                        {member.name}
+                      </Heading>
+                      <Text color="gray.500">{member.role}</Text>
+                    </VStack>
+
+                    {/* Hidden overlay with social media icons on hover */}
+                    <Box
+                      position="absolute"
+                      top={0}
+                      left={0}
+                      width="100%"
+                      height="100%"
+                      bg="blackAlpha.900"
+                      display="flex"
+                      flexDirection="column"
+                      justifyContent="center"
+                      alignItems="center"
+                      opacity={0}
+                      _groupHover={{ opacity: 1 }}
+                      transition="opacity 0.3s ease-in-out"
+                      color="white"
+                    >
+                      <Heading as="h4" size="md" mb={2}>
+                        {member.name}
+                      </Heading>
+                      <Text mb={4}>{member.role}</Text>
+
+                      <Flex gap={4}>
+                        {member.twitter && (
+                          <a href={member.twitter} target="_blank" rel="noopener noreferrer">
+                            <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
+                          </a>
+                        )}
+                        {member.linkedin && (
+                          <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                            <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
+                          </a>
+                        )}
+                      </Flex>
+                    </Box>
+                  </Box>
+                ) : null
+              )}
+            </Flex>
+          </Container>
+        </Box>
+
+        {/* Section 3: Team Members */}
+        <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
+          <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
+            <Heading as="h2" size="xl" textAlign="center" mb={8}>
+              Team Members
+            </Heading>
+            <Flex
+              direction={{ base: "column", md: "row" }}
+              wrap="wrap"
+              gap={6}
+              justify="center"
+            >
+              {teamMembers.map((member) =>
+                member ? (
+                  <Box
+                    key={member.name}
+                    position="relative"
+                    width={{ base: "100%", md: "45%", lg: "30%" }}
+                    borderRadius="lg"
+                    overflow="hidden"
+                    boxShadow="md"
+                    role="group"
+                    textAlign="center"
+                  >
+                    <Flex justify="center" my={6}>
+                      <Avatar
+                        size="xl"
+                        name={member.name}
+                        src={member.image}
+                        mx="auto"
+                      />
+                    </Flex>
+
+                    <VStack spacing={2} mt={2} mb={6}>
+                      <Heading as="h3" size="md">
+                        {member.name}
+                      </Heading>
+                      <Text color="gray.500">{member.role}</Text>
+                    </VStack>
+
+                    <Box
+                      position="absolute"
+                      top={0}
+                      left={0}
+                      width="100%"
+                      height="100%"
+                      bg="blackAlpha.900"
+                      display="flex"
+                      flexDirection="column"
+                      justifyContent="center"
+                      alignItems="center"
+                      opacity={0}
+                      _groupHover={{ opacity: 1 }}
+                      transition="opacity 0.3s ease-in-out"
+                      color="white"
+                    >
+                      <Heading as="h4" size="md" mb={2}>
+                        {member.name}
+                      </Heading>
+                      <Text mb={4}>{member.role}</Text>
+
+                      <Flex gap={4}>
+                        {member.twitter && (
+                          <a href={member.twitter} target="_blank" rel="noopener noreferrer">
+                            <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
+                          </a>
+                        )}
+                        {member.linkedin && (
+                          <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                            <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
+                          </a>
+                        )}
+                      </Flex>
+                    </Box>
+                  </Box>
+                ) : null
+              )}
+            </Flex>
+          </Container>
+        </Box>
       </Box>
     </Flex>
   );
 }
+
+// Data for board members
+const boardMembers = [
+  {
+    name: "Dr. Rajul Gajjar",
+    role: "Chairman and Vice Chancellor, GTU",
+    image: "/teams/rajul_gajjar.png",
+    twitter: "https://twitter.com/rajulgajjar",
+    linkedin: "https://linkedin.com/in/rajulgajjar",
+  },
+  {
+    name: "Dr. Pankajray Patel",
+    role: "I/C Vice Chancellor, GTU",
+    image: "/teams/pankajray_patel.png",
+    twitter: "https://twitter.com/rajulgajjar",
+    linkedin: "https://linkedin.com/in/rajulgajjar",
+  },
+  {
+    name: "Dr. K. N. Kher",
+    role: "Registrar, GTU",
+    image: "/teams/knkher.jpg",
+    twitter: "https://twitter.com/knkher",
+    linkedin: "https://linkedin.com/in/knkher",
+  },
+  {
+    name: "Prof. (Dr.) Shailesh Panchal",
+    role: "Director, Graduate School of Engg. & Tech., GTU",
+    image: "/teams/shailesh_panchal.jpeg",
+    twitter: "https://twitter.com/shaileshpanchal",
+    linkedin: "https://linkedin.com/in/shaileshpanchal",
+  },
+  {
+    name: "Prof. (Dr.) Sanjay Chauhan",
+    role: "Director, Graduate School of Pharmacy, GTU",
+    image: "/teams/sanjay_chauhan.jpg",
+    twitter: "https://twitter.com/mtchhabria",
+    linkedin: "https://linkedin.com/in/mtchhabria",
+  },
+  {
+    name: "Prof. (Dr.) M. T. Chhabria",
+    role: "Principal, L. M. College of Pharmacy, Ahmedabad",
+    image: "/teams/mt_chhabria.jpg",
+    twitter: "https://twitter.com/mtchhabria",
+    linkedin: "https://linkedin.com/in/mtchhabria",
+  },
+  {
+    name: "Prof. (Dr.) Vaibhav Bhatt",
+    role: "Director, School of Applied Sciences & Technology, GTU",
+    image: "/teams/vaibhav_bhatt.png",
+    twitter: "https://twitter.com/vaibhavbhatt",
+    linkedin: "https://linkedin.com/in/vaibhavbhatt",
+  },
+];
+
+// Data for team members
+const teamMembers = [
+  {
+    name: "Dr Tushar Panchal",
+    role: "Group CEO, GIC",
+    image: "/teams/tushar_panchal.jpg",
+    twitter: "https://twitter.com/tusharpanchal",
+    linkedin: "https://linkedin.com/in/tusharpanchal",
+  },
+  {
+    name: "Kamlendra Singh",
+    role: "Incubation Manager",
+    image: "/teams/kamlendra_singh.png",
+    twitter: "https://twitter.com/kamlendrasingh",
+    linkedin: "https://linkedin.com/in/kamlendrasingh",
+  },
+  {
+    name: "Nidhi Joshi",
+    role: "Executive Account & Admin",
+    image: "/teams/nidhi_joshi.png",
+    twitter: "https://twitter.com/nidhijoshi",
+    linkedin: "https://linkedin.com/in/nidhijoshi",
+  },
+  {
+    name: "Chirag Pandey",
+    role: "Project Assistant",
+    image: "/teams/chirag_pandey.png",
+    twitter: "https://twitter.com/chiragpandey",
+    linkedin: "https://linkedin.com/in/chiragpandey",
+  },
+];

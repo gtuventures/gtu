@@ -105,7 +105,86 @@ export default function Component() {
                       <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                         <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
                       </a>
+                    </Flex>
+                  </Box>
+                </Box>
+              ) : null
+            )}
+          </Flex>
+        </Container>
+      </Box>
 
+      {/* New Section: Team Members with Hover Effect */}
+      <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
+        <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
+          <Heading as="h2" size="xl" textAlign="center" mb={8}>
+            Team Members
+          </Heading>
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            wrap="wrap"
+            gap={6}
+            justify="center"
+          >
+            {teamMembers.map((member) =>
+              member ? (
+                <Box
+                  key={member.name}
+                  position="relative"
+                  width={{ base: "100%", md: "45%", lg: "30%" }}
+                  borderRadius="lg"
+                  overflow="hidden"
+                  boxShadow="md"
+                  role="group"
+                  textAlign="center" // Center the text as well
+                >
+                  {/* Centering the Avatar */}
+                  <Flex justify="center" my={6}>
+                    <Avatar
+                      size="xl"
+                      name={member.name}
+                      src={member.image}
+                      mx="auto" // Center horizontally
+                    />
+                  </Flex>
+
+                  <VStack spacing={2} mt={2} mb={6}>
+                    <Heading as="h3" size="md">
+                      {member.name}
+                    </Heading>
+                    <Text color="gray.500">{member.role}</Text>
+                  </VStack>
+
+                  {/* Hidden overlay with social media icons on hover */}
+                  <Box
+                    position="absolute"
+                    top={0}
+                    left={0}
+                    width="100%"
+                    height="100%"
+                    bg="blackAlpha.900"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    opacity={0}
+                    _groupHover={{ opacity: 1 }}
+                    transition="opacity 0.3s ease-in-out"
+                    color="white"
+                  >
+                    <Heading as="h4" size="md" mb={2}>
+                      {member.name}
+                    </Heading>
+                    <Text mb={4}>{member.role}</Text>
+
+                    {/* Social Media Icons with Links */}
+                    <Flex gap={4}>
+                      <a href={member.twitter} target="_blank" rel="noopener noreferrer">
+                        <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
+                      </a>
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                        <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
+                      </a>
                     </Flex>
                   </Box>
                 </Box>
@@ -119,10 +198,17 @@ export default function Component() {
 }
 
 // Data for board members
+// Data for board members
 const boardMembers = [
   {
+    name: "Dr. Rajul Gajjar",
+    role: "Chairman and Vice Chancellor,GTU",
+    image: "/teams/rajul_gajjar.png",
+  },
+
+  {
     name: "Dr Pankajray Patel",
-    role: " I/C Vice Chancellor, Gujarat Technological University",
+    role: " I/C Vice Chancellor,GTU",
     image: "/teams/pankajray_patel.png",
     twitter: "https://twitter.com/rajulgajjar",
     linkedin: "https://linkedin.com/in/rajulgajjar",
@@ -169,7 +255,17 @@ const boardMembers = [
     twitter: "https://twitter.com/vaibhavbhatt",
     linkedin: "https://linkedin.com/in/vaibhavbhatt",
   },
-  // 6. Kamlendra Singh, Incubation Manager
+];
+
+// Data for team members
+const teamMembers = [
+  {
+    name:"Dr Tushar Panchal",
+    role:"Group CEO, GIC",
+    image:"/teams/tushar_panchal.jpg",
+    twitter:"https://twitter.com/tusharpanchal",
+    linkedin:"https://linkedin.com/in/tusharpanchal",
+  },
   {
     name: "Kamlendra Singh",
     role: "Incubation Manager",
@@ -177,7 +273,6 @@ const boardMembers = [
     twitter: "https://twitter.com/kamlendrasingh",
     linkedin: "https://linkedin.com/in/kamlendrasingh",
   },
-  // 7. Nidhi Joshi, Executive Account & Admin
   {
     name: "Nidhi Joshi",
     role: "Executive Account & Admin",
@@ -185,7 +280,6 @@ const boardMembers = [
     twitter: "https://twitter.com/nidhijoshi",
     linkedin: "https://linkedin.com/in/nidhijoshi",
   },
-  // 8. Chirag Pandey, Project Assistant
   {
     name: "Chirag Pandey",
     role: "Project Assistant",

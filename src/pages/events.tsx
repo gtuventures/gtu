@@ -11,7 +11,7 @@ export default function Component() {
           fontSize={{ base: "3xl", md: "4xl" }}
           fontWeight="bold"
         >
-          Upcoming Events
+          GTU Events
         </Heading>
         <Text
           color="gray.500"
@@ -42,6 +42,34 @@ export default function Component() {
           />
           <CarouselItem
             imgSrc="./events/20221018_184401.jpg"
+            eventTitle="Startup Pitch Competition"
+          />
+          <CarouselItem
+            imgSrc="./events/280942987_5341870742543407_7213921037135222906_n.jpg"
+            eventTitle="Startup Pitch Competition"
+          />
+          <CarouselItem
+            imgSrc="./events/aic.png"
+            eventTitle="Startup Pitch Competition"
+          />{" "}
+          <CarouselItem
+            imgSrc="./events/Digital.png"
+            eventTitle="Startup Pitch Competition"
+          />
+          <CarouselItem
+            imgSrc="./events/NSD.png"
+            eventTitle="Startup Pitch Competition"
+          />
+          <CarouselItem
+            imgSrc="./events/p2.jpg"
+            eventTitle="Startup Pitch Competition"
+          />
+          <CarouselItem
+            imgSrc="./events/piyush.jpg"
+            eventTitle="Startup Pitch Competition"
+          />
+          <CarouselItem
+            imgSrc="./events/s.png"
             eventTitle="Startup Pitch Competition"
           />
         </Carousel>

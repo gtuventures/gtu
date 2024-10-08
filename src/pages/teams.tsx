@@ -55,7 +55,7 @@ export default function Component() {
                   boxShadow="sm"
                   w={{ base: "100%", md: "45%", lg: "30%" }}
                 >
-                  <Avatar src={member.image} name={member.name} size="xl" />
+                  <Avatar  name={member.name} size="xl" />
                   <VStack spacing={2} mt={4}>
                     <Heading as="h3" size="md">
                       {member.name}
@@ -82,42 +82,42 @@ const teamMembers = [
     role: "Group CEO",
     description:
       " Dr. Tushar Panchal is a.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   {
     name: "Mr. Mahavirsingh Makwana",
     role: "Incubation Manager",
     description:
       "Mr. Mahavirsingh Makwana is a .",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   {
     name: "Ms. Akanksha Gupta",
     role: "OSD Incubation & Administrator",
     description:
       "Michael has founded and led multiple successful startups, and now shares his expertise with the next generation of entrepreneurs.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   {
     name: "Mr. Hemik D Mehta",
     role: "Reginal Innovation & Start-up Coordinetor",
     description:
       "Emily has a wealth of experience in building and scaling accelerator programs, helping startups achieve their full potential.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   {
     name: "Ms. Manali Patel",
     role: "Incubation Associate",
     description:
       "David has over a decade of experience as a successful entrepreneur and angel investor, and now shares his expertise with our startups.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   {
     name: "Ms. Nidhi Chaudhari",
     role: "Accountant",
     description:
       "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   ,
   {
@@ -125,14 +125,14 @@ const teamMembers = [
     role: "Admin (Incubation)",
     description:
       "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
   {
     name: "Ms. Dhara Dabhi ",
     role: "Office Assistant",
     description:
       "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
 
   {
@@ -140,7 +140,7 @@ const teamMembers = [
     role: "Office Assistant",
     description:
       "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
 
   {
@@ -148,7 +148,7 @@ const teamMembers = [
     role: "Assistant Professor, DIC",
     description:
       "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
 
   {
@@ -156,6 +156,6 @@ const teamMembers = [
     role: "Office Assistant",
     description:
       "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    image: "/placeholder-user.jpg",
+    // image: "/placeholder-user.jpg",
   },
 ];

@@ -6,7 +6,9 @@ import {
   VStack,
   Avatar,
   Container,
+  Icon,
 } from "@chakra-ui/react";
+import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Component() {
   return (
@@ -32,41 +34,82 @@ export default function Component() {
         </Container>
       </Box>
 
-      {/* Second Section: Team Members */}
+      {/* Second Section: Board of Directors with Hover Effect */}
       <Box w="full" py={{ base: 12, md: 24, lg: 32 }}>
         <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
+          <Heading as="h2" size="xl" textAlign="center" mb={8}>
+            Board of Directors
+          </Heading>
           <Flex
             direction={{ base: "column", md: "row" }}
             wrap="wrap"
             gap={6}
             justify="center"
           >
-            {teamMembers.map((member) => 
-              member && (
-                <Flex
+            {boardMembers.map((member) =>
+              member ? (
+                <Box
                   key={member.name}
-                  direction="column"
-                  align="center"
-                  justify="center"
-                  p={6}
-                  bg="card"
-                  rounded="lg"
-                  textAlign="center"
-                  boxShadow="sm"
-                  w={{ base: "100%", md: "45%", lg: "30%" }}
+                  position="relative"
+                  width={{ base: "100%", md: "45%", lg: "30%" }}
+                  borderRadius="lg"
+                  overflow="hidden"
+                  boxShadow="md"
+                  role="group"
+                  textAlign="center" // Center the text as well
                 >
-                  <Avatar  name={member.name} size="xl" />
-                  <VStack spacing={2} mt={4}>
+                  {/* Centering the Avatar */}
+                  <Flex justify="center" my={6}>
+                    <Avatar
+                      size="xl"
+                      name={member.name}
+                      src={member.image}
+                      mx="auto" // Center horizontally
+                    />
+                  </Flex>
+
+                  <VStack spacing={2} mt={2} mb={6}>
                     <Heading as="h3" size="md">
                       {member.name}
                     </Heading>
-                    <Text color="muted">{member.role}</Text>
-                    <Text color="muted" fontSize="sm">
-                      {member.description}
-                    </Text>
+                    <Text color="gray.500">{member.role}</Text>
                   </VStack>
-                </Flex>
-              )
+
+                  {/* Hidden overlay with social media icons on hover */}
+                  <Box
+                    position="absolute"
+                    top={0}
+                    left={0}
+                    width="100%"
+                    height="100%"
+                    bg="blackAlpha.900"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    opacity={0}
+                    _groupHover={{ opacity: 1 }}
+                    transition="opacity 0.3s ease-in-out"
+                    color="white"
+                  >
+                    <Heading as="h4" size="md" mb={2}>
+                      {member.name}
+                    </Heading>
+                    <Text mb={4}>{member.role}</Text>
+
+                    {/* Social Media Icons with Links */}
+                    <Flex gap={4}>
+                      <a href={member.twitter} target="_blank" rel="noopener noreferrer">
+                        <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
+                      </a>
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                        <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
+                      </a>
+
+                    </Flex>
+                  </Box>
+                </Box>
+              ) : null
             )}
           </Flex>
         </Container>
@@ -75,87 +118,79 @@ export default function Component() {
   );
 }
 
-// Data for team members
-const teamMembers = [
+// Data for board members
+const boardMembers = [
   {
-    name: "Dr. Tushar Panchal",
-    role: "Group CEO",
-    description:
-      " Dr. Tushar Panchal is a.",
-    // image: "/placeholder-user.jpg",
+    name: "Dr Pankajray Patel",
+    role: " I/C Vice Chancellor, Gujarat Technological University",
+    image: "/teams/pankajray_patel.png",
+    twitter: "https://twitter.com/rajulgajjar",
+    linkedin: "https://linkedin.com/in/rajulgajjar",
   },
   {
-    name: "Mr. Mahavirsingh Makwana",
+    name: "Dr. K. N. Kher",
+    role: "Registrar, GTU",
+    image: "/teams/knkher.jpg",
+    twitter: "https://twitter.com/knkher",
+    linkedin: "https://linkedin.com/in/knkher",
+  },
+
+
+  //Prof. (Dr.) Shailesh Panchal, Director, Graduate School of Engg. & Tech., GTU
+  {
+    name: "Prof. (Dr.) Shailesh Panchal",
+    role: "Director, Graduate School of Engg. & Tech., GTU",
+    image: "/teams/shailesh_panchal.jpeg",
+    twitter: "https://twitter.com/shaileshpanchal",
+    linkedin: "https://linkedin.com/in/shaileshpanchal",
+  },
+
+  // Prof. (Dr.) Sanjay Chauhan, Director, Graduate School of Pharmacy, GTU
+  {
+    name: "Prof. (Dr.) Sanjay Chauhan",
+    role: "Director, Graduate School of Pharmacy, GTU",
+    image: "/teams/sanjay_chauhan.jpg",
+    twitter: "https://twitter.com/mtchhabria",
+    linkedin: "https://linkedin.com/in/mtchhabria",
+  },
+  //4. Prof. (Dr.) M. T. Chhabria, Principal, L. M. College of Pharmacy, Ahmedabad
+  {
+    name:"Prof. (Dr.) M. T. Chhabria",
+    role:"Principal, L. M. College of Pharmacy, Ahmedabad",
+    image:"/teams/mt_chhabria.jpg",
+    twitter:"https://twitter.com/mtchhabria",
+    linkedin:"https://linkedin.com/in/mtchhabria",
+  },
+  // 5. Prof. (Dr.) Vaibhav Bhatt, Director, School of Applied Sciences & Technology, GTU
+  {
+    name: "Prof. (Dr.) Vaibhav Bhatt",
+    role: "Director, School of Applied Sciences & Technology, GTU",
+    image: "/teams/vaibhav_bhatt.png",
+    twitter: "https://twitter.com/vaibhavbhatt",
+    linkedin: "https://linkedin.com/in/vaibhavbhatt",
+  },
+  // 6. Kamlendra Singh, Incubation Manager
+  {
+    name: "Kamlendra Singh",
     role: "Incubation Manager",
-    description:
-      "Mr. Mahavirsingh Makwana is a .",
-    // image: "/placeholder-user.jpg",
+    image: "/teams/kamlendra_singh.png",
+    twitter: "https://twitter.com/kamlendrasingh",
+    linkedin: "https://linkedin.com/in/kamlendrasingh",
   },
+  // 7. Nidhi Joshi, Executive Account & Admin
   {
-    name: "Ms. Akanksha Gupta",
-    role: "OSD Incubation & Administrator",
-    description:
-      "Michael has founded and led multiple successful startups, and now shares his expertise with the next generation of entrepreneurs.",
-    // image: "/placeholder-user.jpg",
+    name: "Nidhi Joshi",
+    role: "Executive Account & Admin",
+    image: "/teams/nidhi_joshi.png",
+    twitter: "https://twitter.com/nidhijoshi",
+    linkedin: "https://linkedin.com/in/nidhijoshi",
   },
+  // 8. Chirag Pandey, Project Assistant
   {
-    name: "Mr. Hemik D Mehta",
-    role: "Reginal Innovation & Start-up Coordinetor",
-    description:
-      "Emily has a wealth of experience in building and scaling accelerator programs, helping startups achieve their full potential.",
-    // image: "/placeholder-user.jpg",
-  },
-  {
-    name: "Ms. Manali Patel",
-    role: "Incubation Associate",
-    description:
-      "David has over a decade of experience as a successful entrepreneur and angel investor, and now shares his expertise with our startups.",
-    // image: "/placeholder-user.jpg",
-  },
-  {
-    name: "Ms. Nidhi Chaudhari",
-    role: "Accountant",
-    description:
-      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    // image: "/placeholder-user.jpg",
-  },
-  ,
-  {
-    name: "Mr. Vishal Rathod ",
-    role: "Admin (Incubation)",
-    description:
-      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    // image: "/placeholder-user.jpg",
-  },
-  {
-    name: "Ms. Dhara Dabhi ",
-    role: "Office Assistant",
-    description:
-      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    // image: "/placeholder-user.jpg",
-  },
-
-  {
-    name: "Mr. Siddharaj Solanki",
-    role: "Office Assistant",
-    description:
-      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    // image: "/placeholder-user.jpg",
-  },
-
-  {
-    name: "Mr. Neelesh Sharma",
-    role: "Assistant Professor, DIC",
-    description:
-      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    // image: "/placeholder-user.jpg",
-  },
-
-  {
-    name: "Mr. Rakesh Nayi",
-    role: "Office Assistant",
-    description:
-      "Sarah ensures the smooth running of our incubation center, supporting our startups and team with her exceptional organizational skills.",
-    // image: "/placeholder-user.jpg",
-  },
+    name: "Chirag Pandey",
+    role: "Project Assistant",
+    image: "/teams/chirag_pandey.png",
+    twitter: "https://twitter.com/chiragpandey",
+    linkedin: "https://linkedin.com/in/chiragpandey",
+  }
 ];

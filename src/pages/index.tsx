@@ -109,7 +109,7 @@ export default function Component() {
                 </Text>
 
 
-                <Button as={Link} href="/startupform" mt={6} colorScheme="whiteAlpha">
+                <Button as={Link} href="/startupform" mt={6} colorScheme="whiteAlpha" target="_blank" >
                   Get Started
                 </Button>
 

@@ -11,6 +11,7 @@ import {
   VStack,
   useToast,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import ImageCarousel from "../components/slider";
 import { FiBriefcase } from "react-icons/fi";
 import StartupStats from "../components/StartupStats";
@@ -107,9 +108,11 @@ export default function Component() {
                   services to help startups and small businesses succeed.
                 </Text>
 
-                <Button mt={6} colorScheme="whiteAlpha">
+
+                <Button as={Link} href="/startupform" mt={6} colorScheme="whiteAlpha">
                   Get Started
                 </Button>
+
               </Box>
               <Box flex="1" maxW={{ base: "100%", md: "600px" }}>
                 <Image

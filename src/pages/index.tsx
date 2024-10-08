@@ -11,6 +11,7 @@ import {
   VStack,
   useToast,
 } from "@chakra-ui/react";
+import StartupSupport from "../components/support"
 import Link from "next/link";
 import ImageCarousel from "../components/slider";
 import { FiBriefcase } from "react-icons/fi";
@@ -244,7 +245,7 @@ export default function Component() {
               </Flex>
             </Box>
           </Box>
-          {/* contact form */}
+                <StartupSupport />
           <Box id="contact" py={{ base: 12, md: 24, lg: 32 }}>
             <Box textAlign="center" px={{ base: 8, md: 95 }}>
               <Heading as="h2" size="xl" fontWeight="bold">
@@ -270,6 +271,7 @@ export default function Component() {
                   </Box>
                   {/* Adjust the size as needed */}
                 </Flex>
+
 
                 {/* Contact Form */}
                 <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">

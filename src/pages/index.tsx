@@ -128,54 +128,67 @@ export default function Component() {
             </Flex>
           </Box> */}
 
-<Box position="relative" height="100vh" width="full" overflow="hidden">
-      <Image
-        src="/incubation.jpeg"
-        alt="Modern startup incubator hallway"
-        position="absolute"
-        inset="0"
-        objectFit="cover"
-        width="full"
-        height="full"
-      />
-      <Box position="absolute" inset="0" bg="blue.600" opacity="0.3" />
-      <Flex
-        position="relative"
-        zIndex="10"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        height="full"
-        textAlign="center"
-        color="white"
-        px={4}
-      >
-        <Heading size={{ base: "2xl", md: "4xl" }} fontWeight="bold" mb={4}>
-          CONNECT. LEARN.
-          <br />
-          START
-        </Heading>
-        <Text fontSize={{ base: "lg", md: "xl" }} mb={8} maxW="3xl">
-          Unlock the full potential of your startup with the AIC-GISC Foundation's comprehensive incubation program.
-        </Text>
-        <Button
-          bg="blue.700"
-          _hover={{ bg: "blue.800" }}
-          color="white"
-          fontWeight="bold"
-          py={3}
-          px={6}
-          borderRadius="full"
-          fontSize="lg"
-          as={Link} href="/startupform" mt={6} colorScheme="whiteAlpha" target="_blank"
-        >
-          Get Started
-        </Button>
-      </Flex>
-    </Box>
+          <Box
+            position="relative"
+            height="100vh"
+            width="full"
+            overflow="hidden"
+          >
+            <Image
+              src="/incubation.jpeg"
+              alt="Modern startup incubator hallway"
+              position="absolute"
+              inset="0"
+              objectFit="cover"
+              width="full"
+              height="full"
+            />
+            <Box position="absolute" inset="0" bg="blue.600" opacity="0.3" />
+            <Flex
+              position="relative"
+              zIndex="10"
+              flexDirection="column"
+              alignItems="center"
+              justifyContent="center"
+              height="full"
+              textAlign="center"
+              color="white"
+              px={4}
+            >
+              <Heading
+                size={{ base: "2xl", md: "4xl" }}
+                fontWeight="bold"
+                mb={4}
+              >
+                CONNECT. LEARN.
+                <br />
+                START
+              </Heading>
+              <Text fontSize={{ base: "lg", md: "xl" }} mb={8} maxW="3xl">
+                Unlock the full potential of your startup with the AIC-GISC
+                Foundation's comprehensive incubation program.
+              </Text>
+              <Button
+                bg="blue.700"
+                _hover={{ bg: "blue.800" }}
+                color="white"
+                fontWeight="bold"
+                py={3}
+                px={6}
+                borderRadius="full"
+                fontSize="lg"
+                as={Link}
+                href="/startupform"
+                mt={6}
+                colorScheme="whiteAlpha"
+                target="_blank"
+              >
+                Get Started
+              </Button>
+            </Flex>
+          </Box>
 
           {/* Image Carousel Section */}
-
 
           {/* Startup Stats Section */}
           <StartupStats />
@@ -245,7 +258,7 @@ export default function Component() {
               </Flex>
             </Box>
           </Box>
-                <StartupSupport />
+          <StartupSupport />
           <Box id="contact" py={{ base: 12, md: 24, lg: 32 }}>
             <Box textAlign="center" px={{ base: 8, md: 95 }}>
               <Heading as="h2" size="xl" fontWeight="bold">
@@ -271,7 +284,6 @@ export default function Component() {
                   </Box>
                   {/* Adjust the size as needed */}
                 </Flex>
-
 
                 {/* Contact Form */}
                 <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">

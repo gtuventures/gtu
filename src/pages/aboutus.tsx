@@ -340,14 +340,14 @@ export default function Component() {
 const boardMembers = [
   {
     name: "Dr. Rajul Gajjar",
-    role: "Chairman and Vice Chancellor, GTU",
+    role: "Chairperson and Vice Chancellor, GTU",
     image: "/teams/rajul_gajjar.png",
     twitter: "https://twitter.com/rajulgajjar",
     linkedin: "https://linkedin.com/in/rajulgajjar",
   },
   {
     name: "Dr. Pankajray Patel",
-    role: "I/C Vice Chancellor, GTU",
+    role: "Director, GISC",
     image: "/teams/pankajray_patel.png",
     twitter: "https://twitter.com/rajulgajjar",
     linkedin: "https://linkedin.com/in/rajulgajjar",

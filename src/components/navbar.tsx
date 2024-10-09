@@ -137,6 +137,13 @@ export default function WithSubnavigation() {
                   events
                 </Link>
                 <Link
+                  href="/startups"
+                  fontWeight="semibold"
+                  _hover={{ color: "purple.300" }}
+                >
+                  Startups Incubated with us
+                </Link>
+                <Link
                   href="/teams"
                   w="full"
                   textAlign="center"

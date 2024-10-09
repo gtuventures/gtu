@@ -202,7 +202,7 @@ export default function Component() {
 const boardMembers = [
   {
     name: "Dr. Rajul Gajjar",
-    role: "Chairman and Vice Chancellor,GTU",
+    role: "Chairperson and Vice Chancellor,GTU",
     image: "/teams/rajul_gajjar.png",
   },
 

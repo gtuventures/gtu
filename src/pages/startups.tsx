@@ -1,7 +1,15 @@
-import { Box, Image, SimpleGrid, Text, Heading, Container } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  SimpleGrid,
+  Text,
+  Heading,
+  Container,
+} from "@chakra-ui/react";
+
 const startups = [
   {
-    image: "/startups/400dpiLogo - SHPERO Health.jpg",
+    image: "https://gtu-e09.pages.dev/startups/azeeodo.jpg",
     name: "Startup",
   },
   {
@@ -20,7 +28,6 @@ const startups = [
     image: "/startups/Decipher Logo.jpg",
     name: "Startup One",
   },
-
   {
     image: "/startups/download.png",
     name: "Startup One",
@@ -29,7 +36,6 @@ const startups = [
     image: "/startups/healthcare.png",
     name: "Startup One",
   },
-
   {
     image: "/startups/IMG-20220429-WA0029.jpg",
     name: "Startup One",
@@ -54,7 +60,6 @@ const startups = [
     image: "/startups/LOGO-removebg-preview.png",
     name: "Startup One",
   },
-
   {
     image: "./startups/New Ingress Logo Final-01.png",
     name: "Startup One",
@@ -89,7 +94,14 @@ export default function StartupsGrid() {
         <Text mb={8} color="gray.500">
           Explore the amazing startups and learn more about them.
         </Text>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={6}>
+
+        {/* A Masonry-like grid that adapts to different image sizes */}
+        <SimpleGrid
+          columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+          spacing={6}
+          templateRows="masonry"
+          autoRows="minmax(150px, auto)"
+        >
           {startups.map((startup, index) => (
             <Box
               key={index}
@@ -98,15 +110,20 @@ export default function StartupsGrid() {
               boxShadow="md"
               _hover={{ transform: "scale(1.05)" }}
               transition="all 0.3s"
+              lineHeight="0"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
             >
               <Image
                 src={startup.image}
                 alt={startup.name}
-                width="100%"
-                height="200px"
                 objectFit="cover"
+                maxH="300px"
+                width="100%"
+                borderRadius="lg"
+                _hover={{ opacity: 0.8 }}
               />
-            
             </Box>
           ))}
         </SimpleGrid>

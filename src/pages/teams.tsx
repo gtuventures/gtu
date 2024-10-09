@@ -141,7 +141,7 @@ export default function Component() {
                   {/* Centering the Avatar */}
                   <Flex justify="center" my={6}>
                     <Avatar
-                      size="xl"
+                      size="2xl"
                       name={member.name}
                       src={member.image}
                       mx="auto" // Center horizontally
@@ -208,15 +208,15 @@ const boardMembers = [
 
   {
     name: "Dr Pankajray Patel",
-    role: " I/C Vice Chancellor,GTU",
+    role: " Director GISC GTU",
     image: "/teams/pankajray_patel.png",
     twitter: "https://twitter.com/rajulgajjar",
     linkedin: "https://linkedin.com/in/rajulgajjar",
   },
   {
     name: "Dr. K. N. Kher",
-    role: "Director AISC , GISC & DIC",
-    image: "/teams/knkher.jpg",
+    role: "Director AIC-GISC & GISC GTU",
+    image: "/teams/knkher.png",
     twitter: "https://twitter.com/knkher",
     linkedin: "https://linkedin.com/in/knkher",
   },
@@ -224,7 +224,7 @@ const boardMembers = [
   //Prof. (Dr.) Shailesh Panchal, Director, Graduate School of Engg. & Tech., GTU
   {
     name: "Dr. Shailesh Panchal",
-    role: "Director AISC , GISC & DIC",
+    role: "Director AIC GISC",
     image: "/teams/shailesh_panchal.jpeg",
     twitter: "https://twitter.com/shaileshpanchal",
     linkedin: "https://linkedin.com/in/shaileshpanchal",
@@ -233,7 +233,7 @@ const boardMembers = [
   // Prof. (Dr.) Sanjay Chauhan, Director, Graduate School of Pharmacy, GTU
   {
     name: "Dr. Sanjay Chauhan",
-    role: "Director AISC , GISC & DIC",
+    role: "Director AIC GISC",
     image: "/teams/sanjay_chauhan.jpg",
     twitter: "https://twitter.com/mtchhabria",
     linkedin: "https://linkedin.com/in/mtchhabria",
@@ -241,15 +241,15 @@ const boardMembers = [
   //4. Prof. (Dr.) M. T. Chhabria, Principal, L. M. College of Pharmacy, Ahmedabad
   {
     name: "Dr. M. T. Chhabria",
-    role: "Director AISC , GISC & DIC",
-    image: "/teams/mt_chhabria.jpg",
+    role: "Director AIC GISC",
+    image: "/teams/chabbariyasir.png",
     twitter: "https://twitter.com/mtchhabria",
     linkedin: "https://linkedin.com/in/mtchhabria",
   },
   // 5. Prof. (Dr.) Vaibhav Bhatt, Director, School of Applied Sciences & Technology, GTU
   {
     name: "Dr. Vaibhav Bhatt",
-    role: "Director AISC , GISC & DIC",
+    role: "Director AIC GISC",
     image: "/teams/vaibhav_bhatt.png",
     twitter: "https://twitter.com/vaibhavbhatt",
     linkedin: "https://linkedin.com/in/vaibhavbhatt",

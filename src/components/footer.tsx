@@ -2,12 +2,8 @@
 
 import {
   Box,
-  Container,
-  SimpleGrid,
-  Stack,
   Text,
   Flex,
-  useColorModeValue,
   Image, // Import Image component
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
@@ -31,13 +27,13 @@ export default function LargeWithLogoCentered() {
         <Text mt={2} textAlign="center">
           Phone: 9909910798
         </Text>
-        <br />
+        {/* <br /> */}
         <Text mt={2} textAlign="center">
-          Phone: 79-23267644
+         79-23267644
         </Text>
-        <br />
+        {/* <br /> */}
         <Text mt={2} textAlign="center">
-          Phone: 79-23267641
+           79-23267641
         </Text>
         <Text mt={2} textAlign="center">
           Email: info@gtuventures.com

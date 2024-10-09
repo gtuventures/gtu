@@ -42,7 +42,7 @@ export default function Component() {
           >
             <VStack align="flex-start" spacing={4}>
               <Heading as="h1" fontSize={{ base: "3xl", sm: "5xl", xl: "6xl" }}>
-                GTU Ventures Incubation Center
+                GTU Ventures
               </Heading>
               <Text
                 maxW="600px"
@@ -347,42 +347,42 @@ const boardMembers = [
   },
   {
     name: "Dr. Pankajray Patel",
-    role: "Director, GISC",
+    role: "Director GISC, GTU",
     image: "/teams/pankajray_patel.png",
     twitter: "https://twitter.com/rajulgajjar",
     linkedin: "https://linkedin.com/in/rajulgajjar",
   },
   {
     name: "Dr. K. N. Kher",
-    role: "Registrar, GTU",
-    image: "/teams/knkher.jpg",
+    role: "Director AIC-GISC & GISC GTU",
+    image: "/teams/knkher.png",
     twitter: "https://twitter.com/knkher",
     linkedin: "https://linkedin.com/in/knkher",
   },
   {
     name: "Prof. (Dr.) Shailesh Panchal",
-    role: "Director, Graduate School of Engg. & Tech., GTU",
+    role: "Director AIC GISC",
     image: "/teams/shailesh_panchal.jpeg",
     twitter: "https://twitter.com/shaileshpanchal",
     linkedin: "https://linkedin.com/in/shaileshpanchal",
   },
   {
     name: "Prof. (Dr.) Sanjay Chauhan",
-    role: "Director, Graduate School of Pharmacy, GTU",
+    role: "Director AIC GISC",
     image: "/teams/sanjay_chauhan.jpg",
     twitter: "https://twitter.com/mtchhabria",
     linkedin: "https://linkedin.com/in/mtchhabria",
   },
   {
     name: "Prof. (Dr.) M. T. Chhabria",
-    role: "Principal, L. M. College of Pharmacy, Ahmedabad",
-    image: "/teams/mt_chhabria.jpg",
+    role: "Director AIC GISC",
+    image: "/teams/chabbariyasir.png",
     twitter: "https://twitter.com/mtchhabria",
     linkedin: "https://linkedin.com/in/mtchhabria",
   },
   {
     name: "Prof. (Dr.) Vaibhav Bhatt",
-    role: "Director, School of Applied Sciences & Technology, GTU",
+    role: "Director AIC GISC",
     image: "/teams/vaibhav_bhatt.png",
     twitter: "https://twitter.com/vaibhavbhatt",
     linkedin: "https://linkedin.com/in/vaibhavbhatt",

@@ -9,7 +9,7 @@ import {
 
 const startups = [
   {
-    image: "https://gtu-e09.pages.dev/startups/azeeodo.jpg",
+    image: "/startups/400dpiLogo - SHPERO Health.jpg",
     name: "Startup",
   },
   {

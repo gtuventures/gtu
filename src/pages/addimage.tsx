@@ -168,6 +168,11 @@ export default function IndependentImageUploader() {
           Form Details ↗️
         </Button>
       </Link>
+      <Link href={"/addcircular"}>
+        <Button mt={5} colorScheme="blue" width="full">
+          Add Circular ↗️
+        </Button>
+      </Link>
     </Box>
   );
 }

@@ -483,6 +483,13 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/chiragpandey",
   },
   {
+    name: "Mr Raj Hakani",
+    role: "Assistant Professor",
+    image: "/teams/raj_hakani.jpg",
+    twitter: "https://twitter.com/chiragpandey",
+    linkedin: "https://linkedin.com/in/chiragpandey",
+  },
+  {
     name: "Mr. Rakesh Nayi",
     role: "Office Assistant",
     image: "/teams/rakesh_nayi.jpg",

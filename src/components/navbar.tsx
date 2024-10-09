@@ -138,8 +138,13 @@ export default function WithSubnavigation() {
                 </Link>
                 <Link
                   href="/startups"
+                  w="full"
+                  textAlign="center"
+                  py={3}
                   fontWeight="semibold"
-                  _hover={{ color: "purple.300" }}
+                  bg="purple.500"
+                  borderRadius="md"
+                  _hover={{ bg: "purple.400" }}
                 >
                   Startups Incubated with us
                 </Link>

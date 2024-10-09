@@ -9,78 +9,113 @@ import {
 
 const startups = [
   {
-    image: "/startups/400dpiLogo - SHPERO Health.jpg",
+    image: "/startups/1.jpg",
     name: "Startup",
   },
   {
-    image: "/startups/AI FOR LLP-Dr.Sachin Sharma.png",
+    image: "/startups/2.jpg",
     name: "Startup One",
   },
   {
-    image: "/startups/azeeodo.jpg",
+    image: "/startups/3.png",
     name: "Startup One",
   },
   {
-    image: "./startups/DASS SRL LOGO - Chanchal Dass.png",
+    image: "./startups/4.png",
     name: "Startup One",
   },
   {
-    image: "/startups/Decipher Logo.jpg",
+    image: "/startups/5.jpg",
     name: "Startup One",
   },
   {
-    image: "/startups/download.png",
+    image: "/startups/6.jpg",
     name: "Startup One",
   },
   {
-    image: "/startups/healthcare.png",
+    image: "/startups/7.png",
     name: "Startup One",
   },
   {
-    image: "/startups/IMG-20220429-WA0029.jpg",
+    image: "/startups/8.png",
     name: "Startup One",
   },
   {
-    image: "/startups/IMG-20220922-WA0006.jpg",
+    image: "/startups/9.jpg",
     name: "Startup One",
   },
   {
-    image: "/startups/logo - Ygen Healthcare.png",
+    image: "/startups/10.png",
     name: "Startup One",
   },
   {
-    image: "/startups/Logo 11 - Manish Raval.png",
+    image: "/startups/11.png",
     name: "Startup One",
   },
   {
-    image: "/startups/logo_page-0001.jpg",
+    image: "/startups/12.jpg",
     name: "Startup One",
   },
   {
-    image: "/startups/LOGO-removebg-preview.png",
+    image: "/startups/13.jpg",
     name: "Startup One",
   },
   {
-    image: "./startups/New Ingress Logo Final-01.png",
+    image: "./startups/14.jpg",
     name: "Startup One",
   },
   {
-    image: "/startups/SayitDoc_logo_-_Yash_Bhatt-rerrrmovebg-preview.png",
+    image: "/startups/15.jpg",
     name: "Startup One",
   },
   {
-    image:
-      "/startups/Smile in Hour® Cosmetic Salon Beauty Dental Implant Clinic Ahmedabad, Delhi, Mumbai India Logo Tr - Smile in Hour.png",
+    image: "/startups/16.jpg",
     name: "Startup One",
   },
   {
-    image: "/startups/sns logo - SynerSense (1).png",
+    image: "/startups/17.jpg",
     name: "Startup One",
   },
   {
-    image: "/startups/WhatsApp-Image-2022-09-03-at-14.06.22.jpg",
+    image: "/startups/18.png",
     name: "Startup One",
   },
+  {
+    image: "/startups/19.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/20.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/21.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/22.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/23.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/24.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/25.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/26.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/27.jpg",
+    name: "Startup One",
+  }
   // Add more startups as needed
 ];
 

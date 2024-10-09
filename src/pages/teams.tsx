@@ -215,17 +215,16 @@ const boardMembers = [
   },
   {
     name: "Dr. K. N. Kher",
-    role: "Registrar, GTU",
+    role: "Director AISC , GISC & DIC",
     image: "/teams/knkher.jpg",
     twitter: "https://twitter.com/knkher",
     linkedin: "https://linkedin.com/in/knkher",
   },
 
-
   //Prof. (Dr.) Shailesh Panchal, Director, Graduate School of Engg. & Tech., GTU
   {
-    name: "Prof. (Dr.) Shailesh Panchal",
-    role: "Director, Graduate School of Engg. & Tech., GTU",
+    name: "Dr. Shailesh Panchal",
+    role: "Director AISC , GISC & DIC",
     image: "/teams/shailesh_panchal.jpeg",
     twitter: "https://twitter.com/shaileshpanchal",
     linkedin: "https://linkedin.com/in/shaileshpanchal",
@@ -233,24 +232,24 @@ const boardMembers = [
 
   // Prof. (Dr.) Sanjay Chauhan, Director, Graduate School of Pharmacy, GTU
   {
-    name: "Prof. (Dr.) Sanjay Chauhan",
-    role: "Director, Graduate School of Pharmacy, GTU",
+    name: "Dr. Sanjay Chauhan",
+    role: "Director AISC , GISC & DIC",
     image: "/teams/sanjay_chauhan.jpg",
     twitter: "https://twitter.com/mtchhabria",
     linkedin: "https://linkedin.com/in/mtchhabria",
   },
   //4. Prof. (Dr.) M. T. Chhabria, Principal, L. M. College of Pharmacy, Ahmedabad
   {
-    name:"Prof. (Dr.) M. T. Chhabria",
-    role:"Principal, L. M. College of Pharmacy, Ahmedabad",
-    image:"/teams/mt_chhabria.jpg",
-    twitter:"https://twitter.com/mtchhabria",
-    linkedin:"https://linkedin.com/in/mtchhabria",
+    name: "Dr. M. T. Chhabria",
+    role: "Director AISC , GISC & DIC",
+    image: "/teams/mt_chhabria.jpg",
+    twitter: "https://twitter.com/mtchhabria",
+    linkedin: "https://linkedin.com/in/mtchhabria",
   },
   // 5. Prof. (Dr.) Vaibhav Bhatt, Director, School of Applied Sciences & Technology, GTU
   {
-    name: "Prof. (Dr.) Vaibhav Bhatt",
-    role: "Director, School of Applied Sciences & Technology, GTU",
+    name: "Dr. Vaibhav Bhatt",
+    role: "Director AISC , GISC & DIC",
     image: "/teams/vaibhav_bhatt.png",
     twitter: "https://twitter.com/vaibhavbhatt",
     linkedin: "https://linkedin.com/in/vaibhavbhatt",

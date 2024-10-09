@@ -20,7 +20,6 @@ export default function LargeWithLogoCentered() {
   return (
     <>
       <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">
-   
         {/* Image Section */}
         <Flex justify="center" my={4}>
           <Image src="/gtulogo.svg" alt="GTU Ventures" maxW="100%" />
@@ -30,7 +29,15 @@ export default function LargeWithLogoCentered() {
           GTU, AIC
         </Text>
         <Text mt={2} textAlign="center">
-          Phone: (123) 456-7890
+          Phone: 9909910798
+        </Text>
+        <br />
+        <Text mt={2} textAlign="center">
+          Phone: 79-23267644
+        </Text>
+        <br />
+        <Text mt={2} textAlign="center">
+          Phone: 79-23267641
         </Text>
         <Text mt={2} textAlign="center">
           Email: info@gtuventures.com

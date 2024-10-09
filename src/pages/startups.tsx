@@ -1,64 +1,8 @@
-import {
-  SimpleGrid,
-  Image,
-  Box,
-  Heading,
-  Text,
-  Container,
-} from "@chakra-ui/react";
-import { Key } from "react";
-
-interface Startup {
-  image: string | undefined;
-  name: string | undefined;
-}
-
-interface StartupsPageProps {
-  startups: Startup[];
-}
-
-const StartupsPage = ({ startups }: StartupsPageProps) => {
-  return (
-    <Container maxW="container.xl" p={6}>
-      <Box textAlign="center" mb={8}>
-        <Heading as="h1" size="2xl" mb={4}>
-          Startups Registered with Us
-        </Heading>
-        <Text fontSize="lg" color="gray.600">
-          Explore the amazing startups that are part of our platform, driving
-          innovation and growth.
-        </Text>
-      </Box>
-
-      <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={6}>
-        {startups.map(
-          (
-            startup: { image: string | undefined; name: string | undefined },
-            index: Key | null | undefined
-          ) => (
-            <Box
-              key={index}
-              borderWidth="1px"
-              borderRadius="lg"
-              overflow="hidden"
-              boxShadow="lg"
-            >
-              <Image src={startup.image} objectFit="cover" />
-
-              <Box p={4}></Box>
-            </Box>
-          )
-        )}
-      </SimpleGrid>
-    </Container>
-  );
-};
-
-// Example data for startups
+import { Box, Image, SimpleGrid, Text, Heading, Container } from "@chakra-ui/react";
 const startups = [
   {
     image: "/startups/400dpiLogo - SHPERO Health.jpg",
-    name: "Startup One",
+    name: "Startup",
   },
   {
     image: "/startups/AI FOR LLP-Dr.Sachin Sharma.png",
@@ -69,7 +13,7 @@ const startups = [
     name: "Startup One",
   },
   {
-    image: "/startups/DASS SRL LOGO - Chanchal Dass.png",
+    image: "./startups/DASS SRL LOGO - Chanchal Dass.png",
     name: "Startup One",
   },
   {
@@ -112,7 +56,7 @@ const startups = [
   },
 
   {
-    image: "/startups/New Ingress Logo Final-01.png",
+    image: "./startups/New Ingress Logo Final-01.png",
     name: "Startup One",
   },
   {
@@ -135,9 +79,38 @@ const startups = [
   // Add more startups as needed
 ];
 
-// Export page
-const StartupsPageWrapper = () => {
-  return <StartupsPage startups={startups} />;
-};
-
-export default StartupsPageWrapper;
+export default function StartupsGrid() {
+  return (
+    <Box py={{ base: 12, md: 16, lg: 20 }}>
+      <Container maxW="container.xl" textAlign="center">
+        <Heading as="h2" size="xl" mb={8}>
+          List of Startups
+        </Heading>
+        <Text mb={8} color="gray.500">
+          Explore the amazing startups and learn more about them.
+        </Text>
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={6}>
+          {startups.map((startup, index) => (
+            <Box
+              key={index}
+              overflow="hidden"
+              borderRadius="lg"
+              boxShadow="md"
+              _hover={{ transform: "scale(1.05)" }}
+              transition="all 0.3s"
+            >
+              <Image
+                src={startup.image}
+                alt={startup.name}
+                width="100%"
+                height="200px"
+                objectFit="cover"
+              />
+            
+            </Box>
+          ))}
+        </SimpleGrid>
+      </Container>
+    </Box>
+  );
+}

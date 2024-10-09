@@ -189,10 +189,10 @@ export default function Component() {
             </Flex>
           </Box>
 
-          {/* Image Carousel Section */}
 
           {/* Startup Stats Section */}
           <StartupStats />
+          {/* Image Carousel Section */}
           <ImageCarousel />
 
           {/* About Us Section */}

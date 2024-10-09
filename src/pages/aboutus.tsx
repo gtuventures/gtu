@@ -6,22 +6,15 @@ import {
   Flex,
   Heading,
   Text,
-  Link as ChakraLink,
   Image,
   Avatar,
-  AvatarBadge,
   VStack,
   HStack,
-  Button,
-  Fade,
   Container,
   Icon,
 } from "@chakra-ui/react";
-import { SunIcon, LockIcon } from "@chakra-ui/icons"; // Using Chakra UI icons
-import { FaMountain, FaLightbulb, FaRegClock } from "react-icons/fa";
+import { FaLightbulb, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { PiWatch } from "react-icons/pi"; // Import PiWatch icon
-import { FaTwitter, FaLinkedin } from "react-icons/fa";
-import NextLink from "next/link";
 
 export default function Component() {
   const [showVision, setShowVision] = useState(true);
@@ -38,9 +31,12 @@ export default function Component() {
           <Flex
             direction={{ base: "column", lg: "row" }}
             align="center"
+            justify="center"
             px={{ base: 4, md: 6 }}
           >
-            <VStack align="flex-start" spacing={4}>
+            <VStack align="center" spacing={4} textAlign="center">
+              {" "}
+              {/* Align and center text */}
               <Heading as="h1" fontSize={{ base: "3xl", sm: "5xl", xl: "6xl" }}>
                 GTU Ventures
               </Heading>
@@ -51,7 +47,10 @@ export default function Component() {
               >
                 Empowering entrepreneurs to turn their ideas into thriving
                 businesses. Our incubation program provides the resources,
-                mentorship, and support startups need to succeed.
+                mentorship, and support startups need to succeed. Empowering
+                entrepreneurs to turn their ideas into thriving businesses. Our
+                incubation program provides the resources, mentorship, and
+                support startups need to succeed.
               </Text>
             </VStack>
             <Box
@@ -61,7 +60,7 @@ export default function Component() {
               m={4}
             >
               <Image
-                src="/incub.webp"
+                src="/aboutus.jpeg"
                 width="475px"
                 height="475px"
                 alt="GTU Ventures Logo"
@@ -155,85 +154,78 @@ export default function Component() {
               gap={6}
               justify="center"
             >
-              {boardMembers.map((member) =>
-                member ? (
+              {boardMembers.map((member) => (
+                <Box
+                  key={member.name}
+                  position="relative"
+                  width={{ base: "100%", md: "45%", lg: "30%" }}
+                  borderRadius="lg"
+                  overflow="hidden"
+                  boxShadow="md"
+                  role="group"
+                  textAlign="center"
+                >
+                  <Flex justify="center" my={6}>
+                    <Avatar
+                      size="xl"
+                      name={member.name}
+                      src={member.image}
+                      mx="auto"
+                    />
+                  </Flex>
+
+                  <VStack spacing={2} mt={2} mb={6}>
+                    <Heading as="h3" size="md">
+                      {member.name}
+                    </Heading>
+                    <Text color="gray.500">{member.role}</Text>
+                  </VStack>
+
+                  {/* Hidden overlay with social media icons on hover */}
                   <Box
-                    key={member.name}
-                    position="relative"
-                    width={{ base: "100%", md: "45%", lg: "30%" }}
-                    borderRadius="lg"
-                    overflow="hidden"
-                    boxShadow="md"
-                    role="group"
-                    textAlign="center"
+                    position="absolute"
+                    top={0}
+                    left={0}
+                    width="100%"
+                    height="100%"
+                    bg="blackAlpha.900"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    opacity={0}
+                    _groupHover={{ opacity: 1 }}
+                    transition="opacity 0.3s ease-in-out"
+                    color="white"
                   >
-                    <Flex justify="center" my={6}>
-                      <Avatar
-                        size="xl"
-                        name={member.name}
-                        src={member.image}
-                        mx="auto"
-                      />
+                    <Heading as="h4" size="md" mb={2}>
+                      {member.name}
+                    </Heading>
+                    <Text mb={4}>{member.role}</Text>
+
+                    <Flex gap={4}>
+                      {member.twitter && (
+                        <a
+                          href={member.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
+                        </a>
+                      )}
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
+                        </a>
+                      )}
                     </Flex>
-
-                    <VStack spacing={2} mt={2} mb={6}>
-                      <Heading as="h3" size="md">
-                        {member.name}
-                      </Heading>
-                      <Text color="gray.500">{member.role}</Text>
-                    </VStack>
-
-                    {/* Hidden overlay with social media icons on hover */}
-                    <Box
-                      position="absolute"
-                      top={0}
-                      left={0}
-                      width="100%"
-                      height="100%"
-                      bg="blackAlpha.900"
-                      display="flex"
-                      flexDirection="column"
-                      justifyContent="center"
-                      alignItems="center"
-                      opacity={0}
-                      _groupHover={{ opacity: 1 }}
-                      transition="opacity 0.3s ease-in-out"
-                      color="white"
-                    >
-                      <Heading as="h4" size="md" mb={2}>
-                        {member.name}
-                      </Heading>
-                      <Text mb={4}>{member.role}</Text>
-
-                      <Flex gap={4}>
-                        {member.twitter && (
-                          <a
-                            href={member.twitter}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
-                          </a>
-                        )}
-                        {member.linkedin && (
-                          <a
-                            href={member.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Icon
-                              as={FaLinkedin}
-                              w={6}
-                              h={6}
-                              cursor="pointer"
-                            />
-                          </a>
-                        )}
-                      </Flex>
-                    </Box>
                   </Box>
-                ) : null
-              )}
+                </Box>
+              ))}
             </Flex>
           </Container>
         </Box>
@@ -250,84 +242,77 @@ export default function Component() {
               gap={6}
               justify="center"
             >
-              {teamMembers.map((member) =>
-                member ? (
+              {teamMembers.map((member) => (
+                <Box
+                  key={member.name}
+                  position="relative"
+                  width={{ base: "100%", md: "45%", lg: "30%" }}
+                  borderRadius="lg"
+                  overflow="hidden"
+                  boxShadow="md"
+                  role="group"
+                  textAlign="center"
+                >
+                  <Flex justify="center" my={6}>
+                    <Avatar
+                      size="xl"
+                      name={member.name}
+                      src={member.image}
+                      mx="auto"
+                    />
+                  </Flex>
+
+                  <VStack spacing={2} mt={2} mb={6}>
+                    <Heading as="h3" size="md">
+                      {member.name}
+                    </Heading>
+                    <Text color="gray.500">{member.role}</Text>
+                  </VStack>
+
                   <Box
-                    key={member.name}
-                    position="relative"
-                    width={{ base: "100%", md: "45%", lg: "30%" }}
-                    borderRadius="lg"
-                    overflow="hidden"
-                    boxShadow="md"
-                    role="group"
-                    textAlign="center"
+                    position="absolute"
+                    top={0}
+                    left={0}
+                    width="100%"
+                    height="100%"
+                    bg="blackAlpha.900"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    opacity={0}
+                    _groupHover={{ opacity: 1 }}
+                    transition="opacity 0.3s ease-in-out"
+                    color="white"
                   >
-                    <Flex justify="center" my={6}>
-                      <Avatar
-                        size="xl"
-                        name={member.name}
-                        src={member.image}
-                        mx="auto"
-                      />
+                    <Heading as="h4" size="md" mb={2}>
+                      {member.name}
+                    </Heading>
+                    <Text mb={4}>{member.role}</Text>
+
+                    <Flex gap={4}>
+                      {member.twitter && (
+                        <a
+                          href={member.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
+                        </a>
+                      )}
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
+                        </a>
+                      )}
                     </Flex>
-
-                    <VStack spacing={2} mt={2} mb={6}>
-                      <Heading as="h3" size="md">
-                        {member.name}
-                      </Heading>
-                      <Text color="gray.500">{member.role}</Text>
-                    </VStack>
-
-                    <Box
-                      position="absolute"
-                      top={0}
-                      left={0}
-                      width="100%"
-                      height="100%"
-                      bg="blackAlpha.900"
-                      display="flex"
-                      flexDirection="column"
-                      justifyContent="center"
-                      alignItems="center"
-                      opacity={0}
-                      _groupHover={{ opacity: 1 }}
-                      transition="opacity 0.3s ease-in-out"
-                      color="white"
-                    >
-                      <Heading as="h4" size="md" mb={2}>
-                        {member.name}
-                      </Heading>
-                      <Text mb={4}>{member.role}</Text>
-
-                      <Flex gap={4}>
-                        {member.twitter && (
-                          <a
-                            href={member.twitter}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
-                          </a>
-                        )}
-                        {member.linkedin && (
-                          <a
-                            href={member.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Icon
-                              as={FaLinkedin}
-                              w={6}
-                              h={6}
-                              cursor="pointer"
-                            />
-                          </a>
-                        )}
-                      </Flex>
-                    </Box>
                   </Box>
-                ) : null
-              )}
+                </Box>
+              ))}
             </Flex>
           </Container>
         </Box>
@@ -336,7 +321,7 @@ export default function Component() {
   );
 }
 
-// Data for board members
+// Sample Data
 const boardMembers = [
   {
     name: "Dr. Rajul Gajjar",
@@ -389,14 +374,13 @@ const boardMembers = [
   },
 ];
 
-// Data for team members
 const teamMembers = [
   {
-    name:"Dr Tushar Panchal",
-    role:"Group CEO, GIC",
-    image:"/teams/tushar_panchal.jpg",
-    twitter:"https://twitter.com/tusharpanchal",
-    linkedin:"https://linkedin.com/in/tusharpanchal",
+    name: "Dr Tushar Panchal",
+    role: "Group CEO, GIC",
+    image: "/teams/tushar_panchal.jpg",
+    twitter: "https://twitter.com/tusharpanchal",
+    linkedin: "https://linkedin.com/in/tusharpanchal",
   },
   {
     name: "Kamlendra Singh",
@@ -502,11 +486,12 @@ const teamMembers = [
     image: "/teams/dhara_dabhi.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",
-  }, {
+  },
+  {
     name: "Mr. Siddharaj Solanki",
     role: "Office Assistant",
     image: "/teams/siddharaj_solanki.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",
-  }
+  },
 ];

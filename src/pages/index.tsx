@@ -16,6 +16,7 @@ import Link from "next/link";
 import ImageCarousel from "../components/slider";
 import { FiBriefcase } from "react-icons/fi";
 import StartupStats from "../components/StartupStats";
+import CircularsList from "../components/circulars";
 import { useForm } from "react-hook-form"; // Import useForm from react-hook-form
 import supabase from "../../supabase";
 import { useEffect, useState } from "react";
@@ -259,6 +260,8 @@ export default function Component() {
             </Box>
           </Box>
           <StartupSupport />
+          {/* circulars and reports */}
+          <CircularsList />
           <Box id="contact" py={{ base: 12, md: 24, lg: 32 }}>
             <Box textAlign="center" px={{ base: 8, md: 95 }}>
               <Heading as="h2" size="xl" fontWeight="bold">
@@ -284,7 +287,6 @@ export default function Component() {
                   </Box>
                   {/* Adjust the size as needed */}
                 </Flex>
-
                 {/* Contact Form */}
                 <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">
                   <VStack

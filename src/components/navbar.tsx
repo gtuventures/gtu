@@ -32,7 +32,7 @@ export default function WithSubnavigation() {
         <Link href="/" display="flex" alignItems="center" gap={2}>
           <Heading as="span" size="lg" fontWeight="bold">
             <Image
-              src={"/ventures.png"}
+              src={"/gtulogo.svg"}
               alt="GTU Ventures"
               height={35}
               width={140}

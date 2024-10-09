@@ -331,18 +331,18 @@ const boardMembers = [
     linkedin: "https://linkedin.com/in/rajulgajjar",
   },
   {
-    name: "Dr. Pankajray Patel",
-    role: "Director GISC, GTU",
-    image: "/teams/pankajray_patel.png",
-    twitter: "https://twitter.com/rajulgajjar",
-    linkedin: "https://linkedin.com/in/rajulgajjar",
-  },
-  {
     name: "Dr. K. N. Kher",
     role: "Director AIC-GISC & GISC GTU",
     image: "/teams/knkher.png",
     twitter: "https://twitter.com/knkher",
     linkedin: "https://linkedin.com/in/knkher",
+  },
+  {
+    name: "Dr. Pankajray Patel",
+    role: "Director GISC, GTU",
+    image: "/teams/pankajray_patel.png",
+    twitter: "https://twitter.com/rajulgajjar",
+    linkedin: "https://linkedin.com/in/rajulgajjar",
   },
   {
     name: "Prof. (Dr.) Shailesh Panchal",
@@ -419,7 +419,7 @@ const teamMembers = [
   },
   {
     name: "Mr. Hemik D Mehta",
-    role: "Reginal Innovation & Start-up Coordinetor",
+    role: "Regional Innovation & Start-up CoOrdinator",
     image: "/teams/hemik_mehta.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",

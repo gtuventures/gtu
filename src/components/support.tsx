@@ -6,6 +6,7 @@ const CompanyShowcase = () => {
     { src: "/incubators/Nodalinstitute.png", name: "Nodal Institute" },
     { src: "/incubators/SISFS.png", name: "SISFS" },
     { src: "/incubators/ssip-.png", name: "SSIP" },
+    { src: "/incubators/aim.png", name: "AIM " },
   ];
 
   return (

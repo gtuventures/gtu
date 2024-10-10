@@ -10,9 +10,9 @@ const CompanyShowcase = () => {
 
   return (
     <Box bg="gray.50" py={10} px={6} textAlign="center">
-      {/* Title */}
+      {/* Title */} 
       <Text fontSize="2xl" fontWeight="bold" mb={6}>
-        Grant Agencies
+        Grant & Funding Support
       </Text>
 
       {/* Logo Grid */}

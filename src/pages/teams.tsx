@@ -208,7 +208,7 @@ const boardMembers = [
 
   {
     name: "Dr. K. N. Kher",
-    role: "Director AIC-GISC & GISC GTU",
+    role: "Registrar,Director AIC-GISC & GISC GTU",
     image: "/teams/knkher.png",
     twitter: "https://twitter.com/knkher",
     linkedin: "https://linkedin.com/in/knkher",
@@ -233,7 +233,7 @@ const boardMembers = [
   // Prof. (Dr.) Sanjay Chauhan, Director, Graduate School of Pharmacy, GTU
   {
     name: "Dr. Sanjay Chauhan",
-    role: "Director AIC GISC",
+    role: "Director AIC GISC & GISC GTU",
     image: "/teams/sanjay_chauhan.jpg",
     twitter: "https://twitter.com/mtchhabria",
     linkedin: "https://linkedin.com/in/mtchhabria",
@@ -295,7 +295,7 @@ const teamMembers = [
   },
   {
     name: "Ms. Akanksha Gupta",
-    role: "OSD Incubation & Administrator",
+    role: "OSD Incubation & Administrator ,GISC GTU",
     image: "/teams/akansha_gupta.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",
@@ -351,8 +351,8 @@ const teamMembers = [
   },
   {
     name: "Mr Raj Hakani",
-    role: "Assistant Professor",
-    image: "/teams/raj_hakani.jpg",
+    role: "Assistant Professor,DIC",
+    image: "/teams/rajhakanisir.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",
   },
@@ -374,6 +374,21 @@ const teamMembers = [
     name: "Mr. Siddharaj Solanki",
     role: "Office Assistant",
     image: "/teams/siddharaj_solanki.jpg",
+    twitter: "https://twitter.com/chiragpandey",
+    linkedin: "https://linkedin.com/in/chiragpandey",
+  },
+
+  {
+    name: "Mr. Yajuvendrasingh Chauhan",
+    role: "Project Manager",
+    image: "/teams/yajuvendrasir.jpg",
+    twitter: "https://twitter.com/chiragpandey",
+    linkedin: "https://linkedin.com/in/chiragpandey",
+  },
+  {
+    name: "Mr. Harshid Thummar",
+    role: "Deputy Manager Operations",
+    image: "/teams/harshidsir.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",
   },

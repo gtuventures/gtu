@@ -45,35 +45,35 @@ export default function WithSubnavigation() {
           <Link
             href="/aboutus"
             fontWeight="semibold"
-            _hover={{ color: "white" }}
+            _hover={{ color: "purple.300" }}
           >
             About Us
           </Link>
           <Link
             href="/startupform"
             fontWeight="semibold"
-            _hover={{ color: "white" }}
+            _hover={{ color: "purple.300" }}
           >
             Register Now
           </Link>
           <Link
             href="/events"
             fontWeight="semibold"
-            _hover={{ color: "white" }}
+            _hover={{ color: "purple.300" }}
           >
             Events
           </Link>
           <Link
             href="/startups"
             fontWeight="semibold"
-            _hover={{ color: "white" }}
+            _hover={{ color: "purple.300" }}
           >
             Startups Incubated with us
           </Link>
           <Link
             href="/teams"
             fontWeight="semibold"
-            _hover={{ color: "white" }}
+            _hover={{ color: "purple.300" }}
           >
             Teams
           </Link>
@@ -108,7 +108,7 @@ export default function WithSubnavigation() {
                   fontWeight="semibold"
                   bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "white" }}
+                  _hover={{ bg: "purple.300" }}
                 >
                   About Us
                 </Link>
@@ -120,7 +120,7 @@ export default function WithSubnavigation() {
                   fontWeight="semibold"
                   bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "white" }}
+                  _hover={{ bg: "purple.300" }}
                 >
                   Register now
                 </Link>
@@ -132,7 +132,7 @@ export default function WithSubnavigation() {
                   fontWeight="semibold"
                   bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "white" }}
+                  _hover={{ bg: "purple.300" }}
                 >
                   events
                 </Link>
@@ -144,7 +144,7 @@ export default function WithSubnavigation() {
                   fontWeight="semibold"
                   bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "white" }}
+                  _hover={{ bg: "purple.300" }}
                 >
                   Startups Incubated with us
                 </Link>
@@ -156,7 +156,7 @@ export default function WithSubnavigation() {
                   fontWeight="semibold"
                   bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "white" }}
+                  _hover={{ bg: "purple.300" }}
                 >
                   Teams
                 </Link>

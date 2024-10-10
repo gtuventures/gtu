@@ -11,7 +11,7 @@ import {
   VStack,
   useToast,
 } from "@chakra-ui/react";
-import StartupSupport from "../components/support"
+import StartupSupport from "../components/support";
 import Link from "next/link";
 import ImageCarousel from "../components/slider";
 import { FiBriefcase } from "react-icons/fi";
@@ -28,18 +28,15 @@ export default function Component() {
   const { register, handleSubmit, reset } = useForm(); // Initialize react-hook-form
 
   const onSubmit = async (data: any) => {
-    console.log(data); // Log form data
-
     // Insert data into Supabase
     const { error } = await supabase
       .from("contactus") // Name of your table
       .insert([{ name: data.name, email: data.email, message: data.message }]);
 
     if (error) {
-      console.error("Error inserting data:", error.message);
       toast({
-        title: error.message,
-        description: "There was an issue sending your message.",
+        title: "Error",
+        description: error.message || "There was an issue sending your message.",
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -47,7 +44,7 @@ export default function Component() {
     } else {
       // Show success toast
       toast({
-        title: "Form Submitted.",
+        title: "Form Submitted",
         description: "Your message has been sent successfully!",
         status: "success",
         duration: 5000,
@@ -75,8 +72,8 @@ export default function Component() {
         title="GTU Ventures"
         description="GTU Ventures provides investment, advisory, and consulting services to help startups and small businesses succeed."
         openGraph={{
-          url: "gtuventures.com",
-          title: "gtuventures.com",
+          url: "https://gtuventures.com",
+          title: "GTU Ventures",
           description:
             "GTU Ventures provides investment, advisory, and consulting services to help startups and small businesses succeed.",
           images: [
@@ -89,46 +86,12 @@ export default function Component() {
           type: "website",
         }}
       />
+
       {isVisible && <PreLoader />}
 
       <Flex direction="column" minH="100vh">
         <Box as="main" flex="1">
           {/* Hero Section */}
-          {/* <Box bg="purple.500" color="white" py={{ base: 12, md: 36, lg: 31 }}>
-            <Flex
-              direction={{ base: "column", md: "row" }}
-              align="center"
-              gap={8}
-              px={{ base: 8, md: 95 }}
-            >
-              <Box flex="1">
-                <Heading as="h1" size="2xl" fontWeight="bold">
-                  Empowering Entrepreneurs
-                </Heading>
-                <Text fontSize="lg" mt={4}>
-                  GTU Ventures provides investment, advisory, and consulting
-                  services to help startups and small businesses succeed.
-                </Text>
-
-
-                <Button as={Link} href="/startupform" mt={6} colorScheme="whiteAlpha" target="_blank" >
-                  Get Started
-                </Button>
-
-              </Box>
-              <Box flex="1" maxW={{ base: "100%", md: "600px" }}>
-                <Image
-                  src="/incubation.jpeg"
-                  alt="GTU Ventures"
-                  rounded="lg"
-                  objectFit="cover"
-                  width="100%"
-                  height="auto"
-                />
-              </Box>
-            </Flex>
-          </Box> */}
-
           <Box
             position="relative"
             height="100vh"
@@ -136,7 +99,7 @@ export default function Component() {
             overflow="hidden"
           >
             <Image
-              src="/incubation.jpeg"
+              src="/incubationhome.webp"
               alt="Modern startup incubator hallway"
               position="absolute"
               inset="0"
@@ -161,17 +124,16 @@ export default function Component() {
                 fontWeight="bold"
                 mb={4}
               >
-                CONNECT. LEARN.
-                <br />
-                START
+                Ideate ,Innovate & <br />
+                Execute !
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} mb={8} maxW="3xl">
                 Unlock the full potential of your startup with the AIC-GISC
                 Foundation's comprehensive incubation program.
               </Text>
               <Button
-                bg="blue.700"
-                _hover={{ bg: "blue.800" }}
+                bg="blue.500"
+                _hover={{ bg: "blue.300" }}
                 color="white"
                 fontWeight="bold"
                 py={3}
@@ -189,9 +151,9 @@ export default function Component() {
             </Flex>
           </Box>
 
-
           {/* Startup Stats Section */}
           <StartupStats />
+
           {/* Image Carousel Section */}
           <ImageCarousel />
 
@@ -218,17 +180,19 @@ export default function Component() {
                   industry expertise.
                 </Text>
                 <Text mt={4}>
-                  Our mission is to empower entrepreneurs and drive innovation
-                  by providing access to capital, strategic guidance, and
-                  industry expertise.
+                  Vision is to be the leading Incubator Center in the nation promoting
+                  entrepreneurship and creating innovative ideas to transform
+                  education, projects, and present them into successful business
+                  opportunities.
                 </Text>
+                <b>Register Today & Get Benefites of GTU Ventures !</b>
               </Box>
               <Image
-                src="/img.webp"
+                src="/incub12.jpeg"
                 alt="GTU Ventures"
                 rounded="lg"
                 objectFit="cover"
-                width={{ base: "100%", md: "600px" }}
+                width={{ base: "100%", md: "500px" }}
                 height="auto"
               />
             </Flex>
@@ -259,18 +223,21 @@ export default function Component() {
               </Flex>
             </Box>
           </Box>
+
           <StartupSupport />
-          {/* circulars and reports */}
+
+          {/* Circulars and Reports */}
           <CircularsList />
+
+          {/* Contact Us Section */}
           <Box id="contact" py={{ base: 12, md: 24, lg: 32 }}>
             <Box textAlign="center" px={{ base: 8, md: 95 }}>
               <Heading as="h2" size="xl" fontWeight="bold">
                 Contact Us
               </Heading>
               <Flex direction={{ base: "column", md: "row" }} gap={8} mt={8}>
-                {/* Left Side Image for Medium and Larger Screens */}
                 <Flex
-                  display={{ base: "none", md: "flex" }} // Hide on small screens
+                  display={{ base: "none", md: "flex" }}
                   flex="1"
                   justify="center"
                   align="center"
@@ -285,9 +252,7 @@ export default function Component() {
                       height="auto"
                     />
                   </Box>
-                  {/* Adjust the size as needed */}
                 </Flex>
-                {/* Contact Form */}
                 <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">
                   <VStack
                     as="form"
@@ -296,18 +261,18 @@ export default function Component() {
                   >
                     <Input
                       placeholder="Name"
-                      {...register("name", { required: "Name is required" })} // Register the input with validation
+                      {...register("name", { required: "Name is required" })}
                     />
                     <Input
                       placeholder="Email / Mobile Number"
-                      {...register("email", { required: "Email is required" })} // Register the input with validation
+                      {...register("email", { required: "Email is required" })}
                     />
                     <Textarea
                       placeholder="Message"
                       rows={4}
                       {...register("message", {
                         required: "Message is required",
-                      })} // Register the textarea with validation
+                      })}
                     />
                     <Button type="submit" colorScheme="purple" width="full">
                       Submit
@@ -323,6 +288,7 @@ export default function Component() {
   );
 }
 
+// ServiceCard Component
 const ServiceCard = ({
   icon,
   title,
@@ -340,10 +306,10 @@ const ServiceCard = ({
     maxW={{ base: "300px", sm: "400px" }}
     textAlign="center"
   >
-    <Icon as={icon} boxSize={8} color="purple.500" />
-    <Heading as="h3" size="lg" mt={4}>
+    <Icon as={icon} w={12} h={12} mb={4} color="blue.500" />
+    <Heading as="h3" size="md" fontWeight="bold" mb={2}>
       {title}
     </Heading>
-    <Text mt={2}>{description}</Text>
+    <Text>{description}</Text>
   </Box>
 );

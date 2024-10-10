@@ -108,7 +108,7 @@ export default function StartupStats() {
             color={pastelColors[0]}
           />
           <StatItem
-            label="Students Projects Supported"
+            label="Students Projects"
             value={3578}
             description=""
             color={pastelColors[1]}
@@ -122,19 +122,19 @@ export default function StartupStats() {
           <StatItem
             label="Funding Disbursed "
             value={2.55}
-            description="(in Million $)"
+            description="(in Million $s)"
             color={pastelColors[3]}
           />
           <StatItem
             label="Jobs Created"
             value={4100}
-            description="(SSIP + NI)"
+            description=""
             color={pastelColors[4]}
           />
           <StatItem
             label="Jobs Created"
             value={4100}
-            description="(SSIP + NI)"
+            description=""
             color={pastelColors[3]}
           />
           <StatItem

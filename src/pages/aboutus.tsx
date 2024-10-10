@@ -417,7 +417,7 @@ const advisors = [
 
   {
     name: "Rahul Bhagchandani",
-    role: "Registrar,Director AIC-GISC & GISC GTU",
+    role: "Advisor GIC,GTU",
     image: "/teams/rahulsir.jpg",
     twitter: "https://twitter.com/knkher",
     linkedin: "https://in.linkedin.com/in/rahulbhagchandani",

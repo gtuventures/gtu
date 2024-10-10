@@ -61,7 +61,7 @@ export default function CircularsList() {
     <Box maxW="4xl" mx="auto" p={4}>
       <HStack spacing={2}>
         <Heading as="h1" size="lg">
-          REPORTS & CIRCULARS
+          CIRCULARS 
         </Heading>
         <Icon as={FiArrowUpRight} boxSize={6} />
       </HStack>

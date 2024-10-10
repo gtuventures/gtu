@@ -99,7 +99,7 @@ export default function Component() {
             overflow="hidden"
           >
             <Image
-              src="/incubationhome.webp"
+              src="/firstimg.png"
               alt="Modern startup incubator hallway"
               position="absolute"
               inset="0"
@@ -128,11 +128,10 @@ export default function Component() {
                 Execute !
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} mb={8} maxW="3xl">
-                Unlock the full potential of your startup with the AIC-GISC
-                Foundation's comprehensive incubation program.
+                Unlock the full potential of your startup with GTU ventures!
               </Text>
               <Button
-                bg="blue.500"
+                bg="purple.500"
                 _hover={{ bg: "blue.300" }}
                 color="white"
                 fontWeight="bold"
@@ -146,7 +145,7 @@ export default function Component() {
                 colorScheme="whiteAlpha"
                 target="_blank"
               >
-                Get Started
+                Apply Now
               </Button>
             </Flex>
           </Box>
@@ -155,7 +154,6 @@ export default function Component() {
           <StartupStats />
 
           {/* Image Carousel Section */}
-          <ImageCarousel />
 
           {/* About Us Section */}
           <Box id="about" py={{ base: 12, md: 24, lg: 32 }}>
@@ -198,6 +196,7 @@ export default function Component() {
             </Flex>
           </Box>
 
+          <ImageCarousel />
           {/* Services Section */}
           <Box id="services" bg="gray.100" py={{ base: 12, md: 24, lg: 32 }}>
             <Box textAlign="center" px={4}>
@@ -225,7 +224,7 @@ export default function Component() {
           </Box>
 
           <StartupSupport />
-
+<br />
           {/* Circulars and Reports */}
           <CircularsList />
 

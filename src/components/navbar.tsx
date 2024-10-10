@@ -30,14 +30,10 @@ export default function WithSubnavigation() {
         py={4}
       >
         <Link href="/" display="flex" alignItems="center" gap={2}>
-          <Heading as="span" size="lg" fontWeight="bold">
-            <Image
-              src={"/gtulogo.svg"}
-              alt="GTU Ventures"
-              height={35}
-              width={140}
-            />
-          </Heading>
+            <Flex align="center" gap={2}>
+              <Image src={"/gtulogo.png"} alt="GTU Ventures" height={47} width={47} />
+              <Image src={"/hihb.png"} alt="GTU Ventures" height={47} width={60} />
+            </Flex>
         </Link>
 
         {/* Desktop Links */}
@@ -47,7 +43,7 @@ export default function WithSubnavigation() {
             fontWeight="semibold"
             _hover={{ color: "purple.300" }}
           >
-            About Us
+            About 
           </Link>
           <Link
             href="/startupform"
@@ -110,7 +106,7 @@ export default function WithSubnavigation() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  About Us
+                  About 
                 </Link>
                 <Link
                   href="/startupform"

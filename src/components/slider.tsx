@@ -110,7 +110,7 @@ export default function ImageCarousel() {
       position="relative"
     >
       <Text fontSize="2xl" fontWeight="bold" textAlign="center" mb={4}>
-        Events
+        Photo Gallery
       </Text>
 <br />
       <Box position="relative" borderRadius="md" overflow="hidden">

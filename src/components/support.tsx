@@ -6,7 +6,7 @@ const CompanyShowcase = () => {
     { src: "/incubators/Nodalinstitute.png", name: "Nodal Institute" },
     { src: "/incubators/SISFS.png", name: "SISFS" },
     { src: "/incubators/ssip-.png", name: "SSIP" },
-    { src: "/incubators/aim.png", name: "AIM " },
+    { src: "/incubators/aim.png", name: "Atal Innovation Mission " },
   ];
 
   return (
@@ -17,7 +17,7 @@ const CompanyShowcase = () => {
       </Text>
 
       {/* Logo Grid */}
-      <SimpleGrid columns={[2, 3, 4]} spacing={10} alignItems="center">
+      <SimpleGrid columns={[2, 3, 5]} spacing={10} alignItems="center">
         {logos.map((logo, index) => (
           <Box key={index} textAlign="center">
             <Image

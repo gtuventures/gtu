@@ -90,7 +90,7 @@ export default function StartupStats() {
           mb={2}
           color="gray.800"
         >
-          STARTUP STATISTICS
+          Impact by GTU Ventures
         </Heading>
         <Text fontSize="xl" textAlign="center" mb={12} color="gray.600">
           The success story of GIC. In facts & numbers.
@@ -102,39 +102,106 @@ export default function StartupStats() {
           gap={6}
         >
           <StatItem
-            label="Application Received"
-            value={2650}
-            description="SSIP + NI (2500 + 150)"
+            label="Students Sensitised"
+            value={43000}
+            description=""
             color={pastelColors[0]}
           />
           <StatItem
-            label="Selected Startup"
-            value={276}
-            description="Data SSIP + NI (250 + 26)"
+            label="Students Projects Supported"
+            value={3578}
+            description=""
             color={pastelColors[1]}
           />
           <StatItem
-            label="Fund Disbursed in Lakh"
-            value={234}
-            description="SSIP + NI (62 + 176)"
+            label="Startups/POC Supported"
+            value={730}
+            description=""
             color={pastelColors[2]}
           />
           <StatItem
-            label="Jobs Created"
-            value={500}
-            description="by Startup (SSIP +NI)"
+            label="Funding Disbursed "
+            value={2.55}
+            description="(in Million $)"
             color={pastelColors[3]}
+          />
+          <StatItem
+            label="Jobs Created"
+            value={4100}
+            description="(SSIP + NI)"
+            color={pastelColors[4]}
+          />
+          <StatItem
+            label="Jobs Created"
+            value={4100}
+            description="(SSIP + NI)"
+            color={pastelColors[3]}
+          />
+          <StatItem
+            label="Capacity Building Program"
+            value={600}
+            description=""
+            color={pastelColors[2]}
+          />
+          <StatItem
+            label="Patents Granted"
+            value={102}
+            description=""
+            color={pastelColors[1]}
+          />
+        </Grid>
+        <br />
+        <Grid
+          templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }} // 1 column on mobile, 4 columns on laptop+
+          gap={6}
+        >
+          {" "}
+          <StatItem
+            label="Revenue by startups"
+            value={6.75}
+            description="in million $"
+            color={pastelColors[1]}
+          />
+          <StatItem
+            label="Mentors Engaged"
+            value={273}
+            description="in million $"
+            color={pastelColors[4]}
           />
         </Grid>
 
-        <Box mt={12}>
+        {/* <Box mt={12}>
           <StatItem
-            label="Revenue generated in crore"
-            value={12}
+            label="Jobs Created"
+            value={4100}
             description="(SSIP + NI)"
             color={pastelColors[4]}
           />
         </Box>
+        <Box mt={12}>
+          <StatItem
+            label="Jobs Created"
+            value={4100}
+            description="(SSIP + NI)"
+            color={pastelColors[3]}
+          />
+        </Box>
+        <Box mt={12}>
+          <StatItem
+            label="Capacity Building Program"
+            value={600}
+            description=""
+            color={pastelColors[3]}
+          />
+        </Box>
+        <Box mt={12}>
+          <StatItem
+            label="Patents Granted"
+            value={102}
+            description=""
+            color={pastelColors[3]}
+          /> */}
+        {/* </Box> */}
       </Box>
     </Box>
   );

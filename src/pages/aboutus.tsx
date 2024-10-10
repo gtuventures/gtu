@@ -468,7 +468,7 @@ const teamMembers = [
   },
   {
     name: "Mr Raj Hakani",
-    role: "Assistant Professor",
+    role: "Assistant Professor,DIC",
     image: "/teams/raj_hakani.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",

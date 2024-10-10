@@ -411,13 +411,13 @@ const advisors = [
     name: "Dr. Mihir Shah sir.",
     role: "Advisor GIC,GTU",
     image: "/teams/mihirsir.jpg",
+    linkedin: "https://www.linkedin.com/in/mihir-shah-6b2b88330",
   },
 
   {
     name: "Rahul Bhagchandani",
     role: "Registrar,Director AIC-GISC & GISC GTU",
     image: "/teams/rahulsir.jpg",
-    twitter: "https://twitter.com/knkher",
     linkedin: "https://in.linkedin.com/in/rahulbhagchandani",
   },
 ];

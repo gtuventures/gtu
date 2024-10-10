@@ -16,10 +16,29 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
-import { FiTwitter } from "react-icons/fi";
+import { FiTwitter, FiFacebook, FiLinkedin } from "react-icons/fi";
 import { Image } from "@chakra-ui/react";
-export default function WithSubnavigation() {
+import { useState } from "react";
+
+export default function EnhancedNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  let timeoutId: string | number | NodeJS.Timeout | undefined;
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Use a timeout to delay hiding the dropdown
+    timeoutId = setTimeout(() => {
+      setDropdownVisible(false);
+    }, 2000); // 500 ms delay
+  };
+
+  const handleMouseEnterDropdown = () => {
+    clearTimeout(timeoutId); // Clear timeout if mouse enters dropdown
+  };
 
   return (
     <Box as="header" bg="white" color="purple" boxShadow="md">
@@ -30,48 +49,94 @@ export default function WithSubnavigation() {
         py={4}
       >
         <Link href="/" display="flex" alignItems="center" gap={2}>
-            <Flex align="center" gap={2}>
-              <Image src={"/gtulogo.png"} alt="GTU Ventures" height={47} width={47} />
-              <Image src={"/hihb.png"} alt="GTU Ventures" height={47} width={60} />
-            </Flex>
+          <Flex align="center" gap={2}>
+            <Image
+              src={"/gtulogo.png"}
+              alt="GTU Ventures Logo"
+              height={47}
+              width={47}
+            />
+            <Image
+              src={"/hihb.png"}
+              alt="GTU Ventures Banner"
+              height={47}
+              width={60}
+            />
+          </Flex>
         </Link>
 
         {/* Desktop Links */}
         <Flex display={{ base: "none", md: "flex" }} gap={6} align="center">
-          <Link
-            href="/aboutus"
-            fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
+          <Box
+            position="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            About 
-          </Link>
+            <Link
+              href="#"
+              fontWeight="semibold"
+              _hover={{ color: "purple.300" }}
+            >
+              {" "}
+              About{" "}
+            </Link>
+            {dropdownVisible && (
+              <Box
+                position="absolute"
+                bg="white"
+                boxShadow="md"
+                mt={2}
+                borderRadius="md"
+                zIndex={1}
+                onMouseEnter={handleMouseEnterDropdown}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link
+                  href="/aboutus"
+                  display="block"
+                  px={4}
+                  py={2}
+                  _hover={{ bg: "purple.100" }}
+                >
+                  {" "}
+                  About Us ↗{" "}
+                </Link>
+                <Link
+                  href="/teams"
+                  display="block"
+                  px={4}
+                  py={2}
+                  _hover={{ bg: "purple.100" }}
+                >
+                  {" "}
+                  Teams ↗{" "}
+                </Link>
+              </Box>
+            )}
+          </Box>
           <Link
             href="/startupform"
             fontWeight="semibold"
             _hover={{ color: "purple.300" }}
           >
-            Register Now
+            {" "}
+            Register Now{" "}
           </Link>
           <Link
             href="/events"
             fontWeight="semibold"
             _hover={{ color: "purple.300" }}
           >
-            Events
+            {" "}
+            Events{" "}
           </Link>
           <Link
             href="/startups"
             fontWeight="semibold"
             _hover={{ color: "purple.300" }}
           >
-            Startups Incubated with us
-          </Link>
-          <Link
-            href="/teams"
-            fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
-          >
-            Teams
+            {" "}
+            Startups Incubated with Us{" "}
           </Link>
         </Flex>
 
@@ -80,6 +145,7 @@ export default function WithSubnavigation() {
           variant="outline"
           display={{ base: "flex", md: "none" }}
           onClick={onOpen}
+          aria-label="Open Menu"
         >
           <Icon as={FiMenu} boxSize={6} />
         </Button>
@@ -90,9 +156,7 @@ export default function WithSubnavigation() {
           <DrawerContent bg="white" color="purple">
             <DrawerCloseButton />
             <DrawerHeader borderBottomWidth="1px">
-              <Heading size="md" fontWeight="bold">
-                GTU Ventures
-              </Heading>
+              <Heading size="md"> GTU Ventures </Heading>
             </DrawerHeader>
             <DrawerBody>
               <VStack align="start" spacing={6} mt={4}>
@@ -106,7 +170,8 @@ export default function WithSubnavigation() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  About 
+                  {" "}
+                  About Us{" "}
                 </Link>
                 <Link
                   href="/startupform"
@@ -118,7 +183,8 @@ export default function WithSubnavigation() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  Register now
+                  {" "}
+                  Register Now{" "}
                 </Link>
                 <Link
                   href="/events"
@@ -130,7 +196,8 @@ export default function WithSubnavigation() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  events
+                  {" "}
+                  Events{" "}
                 </Link>
                 <Link
                   href="/startups"
@@ -142,40 +209,53 @@ export default function WithSubnavigation() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  Startups Incubated with us
-                </Link>
-                <Link
-                  href="/teams"
-                  w="full"
-                  textAlign="center"
-                  py={3}
-                  fontWeight="semibold"
-                  bg="white"
-                  borderRadius="md"
-                  _hover={{ bg: "purple.300" }}
-                >
-                  Teams
+                  {" "}
+                  Startups Incubated with Us{" "}
                 </Link>
               </VStack>
-              <Divider mt={6} borderColor="white" />
+              <Divider mt={6} borderColor="#E2E8F0" />
               <VStack align="start" spacing={4} mt={6}>
-                <Heading size="sm" fontWeight="bold">
-                  Follow Us
-                </Heading>
+                <Heading size="sm"> Follow Us </Heading>
                 <Flex gap={3}>
                   <Button
                     as="a"
                     href="#"
-                    bg="twitter.500"
-                    color="purple"
+                    bg="#1DA1F2"
+                    color="#FFFFFF"
                     borderRadius="full"
                     size="sm"
-                    _hover={{ bg: "twitter.400" }}
+                    _hover={{ bg: "#1A91DA" }}
                     leftIcon={<Icon as={FiTwitter} />}
                   >
-                    Twitter
+                    {" "}
+                    Twitter{" "}
                   </Button>
-                  {/* Add more social buttons as needed */}
+                  <Button
+                    as="a"
+                    href="#"
+                    bg="#4267B2"
+                    color="#FFFFFF"
+                    borderRadius="full"
+                    size="sm"
+                    _hover={{ bg: "#365899" }}
+                    leftIcon={<Icon as={FiFacebook} />}
+                  >
+                    {" "}
+                    Facebook{" "}
+                  </Button>
+                  <Button
+                    as="a"
+                    href="#"
+                    bg="#0077B5"
+                    color="#FFFFFF"
+                    borderRadius="full"
+                    size="sm"
+                    _hover={{ bg: "#005582" }}
+                    leftIcon={<Icon as={FiLinkedin} />}
+                  >
+                    {" "}
+                    LinkedIn{" "}
+                  </Button>
                 </Flex>
               </VStack>
             </DrawerBody>

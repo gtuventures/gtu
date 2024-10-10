@@ -228,93 +228,8 @@ export default function Component() {
           </Container>
         </Box>
         {/* section 2 advisors */}
-<Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
-          <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
-            <Heading as="h2" size="xl" textAlign="center" mb={8}>
-              Advisors
-            </Heading>
-            <Flex
-              direction={{ base: "column", md: "row" }}
-              wrap="wrap"
-              gap={6}
-              justify="center"
-            >
-              {advisors.map((member) => (
-                <Box
-                  key={member.name}
-                  position="relative"
-                  width={{ base: "100%", md: "45%", lg: "30%" }}
-                  borderRadius="lg"
-                  overflow="hidden"
-                  boxShadow="md"
-                  role="group"
-                  textAlign="center"
-                >
-                  <Flex justify="center" my={6}>
-                    <Avatar
-                      size="xl"
-                      name={member.name}
-                      src={member.image}
-                      mx="auto"
-                    />
-                  </Flex>
-
-                  <VStack spacing={2} mt={2} mb={6}>
-                    <Heading as="h3" size="md">
-                      {member.name}
-                    </Heading>
-                    <Text color="gray.500">{member.role}</Text>
-                  </VStack>
-
-                  <Box
-                    position="absolute"
-                    top={0}
-                    left={0}
-                    width="100%"
-                    height="100%"
-                    bg="blackAlpha.900"
-                    display="flex"
-                    flexDirection="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    opacity={0}
-                    _groupHover={{ opacity: 1 }}
-                    transition="opacity 0.3s ease-in-out"
-                    color="white"
-                  >
-                    <Heading as="h4" size="md" mb={2}>
-                      {member.name}
-                    </Heading>
-                    <Text mb={4}>{member.role}</Text>
-
-                    <Flex gap={4}>
-                      {member.twitter && (
-                        <a
-                          href={member.twitter}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
-                        </a>
-                      )}
-                      {member.linkedin && (
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
-                        </a>
-                      )}
-                    </Flex>
-                  </Box>
-                </Box>
-              ))}
-            </Flex>
-          </Container>
-        </Box>
         {/* Section 3: Team Members */}
-        <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
+        {/* {/* <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
           <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
             <Heading as="h2" size="xl" textAlign="center" mb={8}>
               Team Members
@@ -395,10 +310,10 @@ export default function Component() {
                     </Flex>
                   </Box>
                 </Box>
-              ))}
-            </Flex>
-          </Container>
-        </Box>
+              ))} */}
+            {/* </Flex>
+          </Container>  */}
+        {/* </Box> */}
       </Box>
     </Flex>
   );
@@ -406,30 +321,13 @@ export default function Component() {
 
 
 
-const advisors = [
-  {
-    name: "Dr. Mihir Shah sir.",
-    role: "Advisor GIC,GTU",
-    image: "/teams/mihirsir.jpg",
-    twitter: "https://twitter.com/knkher",
-    linkedin: "https://www.linkedin.com/in/mihir-shah-6b2b88330",
-  },
-
-  {
-    name: "Rahul Bhagchandani",
-    role: "Advisor GIC,GTU",
-    image: "/teams/rahulsir.jpg",
-    twitter: "https://twitter.com/knkher",
-    linkedin: "https://in.linkedin.com/in/rahulbhagchandani",
-  },
-];
 
 
 // Sample Data
 const boardMembers = [
   {
     name: "Dr. Rajul Gajjar",
-    role: "Chairperson and Vice Chancellor,GTU",
+    role: "Chairperson & Vice Chancellor,GTU",
     image: "/teams/rajul_gajjar.png",
   },
 
@@ -483,139 +381,139 @@ const boardMembers = [
   },
 ];
 
-const teamMembers = [
-  {
-    name: "Dr Tushar Panchal",
-    role: "Group CEO, GIC",
-    image: "/teams/tushar_panchal.jpg",
-    twitter: "https://twitter.com/tusharpanchal",
-    linkedin: "https://linkedin.com/in/tusharpanchal",
-  },
-  {
-    name: "Kamlendra Singh",
-    role: "incubation manager, AiC GISC",
-    image: "/teams/kamlendra_singh.png",
-    twitter: "https://twitter.com/kamlendrasingh",
-    linkedin: "https://linkedin.com/in/kamlendrasingh",
-  },
-  {
-    name: "Nidhi Joshi",
-    role: "Executive Account & Admin",
-    image: "/teams/nidhi_joshi.png",
-    twitter: "https://twitter.com/nidhijoshi",
-    linkedin: "https://linkedin.com/in/nidhijoshi",
-  },
-  {
-    name: "Chirag Pandey",
-    role: "Project Assistant",
-    image: "/teams/chirag_pandey.png",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Mr. Mahavirsingh Makwana",
-    role: "Incubation manager GISC GTU",
-    image: "/teams/mahavirsinh_makwana.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Ms. Akanksha Gupta",
-    role: "OSD Incubation & Administrator ,GISC GTU",
-    image: "/teams/akansha_gupta.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Mr. Hemik D Mehta",
-    role: "Regional Innovation & Start-up CoOrdinator",
-    image: "/teams/hemik_mehta.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Ms. Manali Patel",
-    role: "Incubation Associate",
-    image: "/teams/Manali_patel.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Mr. Kalpesh Maiyad",
-    role: "Incubation Associate",
-    image: "/teams/kalpesh_maiyad.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Ms. Nidhi Chaudhari",
-    role: "Accountant",
-    image: "/teams/nidhi_chaudhari.png",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Ms. Pina Kori",
-    role: "Accountant",
-    image: "/teams/pina_kori.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Mr. Vishal Rathod ",
-    role: "Admin(Incubation)",
-    image: "/teams/vishal_rathod.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Mr. Neelesh Sharma",
-    role: "Assistant Professor, DIC",
-    image: "/teams/neelesh_sharma.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Mr Raj Hakani",
-    role: "Assistant Professor, DIC",
-    image: "/teams/rajhakanisir.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Mr. Rakesh Nayi",
-    role: "Office Assistant",
-    image: "/teams/rakesh_nayi.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Ms. Dhara Dabhi",
-    role: "Office Assistant",
-    image: "/teams/dhara_dabhi.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Mr. Siddharaj Solanki",
-    role: "Office Assistant",
-    image: "/teams/siddharaj_solanki.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
+// const teamMembers = [
+//   {
+//     name: "Dr Tushar Panchal",
+//     role: "Group CEO, GIC",
+//     image: "/teams/tushar_panchal.jpg",
+//     twitter: "https://twitter.com/tusharpanchal",
+//     linkedin: "https://linkedin.com/in/tusharpanchal",
+//   },
+//   {
+//     name: "Kamlendra Singh",
+//     role: "incubation manager, AiC GISC",
+//     image: "/teams/kamlendra_singh.png",
+//     twitter: "https://twitter.com/kamlendrasingh",
+//     linkedin: "https://linkedin.com/in/kamlendrasingh",
+//   },
+//   {
+//     name: "Nidhi Joshi",
+//     role: "Executive Account & Admin",
+//     image: "/teams/nidhi_joshi.png",
+//     twitter: "https://twitter.com/nidhijoshi",
+//     linkedin: "https://linkedin.com/in/nidhijoshi",
+//   },
+//   {
+//     name: "Chirag Pandey",
+//     role: "Project Assistant",
+//     image: "/teams/chirag_pandey.png",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Mr. Mahavirsingh Makwana",
+//     role: "Incubation manager GISC GTU",
+//     image: "/teams/mahavirsinh_makwana.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Ms. Akanksha Gupta",
+//     role: "OSD Incubation & Administrator ,GISC GTU",
+//     image: "/teams/akansha_gupta.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Mr. Hemik D Mehta",
+//     role: "Regional Innovation & Start-up CoOrdinator",
+//     image: "/teams/hemik_mehta.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Ms. Manali Patel",
+//     role: "Incubation Associate",
+//     image: "/teams/Manali_patel.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Mr. Kalpesh Maiyad",
+//     role: "Incubation Associate",
+//     image: "/teams/kalpesh_maiyad.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Ms. Nidhi Chaudhari",
+//     role: "Accountant",
+//     image: "/teams/nidhi_chaudhari.png",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Ms. Pina Kori",
+//     role: "Accountant",
+//     image: "/teams/pina_kori.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Mr. Vishal Rathod ",
+//     role: "Admin(Incubation)",
+//     image: "/teams/vishal_rathod.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Mr. Neelesh Sharma",
+//     role: "Assistant Professor, DIC",
+//     image: "/teams/neelesh_sharma.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Mr Raj Hakani",
+//     role: "Assistant Professor, DIC",
+//     image: "/teams/rajhakanisir.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Mr. Rakesh Nayi",
+//     role: "Office Assistant",
+//     image: "/teams/rakesh_nayi.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Ms. Dhara Dabhi",
+//     role: "Office Assistant",
+//     image: "/teams/dhara_dabhi.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Mr. Siddharaj Solanki",
+//     role: "Office Assistant",
+//     image: "/teams/siddharaj_solanki.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
 
-  {
-    name: "Mr. Yajuvendrasingh Chauhan",
-    role: "Project Manager",
-    image: "/teams/yajuvendrasir.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-  {
-    name: "Mr. Harshid Thummar",
-    role: "Deputy Manager Operations",
-    image: "/teams/harshidsir.jpg",
-    twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
-  },
-];
+//   {
+//     name: "Mr. Yajuvendrasingh Chauhan",
+//     role: "Project Manager",
+//     image: "/teams/yajuvendrasir.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+//   {
+//     name: "Mr. Harshid Thummar",
+//     role: "Deputy Manager Operations",
+//     image: "/teams/harshidsir.jpg",
+//     twitter: "https://twitter.com/chiragpandey",
+//     linkedin: "https://linkedin.com/in/chiragpandey",
+//   },
+// ];

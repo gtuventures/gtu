@@ -22,7 +22,7 @@ export default function WithSubnavigation() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box as="header" bg="purple.600" color="white" boxShadow="md">
+    <Box as="header" bg="white" color="purple" boxShadow="md">
       <Flex
         align="center"
         justify="space-between"
@@ -45,35 +45,35 @@ export default function WithSubnavigation() {
           <Link
             href="/aboutus"
             fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
+            _hover={{ color: "white" }}
           >
             About Us
           </Link>
           <Link
             href="/startupform"
             fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
+            _hover={{ color: "white" }}
           >
             Register Now
           </Link>
           <Link
             href="/events"
             fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
+            _hover={{ color: "white" }}
           >
             Events
           </Link>
           <Link
             href="/startups"
             fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
+            _hover={{ color: "white" }}
           >
             Startups Incubated with us
           </Link>
           <Link
             href="/teams"
             fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
+            _hover={{ color: "white" }}
           >
             Teams
           </Link>
@@ -91,7 +91,7 @@ export default function WithSubnavigation() {
         {/* Mobile Sidebar */}
         <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
           <DrawerOverlay />
-          <DrawerContent bg="purple.600" color="white">
+          <DrawerContent bg="white" color="purple">
             <DrawerCloseButton />
             <DrawerHeader borderBottomWidth="1px">
               <Heading size="md" fontWeight="bold">
@@ -106,9 +106,9 @@ export default function WithSubnavigation() {
                   textAlign="center"
                   py={3}
                   fontWeight="semibold"
-                  bg="purple.500"
+                  bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "purple.400" }}
+                  _hover={{ bg: "white" }}
                 >
                   About Us
                 </Link>
@@ -118,9 +118,9 @@ export default function WithSubnavigation() {
                   textAlign="center"
                   py={3}
                   fontWeight="semibold"
-                  bg="purple.500"
+                  bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "purple.400" }}
+                  _hover={{ bg: "white" }}
                 >
                   Register now
                 </Link>
@@ -130,9 +130,9 @@ export default function WithSubnavigation() {
                   textAlign="center"
                   py={3}
                   fontWeight="semibold"
-                  bg="purple.500"
+                  bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "purple.400" }}
+                  _hover={{ bg: "white" }}
                 >
                   events
                 </Link>
@@ -142,9 +142,9 @@ export default function WithSubnavigation() {
                   textAlign="center"
                   py={3}
                   fontWeight="semibold"
-                  bg="purple.500"
+                  bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "purple.400" }}
+                  _hover={{ bg: "white" }}
                 >
                   Startups Incubated with us
                 </Link>
@@ -154,14 +154,14 @@ export default function WithSubnavigation() {
                   textAlign="center"
                   py={3}
                   fontWeight="semibold"
-                  bg="purple.500"
+                  bg="white"
                   borderRadius="md"
-                  _hover={{ bg: "purple.400" }}
+                  _hover={{ bg: "white" }}
                 >
                   Teams
                 </Link>
               </VStack>
-              <Divider mt={6} borderColor="purple.300" />
+              <Divider mt={6} borderColor="white" />
               <VStack align="start" spacing={4} mt={6}>
                 <Heading size="sm" fontWeight="bold">
                   Follow Us
@@ -171,7 +171,7 @@ export default function WithSubnavigation() {
                     as="a"
                     href="#"
                     bg="twitter.500"
-                    color="white"
+                    color="purple"
                     borderRadius="full"
                     size="sm"
                     _hover={{ bg: "twitter.400" }}

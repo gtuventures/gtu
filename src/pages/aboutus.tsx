@@ -384,7 +384,7 @@ const teamMembers = [
   },
   {
     name: "Kamlendra Singh",
-    role: "Incubation Manager",
+    role: "incubation manager, AiC GISC",
     image: "/teams/kamlendra_singh.png",
     twitter: "https://twitter.com/kamlendrasingh",
     linkedin: "https://linkedin.com/in/kamlendrasingh",
@@ -405,14 +405,14 @@ const teamMembers = [
   },
   {
     name: "Mr. Mahavirsingh Makwana",
-    role: "Incubation Manager",
+    role: "Incubation manager GISC GTU",
     image: "/teams/mahavirsinh_makwana.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",
   },
   {
     name: "Ms. Akanksha Gupta",
-    role: "OSD Incubation & Administrator",
+    role: "OSD Incubation & Administrator , GISC GTU",
     image: "/teams/akansha_gupta.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",

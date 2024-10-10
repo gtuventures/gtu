@@ -259,15 +259,15 @@ const boardMembers = [
 // Data for team members
 const teamMembers = [
   {
-    name:"Dr Tushar Panchal",
-    role:"Group CEO, GIC",
-    image:"/teams/tushar_panchal.jpg",
-    twitter:"https://twitter.com/tusharpanchal",
-    linkedin:"https://linkedin.com/in/tusharpanchal",
+    name: "Dr Tushar Panchal",
+    role: "Group CEO, GIC",
+    image: "/teams/tushar_panchal.jpg",
+    twitter: "https://twitter.com/tusharpanchal",
+    linkedin: "https://linkedin.com/in/tusharpanchal",
   },
   {
     name: "Kamlendra Singh",
-    role: "Incubation Manager",
+    role: "incubation manager, AiC GISC",
     image: "/teams/kamlendra_singh.png",
     twitter: "https://twitter.com/kamlendrasingh",
     linkedin: "https://linkedin.com/in/kamlendrasingh",
@@ -288,7 +288,7 @@ const teamMembers = [
   },
   {
     name: "Mr. Mahavirsingh Makwana",
-    role: "Incubation Manager",
+    role: "Incubation manager GISC GTU",
     image: "/teams/mahavirsinh_makwana.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",
@@ -369,11 +369,12 @@ const teamMembers = [
     image: "/teams/dhara_dabhi.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",
-  }, {
+  },
+  {
     name: "Mr. Siddharaj Solanki",
     role: "Office Assistant",
     image: "/teams/siddharaj_solanki.jpg",
     twitter: "https://twitter.com/chiragpandey",
     linkedin: "https://linkedin.com/in/chiragpandey",
-  }
+  },
 ];

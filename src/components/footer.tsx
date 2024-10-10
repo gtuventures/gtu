@@ -22,18 +22,18 @@ export default function LargeWithLogoCentered() {
         </Flex>
 
         <Text mt={4} textAlign="center">
-          GTU, AIC
+          AiC GISC, GISC GTU & DIC GTU{" "}
         </Text>
         <Text mt={2} textAlign="center">
           Phone: 9909910798
         </Text>
         {/* <br /> */}
         <Text mt={2} textAlign="center">
-         79-23267644
+         079-23267644
         </Text>
         {/* <br /> */}
         <Text mt={2} textAlign="center">
-           79-23267641
+          079-23267641
         </Text>
         <Text mt={2} textAlign="center">
           Email: info@gtuventures.com

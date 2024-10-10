@@ -12,7 +12,7 @@ const CompanyShowcase = () => {
     <Box bg="gray.50" py={10} px={6} textAlign="center">
       {/* Title */}
       <Text fontSize="2xl" fontWeight="bold" mb={6}>
-        AIC grant agencies
+        Grant Agencies
       </Text>
 
       {/* Logo Grid */}

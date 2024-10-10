@@ -18,7 +18,7 @@ export default function LargeWithLogoCentered() {
       <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">
         {/* Image Section */}
         <Flex justify="center" my={4}>
-          <Image src="/hihb.png" alt="GTU Ventures" maxW="100%" />
+          <Image src="/hihb.png" alt="GTU Ventures" maxW="30%" />
         </Flex>
 
         <Text mt={4} textAlign="center">

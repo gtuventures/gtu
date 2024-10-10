@@ -46,23 +46,23 @@ export default function EnhancedNavbar() {
         align="center"
         justify="space-between"
         px={{ base: 4, md: 8, lg: 12 }}
-        py={4}
+        py={0}
       >
         <Link href="/" display="flex" alignItems="center" gap={2}>
-          <Flex align="center" gap={2}>
+            <Flex align="center" gap={2}>
             <Image
               src={"/gtulogo.png"}
               alt="GTU Ventures Logo"
-              height={47}
-              width={47}
+              height={65}
+              width={65}
             />
             <Image
               src={"/hihb.png"}
               alt="GTU Ventures Banner"
-              height={47}
-              width={60}
+              height={65}
+              width={150}
             />
-          </Flex>
+            </Flex>
         </Link>
 
         {/* Desktop Links */}
@@ -114,14 +114,7 @@ export default function EnhancedNavbar() {
               </Box>
             )}
           </Box>
-          <Link
-            href="/startupform"
-            fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
-          >
-            {" "}
-            Register Now{" "}
-          </Link>
+
           <Link
             href="/events"
             fontWeight="semibold"
@@ -138,6 +131,16 @@ export default function EnhancedNavbar() {
             {" "}
             Startups Incubated with Us{" "}
           </Link>
+          <Button colorScheme="purple">
+            <Link
+              href="/startupform"
+              fontWeight="semibold"
+              _hover={{ color: "purple.300" }}
+            >
+              {" "}
+              Apply Now{" "}
+            </Link>
+          </Button>
         </Flex>
 
         {/* Mobile Menu Button */}

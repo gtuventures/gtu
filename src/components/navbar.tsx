@@ -59,7 +59,7 @@ export default function EnhancedNavbar() {
             <Image
               src={"/hihb.png"}
               alt="GTU Ventures Banner"
-              height={65}
+              height={63}
               width={150}
             />
             </Flex>

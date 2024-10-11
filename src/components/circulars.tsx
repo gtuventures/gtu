@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { use, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { FiArrowUpRight } from 'react-icons/fi'
 import {
@@ -11,40 +11,41 @@ import {
   Button,
   useColorModeValue,
 } from '@chakra-ui/react'
+import supabase from '../../supabase'
 
 interface Circular {
   date: string
-  title: string
+  name: string
   description: string
   link: string
 }
 
-const circulars: Circular[] = [
-  {
-    date: '2024-07-18',
-    title: 'Maverick Effect AI Challenge 2024 (2024JULFMTS00012238)(GIC)',
-    description: 'The Maverick Effect AI Challenge is designed to inspire and empower students in Gujarat to explore the realm of Artificial Intelligence (AI) through hands-on problem-solving and innovative thinking.',
-    link: 'https://www.youtube.com/',
-  },
-  {
-    date: '2024-08-02',
-    title: 'We-Pitch Competition - Empowering Women Entrepreneurs (GIC)',
-    description: 'GTU Innovation Council has partnered with Womennovator to host the "We-Pitch Competition," a prestigious offline event focused on empowering and showcasing women entrepreneurs and leaders.',
-    link: 'https://example.com/we-pitch-competition',
-  },
-  {
-    date: '2024-08-10',
-    title: 'Startup India Hackathon 2024 (2024AUGFMTS00012345)(GIC)',
-    description: 'The Startup India Hackathon encourages innovative problem-solving among young entrepreneurs through a nationwide coding competition.',
-    link: 'https://example.com/startup-india-hackathon',
-  },
-  {
-    date: '2024-09-05',
-    title: 'International Women’s Day Startup Pitch (GIC)',
-    description: 'Join us in celebrating women in tech with a special pitch event highlighting female-led startups in India.',
-    link: 'https://example.com/womens-day-pitch',
-  },
-]
+// const circulars: Circular[] = [
+//   {
+//     date: '2024-07-18',
+//     title: 'Maverick Effect AI Challenge 2024 (2024JULFMTS00012238)(GIC)',
+//     description: 'The Maverick Effect AI Challenge is designed to inspire and empower students in Gujarat to explore the realm of Artificial Intelligence (AI) through hands-on problem-solving and innovative thinking.',
+//     link: 'https://www.youtube.com/',
+//   },
+//   {
+//     date: '2024-08-02',
+//     title: 'We-Pitch Competition - Empowering Women Entrepreneurs (GIC)',
+//     description: 'GTU Innovation Council has partnered with Womennovator to host the "We-Pitch Competition," a prestigious offline event focused on empowering and showcasing women entrepreneurs and leaders.',
+//     link: 'https://example.com/we-pitch-competition',
+//   },
+//   {
+//     date: '2024-08-10',
+//     title: 'Startup India Hackathon 2024 (2024AUGFMTS00012345)(GIC)',
+//     description: 'The Startup India Hackathon encourages innovative problem-solving among young entrepreneurs through a nationwide coding competition.',
+//     link: 'https://example.com/startup-india-hackathon',
+//   },
+//   {
+//     date: '2024-09-05',
+//     title: 'International Women’s Day Startup Pitch (GIC)',
+//     description: 'Join us in celebrating women in tech with a special pitch event highlighting female-led startups in India.',
+//     link: 'https://example.com/womens-day-pitch',
+//   },
+// ]
 
 export default function CircularsList() {
   const [visibleCirculars, setVisibleCirculars] = useState(3)
@@ -52,10 +53,20 @@ export default function CircularsList() {
   const hoverTextColor = useColorModeValue('blue.600', 'blue.400')
   const descriptionColor = useColorModeValue('gray.600', 'gray.400')
   const dateColor = useColorModeValue('green.600', 'green.400')
+  const [circulars, setCirculars] = useState<Circular[]>([])
 
+  async function fetchCirculars() {
+    
+let { data: circulars, error } = await supabase.from("circular").select("*");
+          setCirculars(circulars || [])
+          console.log(circulars)
+  }
   const handleLoadMore = () => {
     setVisibleCirculars((prev) => prev + 3) // Load 3 more circulars
   }
+  useEffect(() => {
+    fetchCirculars();
+  }, [])
 
   return (
     <Box maxW="4xl" mx="auto" p={4}>
@@ -87,7 +98,7 @@ export default function CircularsList() {
                   display="flex"
                   alignItems="center"
                 >
-                  {circular.title}
+                  {circular.name}
                   <Icon as={FiArrowUpRight} boxSize={4} ml={1} />
                 </Text>
               </Link>

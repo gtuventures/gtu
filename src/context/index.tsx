@@ -40,6 +40,7 @@ export const AuthContextProvider = ({ children }: any) => {
     } catch (error) {
       console.log(error);
     } finally {
+      // setUserStore(null);
     }
   };
 

@@ -98,7 +98,7 @@ export default function StartupStats() {
 
         {/* Responsive Grid Layout */}
         <Grid
-          templateColumns={{ base: "1fr", lg: "repeat(5, 1fr)" }} // 1 column on mobile, 4 columns on laptop+
+          templateColumns={{ base: "1fr", lg: "repeat(5, 2fr)" }} // 1 column on mobile, 4 columns on laptop+
           gap={6}
         >
           <StatItem
@@ -114,7 +114,7 @@ export default function StartupStats() {
             color={pastelColors[1]}
           />
           <StatItem
-            label="Startups/POC Supported"
+            label="Startups Supported"
             value={730}
             description=""
             color={pastelColors[2]}
@@ -132,7 +132,7 @@ export default function StartupStats() {
             color={pastelColors[4]}
           />
           <StatItem
-            label="Capacity Building Program"
+            label="Capacity Building &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Program"
             value={600}
             description=""
             color={pastelColors[2]}
@@ -144,7 +144,7 @@ export default function StartupStats() {
             color={pastelColors[1]}
           />
           <StatItem
-            label="Revenue by startups"
+            label="Revenue Generated &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by  Startups"
             value={6.75}
             description="in million $"
             color={pastelColors[1]}

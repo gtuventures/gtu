@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useForm, Controller, set } from "react-hook-form";
 import { Text, useToast } from "@chakra-ui/react";
 import supabase from "../../supabase";
-import { useAuthContext } from "@/context";
 import { BeatLoader } from "react-spinners";
+import Head from "next/head";
+import { NextSeo } from "next-seo";
 interface State {
   districts: string[];
   state: string;
@@ -30,12 +31,14 @@ import { state } from "../components/state";
 function formm() {
   const Router = useRouter();
   const toast = useToast();
-  const { user } = useAuthContext();
+  // const { user } = useAuthContext();
   const form = useForm();
   const { register, handleSubmit, control, watch } = form;
   const [states, setStates] = useState<State[]>(state.states);
-  const [Image, setImage] = useState<any>(null);
+  // const [Image, setImage] = useState<any>(null);
   const [show, setShow] = useState(false);
+
+
 
   interface FormInputs {
     singleErrorInput: string;
@@ -131,6 +134,25 @@ function formm() {
   return (
     <>
       <>
+        <Head>
+          <NextSeo
+            title="GTU Ventures Startup Registration"
+            description="GTU ventures page for startup registeration"
+            openGraph={{
+              url: "https://gtuventures.com",
+              title: "GTU Ventures startup registration page",
+              description: "GTU ventures is a platform for startups",
+              images: [
+                {
+                  url: "https://gtu-e09.pages.dev/hihb.png",
+                  alt: "GTU Ventures",
+                },
+              ],
+              site_name: "gtuventures.com",
+              type: "website",
+            }}
+          />
+        </Head>
         <Container
           maxW="container.xl"
           py={{ base: 4, md: 8, lg: 12 }} // Adds padding based on screen size

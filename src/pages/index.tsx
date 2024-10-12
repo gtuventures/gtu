@@ -70,12 +70,12 @@ export default function Component() {
     <>
       <NextSeo
         title="GTU Ventures"
-        description="GTU Ventures provides investment, advisory, and consulting services to help startups and small businesses succeed."
+        description="GTU Ventures is a government entity associated with AiC GISC, GISC GTU & DIC GTU"
         openGraph={{
           url: "https://gtuventures.com",
           title: "GTU Ventures",
           description:
-            "GTU Ventures provides investment, advisory, and consulting services to help startups and small businesses succeed.",
+            "GTU Ventures is a government entity associated with AiC GISC, GISC GTU & DIC GTU",
           images: [
             {
               url: "https://gtu-e09.pages.dev/hihb.png",
@@ -178,10 +178,10 @@ export default function Component() {
                   industry expertise.
                 </Text>
                 <Text mt={4}>
-                  Vision is to be the leading Incubator Center in the nation promoting
-                  entrepreneurship and creating innovative ideas to transform
-                  education, projects, and present them into successful business
-                  opportunities.
+                  Vision is to be the leading Incubator Center in the nation
+                  promoting entrepreneurship and creating innovative ideas to
+                  transform education, projects, and present them into
+                  successful business opportunities.
                 </Text>
                 <b>Register Today & Get Benefites of GTU Ventures !</b>
               </Box>
@@ -224,7 +224,7 @@ export default function Component() {
           </Box>
 
           <StartupSupport />
-<br />
+          <br />
           {/* Circulars and Reports */}
           <CircularsList />
 

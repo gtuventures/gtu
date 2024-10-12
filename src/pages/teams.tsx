@@ -9,10 +9,32 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 export default function Component() {
   return (
     <Box>
+      <Head>
+        <NextSeo
+          title="GTU Ventures Teams"
+          description="GTU ventures Team Details"
+          openGraph={{
+            url: "https://gtuventures.com",
+            title: "GTU Ventures",
+            description:
+              "GTU ventures Team Details",
+            images: [
+              {
+                url: "https://gtu-e09.pages.dev/hihb.png",
+                alt: "GTU Ventures",
+              },
+            ],
+            site_name: "gtuventures.com",
+            type: "website",
+          }}
+        />
+      </Head>
       {/* First Section: Team Introduction */}
       <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="purple.700">
         <Container px={{ base: 4, md: 6 }} centerContent>

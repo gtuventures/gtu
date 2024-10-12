@@ -32,9 +32,10 @@ export default function App({
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <link rel="manifest" href="/manifest.json" />
-      </Head>
+      </Head> */}
+
       <SessionContextProvider
         supabaseClient={supabaseClient}
         initialSession={pageProps.initialSession}
@@ -47,7 +48,10 @@ export default function App({
             name="gtuventures.com"
             content="GTU Ventures is a startup accelerator that helps founders build successful companies."
           />
-      
+          <meta
+            name="google-site-verification"
+            content="0zVs3FqjeRhDrYAz0rVvfg1B5weflQ4e93C5DF3l4Bk"
+          />
         </Head>
         <ChakraProvider theme={theme}>
           <AuthContextProvider>

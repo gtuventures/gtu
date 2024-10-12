@@ -18,7 +18,7 @@ export default function LargeWithLogoCentered() {
       <Box bg="white" shadow="sm" p={6} rounded="lg" flex="1">
         {/* Image Section */}
         <Flex justify="center" my={4}>
-          <Image src="/hihb.png" alt="GTU Ventures" maxW={{
+          <Image src="/hihh.png" alt="GTU Ventures" maxW={{
             base:"60%",md:"30%"
           }} />
         </Flex>
@@ -65,10 +65,7 @@ export default function LargeWithLogoCentered() {
           px={4}
           direction={{ base: "column", md: "row" }}
         >
-          {/* Left side Image in Footer */}
-          {/* <Flex align="center" mb={{ base: 4, md: 0 }}>
-            <Image src="/hihb.png" alt="GTU Ventures" boxSize="50px" />
-          </Flex> */}
+          
 
           <Text>&copy; 2024 GTU Ventures. All rights reserved.</Text>
 

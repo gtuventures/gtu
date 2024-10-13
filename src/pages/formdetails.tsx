@@ -9,7 +9,7 @@ import Link from "next/link";
 // Define your types for the startup data
 interface Startup {
   id: number;
-  stname: string;
+  startupname: string;
   discription: string;
   email: string;
   coemail: string;
@@ -53,8 +53,19 @@ const StartupsPage = () => {
         <Heading mb={8} color="pastelPink.800" textAlign="center">
           Startups
         </Heading>
-       <Link href="/contactAdmin"> <Button>See Queries ↗️</Button></Link>
-        <Grid templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6}>
+        <Link href="/contactAdmin">
+          {" "}
+          <Button>See Queries ↗️</Button>
+        </Link>
+        <br />
+        <Grid
+          templateColumns={{
+            base: "repeat(1, 1fr)", // 1 column for mobile devices
+            md: "repeat(2, 1fr)", // 2 columns for medium devices like tablets
+            lg: "repeat(2, 1fr)", // 2 columns for large devices like laptops
+          }}
+          gap={6}
+        >
           {startups.map((startup) => (
             <Box
               key={startup.id}
@@ -66,7 +77,7 @@ const StartupsPage = () => {
             >
               <Stack spacing={3}>
                 <Text fontWeight="bold" fontSize="lg" color="pastelBlue.800">
-                  {startup.stname}
+                  <b> {startup.startupname}</b>
                 </Text>
 
                 {/* Displaying key-value pairs with bold keys */}
@@ -124,6 +135,7 @@ const StartupsPage = () => {
                   </ChakraLink>
                 </Text>
               </Stack>
+              <br />
             </Box>
           ))}
         </Grid>

@@ -92,9 +92,9 @@ export default function StartupStats() {
         >
           Impact by GTU Ventures
         </Heading>
-        <Text fontSize="xl" textAlign="center" mb={12} color="gray.600">
+        {/* <Text fontSize="xl" textAlign="center" mb={12} color="gray.600">
           The success story of GIC. In facts & numbers.
-        </Text>
+        </Text> */}
 
         {/* Responsive Grid Layout */}
         <Grid
@@ -121,8 +121,8 @@ export default function StartupStats() {
           />
           <StatItem
             label="Funding Disbursed "
-            value={2.55}
-            description="(in Million $s)"
+            value={21.17}
+            description="in crores ₹"
             color={pastelColors[3]}
           />
           <StatItem
@@ -132,7 +132,7 @@ export default function StartupStats() {
             color={pastelColors[4]}
           />
           <StatItem
-            label="Capacity Building &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Program"
+            label="Capacity Program"
             value={600}
             description=""
             color={pastelColors[2]}
@@ -144,15 +144,15 @@ export default function StartupStats() {
             color={pastelColors[1]}
           />
           <StatItem
-            label="Revenue Generated &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by  Startups"
-            value={6.75}
-            description="in million $"
+            label="Revenue by  Startups"
+            value={56.02}
+            description="in crores ₹"
             color={pastelColors[1]}
           />
           <StatItem
             label="Mentors Engaged"
             value={273}
-            description="in million $"
+            description=""
             color={pastelColors[4]}
           />{" "}
           <StatItem

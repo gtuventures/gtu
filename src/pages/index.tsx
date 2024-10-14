@@ -99,7 +99,7 @@ export default function Component() {
             overflow="hidden"
           >
             <Image
-              src="/firstimg.png"
+              src="/about-aic-gisc.png"
               alt="Modern startup incubator hallway"
               position="absolute"
               inset="0"
@@ -165,7 +165,7 @@ export default function Component() {
             >
               <Box flex="1">
                 <Heading as="h2" size="xl" fontWeight="bold">
-                  About Us
+                  GTU Ventures
                 </Heading>
                 <Text mt={4}>
                   GTU Ventures is a leading investment and consulting firm
@@ -198,7 +198,7 @@ export default function Component() {
 
           <ImageCarousel />
           {/* Services Section */}
-          <Box id="services" bg="gray.100" py={{ base: 12, md: 24, lg: 32 }}>
+          {/* <Box id="services" bg="gray.100" py={{ base: 12, md: 24, lg: 32 }}>
             <Box textAlign="center" px={4}>
               <Heading as="h2" size="xl" fontWeight="bold">
                 Our Services
@@ -221,7 +221,7 @@ export default function Component() {
                 />
               </Flex>
             </Box>
-          </Box>
+          </Box> */}
 
           <StartupSupport />
           <br />

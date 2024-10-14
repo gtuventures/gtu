@@ -49,7 +49,7 @@ export default function EnhancedNavbar() {
         py={0}
       >
         <Link href="/" display="flex" alignItems="center" gap={2}>
-          <Flex align="center" gap={2}>
+            <Flex align="center" gap={2} position="relative" top={1}>
             <Image
               src={"/gtulogo.png"}
               alt="GTU Ventures Logo"
@@ -60,9 +60,9 @@ export default function EnhancedNavbar() {
               src={"/hihh.png"}
               alt="GTU Ventures Banner"
               height={63}
-              width={150}
+              width={200}
             />
-          </Flex>
+            </Flex>
         </Link>
 
         {/* Desktop Links */}
@@ -115,21 +115,21 @@ export default function EnhancedNavbar() {
             )}
           </Box>
 
-          <Link
+          {/* <Link
             href="/events"
             fontWeight="semibold"
             _hover={{ color: "purple.300" }}
           >
             {" "}
             Events{" "}
-          </Link>
+          </Link> */}
           <Link
             href="/startups"
             fontWeight="semibold"
             _hover={{ color: "purple.300" }}
           >
             {" "}
-            Startups Incubated with Us{" "}
+            Startups 
           </Link>
           <Button colorScheme="purple">
             <Link
@@ -189,7 +189,7 @@ export default function EnhancedNavbar() {
                   {" "}
                   Register Now{" "}
                 </Link>
-                <Link
+                {/* <Link
                   href="/events"
                   w="full"
                   textAlign="center"
@@ -201,7 +201,7 @@ export default function EnhancedNavbar() {
                 >
                   {" "}
                   Events{" "}
-                </Link>{" "}
+                </Link>{" "} */}
                 <Link
                   href="/teams"
                   w="full"

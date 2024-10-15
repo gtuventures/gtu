@@ -57,7 +57,7 @@ export default function EnhancedNavbar() {
               width={65}
             />
             <Image
-              src={"/hihh.png"}
+              src={"/gtuvv.svg"}
               alt="GTU Ventures Banner"
               height={63}
               width={200}

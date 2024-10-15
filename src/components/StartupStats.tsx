@@ -7,16 +7,18 @@ const StatItem = ({
   value,
   description,
   color,
+  cr,
 }: {
   label: any;
   value: any;
   description: any;
   color: any;
+  cr: any;
 }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const duration = 9000; // 9 seconds
+    const duration = 2000; // 2 seconds for faster animation
     const steps = 60;
     const increment = value / steps;
     let current = 0;
@@ -45,21 +47,26 @@ const StatItem = ({
         p={6}
         rounded="lg"
         shadow="md"
-        height="200px" // Set a fixed height
+        minHeight="200px" // Set min height to ensure uniform size
         display="flex"
         flexDirection="column"
-        justifyContent="center" // Center content vertically
-        alignItems="center" // Center content horizontally
+        justifyContent="center"
+        alignItems="center"
       >
-        <Text fontSize="4xl" fontWeight="bold" mb={2} color="gray.800">
-          {count}
+        <Box display="flex" alignItems="baseline" mb={2}>
+          <Text fontSize="4xl" fontWeight="bold" color="gray.800">
+            {description} {count.toLocaleString("en-IN")}
+          </Text>
+          <Text fontSize="xs" fontWeight="light" ml={3}>
+            {cr}
+          </Text>
+        </Box>
+        <Text fontSize="xl" mb={1} color="gray.700" textAlign="center">
+            <Text noOfLines={2}>{label}</Text>
         </Text>
-        <Text fontSize="xl" mb={1} color="gray.700">
-          {label}
-        </Text>
-        <Text fontSize="sm" color="gray.600">
+        {/* <Text fontSize="sm" color="gray.600" textAlign="center">
           {description}
-        </Text>
+        </Text> */}
       </Box>
     </motion.div>
   );
@@ -79,7 +86,7 @@ export default function StartupStats() {
       bg={useColorModeValue("gray.50", "gray.800")}
       minH="100vh"
       py={12}
-      px={{ base: 8, md: 95 }}
+      px={{ base: 8, md: 16 }}
     >
       <Box maxW="7xl" mx="auto">
         <Heading
@@ -87,114 +94,92 @@ export default function StartupStats() {
           fontSize="4xl"
           fontWeight="extrabold"
           textAlign="center"
-          mb={2}
-          color="gray.800"
+          mb={10} // Increased margin to add more space
+          color={useColorModeValue("gray.800", "white")}
         >
           Impact by GTU Ventures
         </Heading>
-        {/* <Text fontSize="xl" textAlign="center" mb={12} color="gray.600">
-          The success story of GIC. In facts & numbers.
-        </Text> */}
-
+<br />
         {/* Responsive Grid Layout */}
         <Grid
-          templateColumns={{ base: "1fr", lg: "repeat(5, 2fr)" }} // 1 column on mobile, 4 columns on laptop+
+          templateColumns={{
+            base: "1fr",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(5, 1fr)",
+          }} // Adjust for mobile, tablet, and desktop
           gap={6}
         >
           <StatItem
-            label="Students Sensitised"
+            label="Number of Students Sensitised"
             value={430000}
             description=""
             color={pastelColors[0]}
+            cr="" 
           />
           <StatItem
-            label="Students Projects"
+            label="Students Projects Approved"
             value={3578}
             description=""
             color={pastelColors[1]}
+            cr={""}
           />
           <StatItem
-            label="Startups Supported"
+            label="Startups Supported by GTUVentures"
             value={730}
             description=""
             color={pastelColors[2]}
+            cr={""}
           />
           <StatItem
-            label="Funding Disbursed "
+            label="Funding Disbursed among Startups"
             value={21.17}
-            description="in crores ₹"
+            description="₹"
             color={pastelColors[3]}
+            cr={""}
           />
           <StatItem
-            label="Jobs Created"
+            label="Jobs Created by Startups"
             value={4100}
             description=""
             color={pastelColors[4]}
+            cr={""}
           />
-          <StatItem
-            label="Capacity Program"
-            value={600}
-            description=""
-            color={pastelColors[2]}
-          />
-          <StatItem
-            label="Patents Granted"
-            value={102}
-            description=""
-            color={pastelColors[1]}
-          />
-          <StatItem
-            label="Revenue by  Startups"
-            value={56.02}
-            description="in crores ₹"
-            color={pastelColors[1]}
-          />
-          <StatItem
-            label="Mentors Engaged"
-            value={273}
-            description=""
-            color={pastelColors[4]}
-          />{" "}
-          <StatItem
-            label="Area of Incubation"
-            value={10000}
-            description=""
-            color={pastelColors[4]}
-          />
-        </Grid>
-
-        {/* <Box mt={12}>
-          <StatItem
-            label="Jobs Created"
-            value={4100}
-            description="(SSIP + NI)"
-            color={pastelColors[4]}
-          />
-        </Box>
-        <Box mt={12}>
-          <StatItem
-            label="Jobs Created"
-            value={4100}
-            description="(SSIP + NI)"
-            color={pastelColors[3]}
-          />
-        </Box>
-        <Box mt={12}>
           <StatItem
             label="Capacity Building Program"
             value={600}
             description=""
-            color={pastelColors[3]}
+            color={pastelColors[2]}
+            cr={""}
           />
-        </Box>
-        <Box mt={12}>
           <StatItem
-            label="Patents Granted"
+            label="Patents Granted to Startups"
             value={102}
             description=""
+            color={pastelColors[1]}
+            cr={""}
+          />
+          <StatItem
+            label="Revenue by Startups"
+            value={56.02}
+            description="₹"
+            color={pastelColors[0]}
+            cr={""}
+          />
+          <StatItem
+            label="Mentors Engaged in Startups"
+            value={273}
+            description=""
+            color={pastelColors[4]}
+            cr={""}
+          />
+          <StatItem
+            label="Area of Incubation of GTUVentures"
+            value={10000}
+            description=""
             color={pastelColors[3]}
-          /> */}
-        {/* </Box> */}
+            cr={"Sq. Ft."}  
+          />
+        </Grid>
       </Box>
     </Box>
   );

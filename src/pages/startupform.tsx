@@ -137,11 +137,11 @@ function formm() {
         <Head>
           <NextSeo
             title="GTU Ventures Startup Registration"
-            description="GTU ventures page for startup registeration"
+            description="GTU Ventures page for startup registeration"
             openGraph={{
               url: "https://gtuventures.com",
               title: "GTU Ventures startup registration page",
-              description: "GTU ventures is a platform for startups",
+              description: "GTU Ventures is a platform for startups",
               images: [
                 {
                   url: "https://gtu-e09.pages.dev/hihb.png",

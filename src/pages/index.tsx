@@ -21,7 +21,7 @@ import { useForm } from "react-hook-form"; // Import useForm from react-hook-for
 import supabase from "../../supabase";
 import { useEffect, useState } from "react";
 import { NextSeo } from "next-seo";
-import PreLoader from "../components/pre";
+// import PreLoader from "../components/pre";
 
 export default function Component() {
   const toast = useToast(); // Initialize useToast
@@ -87,7 +87,7 @@ export default function Component() {
         }}
       />
 
-      {isVisible && <PreLoader />}
+      {/* {isVisible && <PreLoader />} */}
 
       <Flex direction="column" minH="100vh">
         <Box as="main" flex="1">
@@ -124,11 +124,10 @@ export default function Component() {
                 fontWeight="bold"
                 mb={4}
               >
-                Ideate ,Innovate & <br />
-                Execute !
+             Innovate2Impact
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} mb={8} maxW="3xl">
-                Unlock the full potential of your startup with GTU ventures!
+                Unlock the full potential of your startup with GTU Ventures!
               </Text>
               <Button
                 bg="purple.500"

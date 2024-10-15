@@ -18,12 +18,12 @@ export default function Component() {
       <Head>
         <NextSeo
           title="GTU Ventures Teams"
-          description="GTU ventures Team Details"
+          description="GTU Ventures Team Details"
           openGraph={{
             url: "https://gtuventures.com",
             title: "GTU Ventures",
             description:
-              "GTU ventures Team Details",
+              "GTU Ventures Team Details",
             images: [
               {
                 url: "https://gtu-e09.pages.dev/hihb.png",

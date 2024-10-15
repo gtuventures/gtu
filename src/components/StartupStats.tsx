@@ -135,7 +135,7 @@ export default function StartupStats() {
             value={21.17}
             description="₹"
             color={pastelColors[3]}
-            cr={""}
+            cr={"cr"}
           />
           <StatItem
             label="Jobs Created by Startups"
@@ -163,7 +163,7 @@ export default function StartupStats() {
             value={56.02}
             description="₹"
             color={pastelColors[0]}
-            cr={""}
+            cr={"cr"}
           />
           <StatItem
             label="Mentors Engaged in Startups"

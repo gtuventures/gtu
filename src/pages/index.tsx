@@ -242,7 +242,7 @@ export default function Component() {
                 >
                   <Box flex="1" maxW={{ base: "100%", md: "450px" }}>
                     <Image
-                      src="/contact.jpeg"
+                      src="/contactus.webp"
                       alt="GTU Ventures"
                       rounded="lg"
                       objectFit="cover"

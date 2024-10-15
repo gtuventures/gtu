@@ -91,6 +91,10 @@ export default function EnhancedNavbar() {
                 onMouseEnter={handleMouseEnterDropdown}
                 onMouseLeave={handleMouseLeave}
               >
+
+
+
+                {/* hsdsdhf */}
                 <Link
                   href="/aboutus"
                   display="block"
@@ -99,7 +103,7 @@ export default function EnhancedNavbar() {
                   _hover={{ bg: "purple.100" }}
                 >
                   {" "}
-                  About Us ↗{" "}
+                  About Us ↗{" "}   
                 </Link>
                 <Link
                   href="/teams"

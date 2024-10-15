@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { opacity, slideUp } from "./anim";
 
-const words = [
-  "GTU",
-  "Ventures",
-  "Startup",
-  "Innovation",
-  "&",
-  "Leadership",
+// const words = [
+//   "GTU",
+//   "Ventures",
+//   "Startup",
+//   "Innovation",
+//   "&",
+//   "Leadership",
   
-];
+// ];
 
 export default function Index() {
   const [index, setIndex] = useState(0);
@@ -22,15 +22,15 @@ export default function Index() {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
-  useEffect(() => {
-    if (index == words.length - 1) return;
-    setTimeout(
-      () => {
-        setIndex(index + 1);
-      },
-      index == 0 ? 1000 : 150
-    );
-  }, [index]);
+  // useEffect(() => {
+  //   if (index == words.length - 1) return;
+  //   setTimeout(
+  //     () => {
+  //       setIndex(index + 1);
+  //     },
+  //     index == 0 ? 1000 : 150
+  //   );
+  // }, [index]);
 
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
     dimension.height
@@ -61,10 +61,10 @@ export default function Index() {
     >
       {dimension.width > 0 && (
         <>
-          <motion.p variants={opacity} initial="initial" animate="enter">
+          {/* <motion.p variants={opacity} initial="initial" animate="enter">
             <span></span>
             {words[index]}
-          </motion.p>
+          </motion.p> */}
           <svg>
             <motion.path
               variants={curve}

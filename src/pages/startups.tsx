@@ -7,100 +7,97 @@ import {
   Container,
 } from "@chakra-ui/react";
 
-// const startups = [
-//   {
-//     image: "/startups/1.jpg",
-//     name: "Startup",
-//   },
-//   {
-//     image: "/startups/3.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/6.jpg",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/8.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/9.jpg",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/11.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/12.jpg",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/13.jpg",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "./startups/14.jpg",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/15.jpg",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/16.jpg",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/17.jpg",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/18.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/19.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/20.jpg",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/21.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/22.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/23.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/24.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/25.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/26.png",
-//     name: "Startup One",
-//   },
-//   {
-//     image: "/startups/27.jpg",
-//     name: "Startup One",
-//   }
-//   // Add more startups as needed
-// ];
 
 
 const startups = [
+  {
+    image: "/startups/1.jpg",
+    name: "Startup",
+  },
+  {
+    image: "/startups/3.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/6.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/8.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/9.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/11.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/12.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/13.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "./startups/14.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/15.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/16.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/17.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/18.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/19.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/20.jpg",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/21.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/22.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/23.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/24.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/25.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/26.png",
+    name: "Startup One",
+  },
+  {
+    image: "/startups/27.jpg",
+    name: "Startup One",
+  },
   {
     image: "/startupNew/1.png",
     name: "Startup One",

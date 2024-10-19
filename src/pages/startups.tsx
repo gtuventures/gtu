@@ -134,10 +134,7 @@ const startups = [
     image: "/startupNew/9.png",
     name: "Startup One",
   },
-  {
-    image: "/startupNew/10.png",
-    name: "Startup One",
-  },
+  
   {
     image: "/startupNew/11.png",
     name: "Startup One",
@@ -220,14 +217,6 @@ const startups = [
   },
   {
     image: "/startupNew/31.png",
-    name: "Startup One",
-  },
-  {
-    image: "/startupNew/32.png",
-    name: "Startup One",
-  },
-  {
-    image: "/startupNew/33.png",
     name: "Startup One",
   },
   {

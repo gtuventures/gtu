@@ -49,7 +49,7 @@ export default function EnhancedNavbar() {
         py={0}
       >
         <Link href="/" display="flex" alignItems="center" gap={2}>
-            <Flex align="center" gap={2} position="relative" top={1}>
+          <Flex align="center" gap={2} position="relative" top={1}>
             <Image
               src={"/gtulogo.png"}
               alt="GTU Ventures Logo"
@@ -62,62 +62,28 @@ export default function EnhancedNavbar() {
               height={63}
               width={200}
             />
-            </Flex>
+          </Flex>
         </Link>
 
         {/* Desktop Links */}
         <Flex display={{ base: "none", md: "flex" }} gap={6} align="center">
-          <Box
-            position="relative"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
+          
             <Link
-              href="#"
+              href="/aboutus"
               fontWeight="semibold"
               _hover={{ color: "purple.300" }}
             >
               {" "}
               About{" "}
             </Link>
-            {dropdownVisible && (
-              <Box
-                position="absolute"
-                bg="white"
-                boxShadow="md"
-                mt={2}
-                borderRadius="md"
-                zIndex={1}
-                onMouseEnter={handleMouseEnterDropdown}
-                onMouseLeave={handleMouseLeave}
-              >
-
-
-
-                {/* hsdsdhf */}
-                <Link
-                  href="/aboutus"
-                  display="block"
-                  px={4}
-                  py={2}
-                  _hover={{ bg: "purple.100" }}
-                >
-                  {" "}
-                  About Us ↗{" "}   
-                </Link>
-                <Link
-                  href="/teams"
-                  display="block"
-                  px={4}
-                  py={2}
-                  _hover={{ bg: "purple.100" }}
-                >
-                  {" "}
-                  Teams ↗{" "}
-                </Link>
-              </Box>
-            )}
-          </Box>
+            <Link
+              href="/teams"
+              fontWeight="semibold"
+              _hover={{ color: "purple.300" }}
+            >
+              {" "}
+              Teams{" "}
+            </Link>
 
           {/* <Link
             href="/events"
@@ -133,7 +99,7 @@ export default function EnhancedNavbar() {
             _hover={{ color: "purple.300" }}
           >
             {" "}
-            Startups 
+            Startups
           </Link>
           <Button colorScheme="purple">
             <Link

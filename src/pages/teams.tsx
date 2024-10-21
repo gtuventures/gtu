@@ -290,7 +290,6 @@ const boardMembers = [
     linkedin: "https://linkedin.com/in/vaibhavbhatt",
   },
 ];
-
 const teamMembers = [
   {
     name: "Dr Tushar Panchal",
@@ -398,6 +397,13 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/chiragpandey",
   },
   {
+    name: "Mr. Mahavirsingh Makwana", // Added back
+    role: "Incubation Manager, GISC GTU",
+    image: "/teams/mahavirsinh_makwana.jpg",
+    twitter: "https://twitter.com/chiragpandey",
+    linkedin: "https://linkedin.com/in/chiragpandey",
+  },
+  {
     name: "Mr. Rakesh Nayi",
     role: "Office Assistant",
     image: "/teams/rakesh_nayi.jpg",
@@ -419,7 +425,6 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/chiragpandey",
   },
 ];
-
 
 // Data for team members
 const advisors = [

@@ -361,8 +361,7 @@ export default function StartupsGrid() {
                 src={startup.image}
                 alt={startup.name}
                 objectFit="cover"
-                maxH="300px"
-                width="100%"
+                maxH="250px"
                 borderRadius="lg"
                 _hover={{ opacity: 0.8 }}
               />

@@ -429,7 +429,7 @@ const teamMembers = [
 // Data for team members
 const advisors = [
   {
-    name: "Dr. Mihir Shah sir.",
+    name: "Dr. Mihir Shah",
     role: "Advisor GIC,GTU",
     image: "/teams/mihirsir.jpg",
     twitter: "https://twitter.com/knkher",

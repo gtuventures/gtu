@@ -12,6 +12,7 @@ import {
 import { useForm } from "react-hook-form";
 import supabase from "../../supabase"; // Adjust the import path if necessary
 import { NextSeo } from "next-seo";
+import { Text } from "@chakra-ui/react";
 
 export default function ContactUsPage() {
   const toast = useToast();
@@ -125,6 +126,25 @@ export default function ContactUsPage() {
           </Box>
         </Box>
       </Flex>
+
+      <Box bg="gray.100" py={12} mt={12}>
+        <Box textAlign="center" px={{ base: 8, md: 95 }}>
+          <Box mt={8}>
+            <Heading as="h4" size="md" fontWeight="bold">
+              Find Us on Google Maps
+            </Heading>
+            <Box mt={4}>
+              <a
+                href="https://www.google.com/maps/place/AIC-GISC+Foundation+-+Incubation+Center+of+GTU+supported+by+AIM/@23.1069421,72.5896984,1081m/data=!3m3!1e3!4b1!5s0x395e83ca6dc190e7:0xcad563431604a1c8!4m6!3m5!1s0x395e83ac8b7546cd:0x52028b3b80a14a59!8m2!3d23.1069372!4d72.5922733!16s%2Fg%2F11hkjsjmx3?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button colorScheme="blue">View on Google Maps</Button>
+              </a>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </>
   );
 }

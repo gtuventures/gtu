@@ -170,7 +170,7 @@ function formm() {
                 <FormControl isRequired>
                   <FormLabel>Startup Name</FormLabel>
                   <Input
-                    {...register("Start", {
+                    {...register("startupname", {
                       required: "Enter Startup Name",
                     })}
                     name="startupname"

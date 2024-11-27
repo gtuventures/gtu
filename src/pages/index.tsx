@@ -14,12 +14,10 @@ import {
 import StartupSupport from "../components/support";
 import Link from "next/link";
 import ImageCarousel from "../components/slider";
-import { FiBriefcase } from "react-icons/fi";
 import StartupStats from "../components/StartupStats";
 import CircularsList from "../components/circulars";
 import { useForm } from "react-hook-form"; // Import useForm from react-hook-form
 import supabase from "../../supabase";
-import { useEffect, useState } from "react";
 import { NextSeo } from "next-seo";
 // import PreLoader from "../components/pre";
 
@@ -36,7 +34,8 @@ export default function Component() {
     if (error) {
       toast({
         title: "Error",
-        description: error.message || "There was an issue sending your message.",
+        description:
+          error.message || "There was an issue sending your message.",
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -124,7 +123,7 @@ export default function Component() {
                 fontWeight="bold"
                 mb={4}
               >
-             Innovate2Impact
+                Innovate2Impact
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} mb={8} maxW="3xl">
                 Unlock the full potential of your startup with GTU Ventures!

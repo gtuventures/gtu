@@ -67,23 +67,61 @@ export default function EnhancedNavbar() {
 
         {/* Desktop Links */}
         <Flex display={{ base: "none", md: "flex" }} gap={6} align="center">
-          
+          <Link
+            href="/contactus"
+            fontWeight="semibold"
+            _hover={{ color: "purple.300" }}
+          >
+            {" "}
+            Contact Us
+          </Link>
+          <Box
+            position="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <Link
               href="/aboutus"
               fontWeight="semibold"
               _hover={{ color: "purple.300" }}
             >
-              {" "}
-              About{" "}
+              About
             </Link>
-            <Link
-              href="/teams"
-              fontWeight="semibold"
-              _hover={{ color: "purple.300" }}
-            >
-              {" "}
-              Teams{" "}
-            </Link>
+            {dropdownVisible && (
+              <Box
+                position="absolute"
+                top="100%"
+                left={0}
+                bg="white"
+                boxShadow="md"
+                borderRadius="md"
+                zIndex={10} // Ensure the dropdown is above other elements
+                onMouseEnter={handleMouseEnterDropdown}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link
+                  href="/aboutus"
+                  display="block"
+                  px={4}
+                  py={2}
+                  fontWeight="semibold"
+                  _hover={{ bg: "purple.100" }}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/teams"
+                  display="block"
+                  px={4}
+                  py={2}
+                  fontWeight="semibold"
+                  _hover={{ bg: "purple.100" }}
+                >
+                  Teams
+                </Link>
+              </Box>
+            )}
+          </Box>
 
           {/* <Link
             href="/events"

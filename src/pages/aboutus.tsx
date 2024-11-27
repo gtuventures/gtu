@@ -9,12 +9,11 @@ import {
   Image,
   Avatar,
   VStack,
-  HStack,
   Container,
   Icon,
+  HStack,
 } from "@chakra-ui/react";
 import { FaLightbulb, FaTwitter, FaLinkedin } from "react-icons/fa";
-import { PiWatch } from "react-icons/pi"; // Import PiWatch icon
 
 export default function Component() {
   const [showVision, setShowVision] = useState(true);
@@ -24,127 +23,175 @@ export default function Component() {
   };
 
   return (
-    <Flex direction="column" minH="100vh">
-      <Box as="main" flex="1">
+    <Flex direction="column" minH="100vh" align="center">
+      {/* Main Section */}
+      <Box as="main" flex="1" px={{ base: 4, md: 12 }}>
         {/* Section 1 */}
-        <Box w="full" py={{ base: 12, md: 24, lg: 32 }}>
+        <Box w="full" py={{ base: 8, md: 16, lg: 20 }}>
           <Flex
             direction={{ base: "column", lg: "row" }}
             align="center"
-            justify="center"
-            px={{ base: 4, md: 6 }}
+            justify="space-between"
+            gap={{ base: 6, lg: 12 }}
           >
-            <VStack align="center" spacing={4} textAlign="center">
-              {" "}
-              {/* Align and center text */}
-              <Heading as="h1" fontSize={{ base: "3xl", sm: "5xl", xl: "6xl" }}>
+            <VStack
+              align="flex-start"
+              spacing={6}
+              textAlign={{ base: "center", lg: "left" }}
+              w={{ base: "100%", lg: "50%" }}
+            >
+              <Heading as="h1" fontSize={{ base: "3xl", md: "5xl" }}>
                 GTU Ventures
               </Heading>
               <Text
                 maxW="600px"
                 color="gray.600"
-                fontSize={{ base: "md", md: "xl" }}
+                fontSize={{ base: "md", md: "lg" }}
               >
-                Empowering entrepreneurs to turn their ideas into thriving
-                businesses. Our incubation program provides the resources,
-                mentorship, and support startups need to succeed. Empowering
-                entrepreneurs to turn their ideas into thriving businesses. Our
-                incubation program provides the resources, mentorship, and
-                support startups need to succeed.
+                Gujarat Technological University (GTU), established in 2007, has
+                consistently been at the forefront of fostering innovation,
+                entrepreneurship, and skills development in Gujarat. With a rich
+                history of supporting over 750 startups and generating thousands
+                of jobs, GTU has carved its niche as a leader in the startup
+                ecosystem of the state.
               </Text>
             </VStack>
-            <Box
-              display="flex"
-              justifyContent="center"
-              mt={{ base: 6, lg: 0 }}
-              m={4}
-            >
+            <Box w={{ base: "100%", lg: "45%" }}>
               <Image
-                src="/aboutus.jpeg"
-                width="475px"
-                height="475px"
-                alt="GTU Ventures Logo"
-                borderRadius="xl"
-                objectFit="contain"
+                src="/gtulandscape.png"
+                alt="GTU Ventures"
+                borderRadius="2xl"
+                boxShadow="lg"
+                objectFit="cover"
+                w="100%"
+                maxH="400px"
               />
             </Box>
           </Flex>
         </Box>
 
         {/* Vision & Mission Section */}
-        <Box w="full" h="100vh" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
-          <Flex direction={{ base: "column", md: "row" }} h="full">
-            {/* Vision Section */}
-            <Box w={{ base: "full", md: "50%" }} position="relative">
+        <Box w="full" py={{ base: 8, md: 16, lg: 20 }} bg="gray.50">
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            gap={6}
+            align="stretch"
+            justify="space-between"
+          >
+            <Box
+              flex="1"
+              h="300px"
+              bg="white"
+              borderRadius="md"
+              overflow="hidden"
+              boxShadow="sm"
+            >
               <Image
-                src={showVision ? "/about-aic-gisc.png" : "/about-aic-gisc.png"}
+                src={
+                  showVision
+                    ? "aboutusimage.avif"
+                    : "https://via.placeholder.com/600"
+                }
                 alt={
                   showVision ? "Incubation Center Interior" : "Mission Image"
                 }
-                boxSize="100%"
+                w="100%"
+                h="100%"
                 objectFit="cover"
               />
             </Box>
 
-            {/* Mission Section */}
-            <Flex direction="column" w={{ base: "full", md: "50%" }}>
-              <Box
-                flex="1"
-                p={8}
-                cursor="pointer"
-                transition="background-color 0.3s"
-                bg={showVision ? "white" : "gray.100"}
-                onClick={toggleView}
-              >
-                <Flex align="center" mb={4}>
-                  <FaLightbulb
-                    className="w-8 h-8 text-yellow-500 mr-4"
-                    size={30}
-                  />
-                  <Heading as="h2" size="lg">
-                    Our Vision
-                  </Heading>
-                </Flex>
-                <Text color="gray.600">
-                  Our Vision is the creation and growth of new ideas through
-                  technology and business startups. We nurture the culture of
-                  innovative thinking and technology-led entrepreneurship to
-                  foster an entrepreneurial culture and contribute to social and
-                  national development.
-                </Text>
-              </Box>
-
-              <Box
-                flex="1"
-                p={8}
-                cursor="pointer"
-                transition="background-color 0.3s"
-                bg={!showVision ? "black" : "gray.800"}
-                color={!showVision ? "white" : "gray.300"}
-                onClick={toggleView}
-              >
-                <Flex align="center" mb={4}>
-                  <PiWatch className="w-8 h-8 text-blue-400 mr-4 " size={30} />
-                  <Heading as="h2" size="lg">
-                    Our Mission
-                  </Heading>
-                </Flex>
-                <Text>
-                  To be the leading Incubator Center in the nation promoting
-                  entrepreneurship and creating innovative ideas to transform
-                  education, projects, and present them into successful business
-                  opportunities.
-                </Text>
-              </Box>
+            <Flex
+              flex="1"
+              direction="column"
+              justify="center"
+              align="center"
+              p={6}
+              bg="white"
+              borderRadius="md"
+              boxShadow="sm"
+              onClick={toggleView}
+              cursor="pointer"
+              transition="transform 0.2s"
+              _hover={{ transform: "scale(1.03)" }}
+            >
+              <Icon as={FaLightbulb} w={10} h={10} color="yellow.500" mb={4} />
+              <Heading as="h2" size="lg" textAlign="center">
+                {showVision ? "Our Vision" : "Our Mission"}
+              </Heading>
+              <Text color="gray.600" fontSize="md" textAlign="center" mt={4}>
+                GTU Ventures envisions becoming the cornerstone of
+                entrepreneurial growth and innovation in the region. Our goal is
+                to empower a dynamic community of entrepreneurs through
+                collaboration and access to critical resources, driving
+                significant economic and social impact for national development.
+              </Text>
             </Flex>
           </Flex>
         </Box>
 
-        {/* Section 2: Board of Directors */}
-        <Box w="full" py={{ base: 12, md: 24, lg: 32 }}>
-          <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
+        {/* Board of Directors */}
+        <Box w="full" py={{ base: 8, md: 16, lg: 20 }}>
+          <Container maxW="container.lg">
             <Heading as="h2" size="xl" textAlign="center" mb={8}>
               Board of Directors
+            </Heading>
+            <Flex wrap="wrap" gap={6} justify="center">
+              {boardMembers.map((member) => (
+                <Box
+                  key={member.name}
+                  w={{ base: "100%", sm: "45%", md: "30%" }}
+                  borderRadius="lg"
+                  overflow="hidden"
+                  boxShadow="md"
+                  textAlign="center"
+                  bg="white"
+                  _hover={{ boxShadow: "lg" }}
+                >
+                  <Avatar
+                    size="xl"
+                    name={member.name}
+                    src={member.image}
+                    mx="auto"
+                    mt={4}
+                  />
+                  <VStack spacing={2} mt={4} mb={6}>
+                    <Heading as="h3" size="md">
+                      {member.name}
+                    </Heading>
+                    <Text color="gray.500" fontSize="sm">
+                      {member.role}
+                    </Text>
+                  </VStack>
+                  <HStack justify="center" spacing={4} pb={4}>
+                    {member.twitter && (
+                      <a
+                        href={member.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Icon as={FaTwitter} w={5} h={5} color="blue.500" />
+                      </a>
+                    )}
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Icon as={FaLinkedin} w={5} h={5} color="blue.700" />
+                      </a>
+                    )}
+                  </HStack>
+                </Box>
+              ))}
+            </Flex>
+          </Container>
+        </Box>
+        <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
+          <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
+            <Heading as="h2" size="xl" textAlign="center" mb={8}>
+              Advisors
             </Heading>
             <Flex
               direction={{ base: "column", md: "row" }}
@@ -152,7 +199,7 @@ export default function Component() {
               gap={6}
               justify="center"
             >
-              {boardMembers.map((member) => (
+              {advisors.map((member) => (
                 <Box
                   key={member.name}
                   position="relative"
@@ -179,7 +226,6 @@ export default function Component() {
                     <Text color="gray.500">{member.role}</Text>
                   </VStack>
 
-                  {/* Hidden overlay with social media icons on hover */}
                   <Box
                     position="absolute"
                     top={0}
@@ -227,293 +273,77 @@ export default function Component() {
             </Flex>
           </Container>
         </Box>
-        {/* section 2 advisors */}
-        {/* Section 3: Team Members */}
-        {/* {/* <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
-          <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
-            <Heading as="h2" size="xl" textAlign="center" mb={8}>
-              Team Members
-            </Heading>
-            <Flex
-              direction={{ base: "column", md: "row" }}
-              wrap="wrap"
-              gap={6}
-              justify="center"
-            >
-              {teamMembers.map((member) => (
-                <Box
-                  key={member.name}
-                  position="relative"
-                  width={{ base: "100%", md: "45%", lg: "30%" }}
-                  borderRadius="lg"
-                  overflow="hidden"
-                  boxShadow="md"
-                  role="group"
-                  textAlign="center"
-                >
-                  <Flex justify="center" my={6}>
-                    <Avatar
-                      size="xl"
-                      name={member.name}
-                      src={member.image}
-                      mx="auto"
-                    />
-                  </Flex>
-
-                  <VStack spacing={2} mt={2} mb={6}>
-                    <Heading as="h3" size="md">
-                      {member.name}
-                    </Heading>
-                    <Text color="gray.500">{member.role}</Text>
-                  </VStack>
-
-                  <Box
-                    position="absolute"
-                    top={0}
-                    left={0}
-                    width="100%"
-                    height="100%"
-                    bg="blackAlpha.900"
-                    display="flex"
-                    flexDirection="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    opacity={0}
-                    _groupHover={{ opacity: 1 }}
-                    transition="opacity 0.3s ease-in-out"
-                    color="white"
-                  >
-                    <Heading as="h4" size="md" mb={2}>
-                      {member.name}
-                    </Heading>
-                    <Text mb={4}>{member.role}</Text>
-
-                    <Flex gap={4}>
-                      {member.twitter && (
-                        <a
-                          href={member.twitter}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
-                        </a>
-                      )}
-                      {member.linkedin && (
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" />
-                        </a>
-                      )}
-                    </Flex>
-                  </Box>
-                </Box>
-              ))} */}
-            {/* </Flex>
-          </Container>  */}
-        {/* </Box> */}
       </Box>
     </Flex>
   );
 }
 
-
-
-
-
 // Sample Data
 const boardMembers = [
   {
     name: "Dr. Rajul Gajjar",
-    role: "Chairperson & Vice Chancellor,GTU",
+    role: "Chairperson and Vice-Chancellor, GTU",
     image: "/teams/rajul_gajjar.png",
   },
-
   {
     name: "Dr. K. N. Kher",
-    role: "Registrar,Director AIC-GISC & GISC GTU",
+    role: "Registrar, GTU; Director, GISC and AIC-GISC",
     image: "/teams/knkher.png",
     twitter: "https://twitter.com/knkher",
     linkedin: "https://linkedin.com/in/knkher",
   },
   {
-    name: "Dr Pankajray Patel",
-    role: " Director GISC GTU",
+    name: "Dr. Pankajray Patel",
+    role: "Director, GISC",
     image: "/teams/pankajray_patel.png",
     twitter: "https://twitter.com/rajulgajjar",
     linkedin: "https://linkedin.com/in/rajulgajjar",
   },
-
-  //Prof. (Dr.) Shailesh Panchal, Director, Graduate School of Engg. & Tech., GTU
   {
     name: "Dr. Shailesh Panchal",
-    role: "Director AIC GISC",
+    role: "Director, AIC-GISC",
     image: "/teams/shailesh_panchal.jpeg",
     twitter: "https://twitter.com/shaileshpanchal",
     linkedin: "https://linkedin.com/in/shaileshpanchal",
   },
-
-  // Prof. (Dr.) Sanjay Chauhan, Director, Graduate School of Pharmacy, GTU
   {
     name: "Dr. Sanjay Chauhan",
-    role: "Director AIC GISC & GISC GTU",
+    role: "Director, GISC & AIC-GISC",
     image: "/teams/sanjay_chauhan.jpg",
     twitter: "https://twitter.com/mtchhabria",
     linkedin: "https://linkedin.com/in/mtchhabria",
   },
-  //4. Prof. (Dr.) M. T. Chhabria, Principal, L. M. College of Pharmacy, Ahmedabad
   {
     name: "Dr. M. T. Chhabria",
-    role: "Director AIC GISC",
+    role: "Director, AIC-GISC & I/c CEO, AIC-GISC",
     image: "/teams/chabbariyasir.png",
     twitter: "https://twitter.com/mtchhabria",
     linkedin: "https://linkedin.com/in/mtchhabria",
   },
-  // 5. Prof. (Dr.) Vaibhav Bhatt, Director, School of Applied Sciences & Technology, GTU
   {
     name: "Dr. Vaibhav Bhatt",
-    role: "Director AIC GISC",
+    role: "Director, AIC-GISC",
     image: "/teams/vaibhav_bhatt.png",
     twitter: "https://twitter.com/vaibhavbhatt",
     linkedin: "https://linkedin.com/in/vaibhavbhatt",
   },
 ];
 
-// const teamMembers = [
-//   {
-//     name: "Dr Tushar Panchal",
-//     role: "Group CEO, GIC",
-//     image: "/teams/tushar_panchal.jpg",
-//     twitter: "https://twitter.com/tusharpanchal",
-//     linkedin: "https://linkedin.com/in/tusharpanchal",
-//   },
-//   {
-//     name: "Kamlendra Singh",
-//     role: "incubation manager, AiC GISC",
-//     image: "/teams/kamlendra_singh.png",
-//     twitter: "https://twitter.com/kamlendrasingh",
-//     linkedin: "https://linkedin.com/in/kamlendrasingh",
-//   },
-//   {
-//     name: "Nidhi Joshi",
-//     role: "Executive Account & Admin",
-//     image: "/teams/nidhi_joshi.png",
-//     twitter: "https://twitter.com/nidhijoshi",
-//     linkedin: "https://linkedin.com/in/nidhijoshi",
-//   },
-//   {
-//     name: "Chirag Pandey",
-//     role: "Project Assistant",
-//     image: "/teams/chirag_pandey.png",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Mr. Mahavirsingh Makwana",
-//     role: "Incubation manager GISC GTU",
-//     image: "/teams/mahavirsinh_makwana.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Ms. Akanksha Gupta",
-//     role: "OSD Incubation & Administrator ,GISC GTU",
-//     image: "/teams/akansha_gupta.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Mr. Hemik D Mehta",
-//     role: "Regional Innovation & Start-up CoOrdinator",
-//     image: "/teams/hemik_mehta.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Ms. Manali Patel",
-//     role: "Incubation Associate",
-//     image: "/teams/Manali_patel.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Mr. Kalpesh Maiyad",
-//     role: "Incubation Associate",
-//     image: "/teams/kalpesh_maiyad.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Ms. Nidhi Chaudhari",
-//     role: "Accountant",
-//     image: "/teams/nidhi_chaudhari.png",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Ms. Pina Kori",
-//     role: "Accountant",
-//     image: "/teams/pina_kori.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Mr. Vishal Rathod ",
-//     role: "Admin(Incubation)",
-//     image: "/teams/vishal_rathod.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Mr. Neelesh Sharma",
-//     role: "Assistant Professor, DIC",
-//     image: "/teams/neelesh_sharma.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Mr Raj Hakani",
-//     role: "Assistant Professor, DIC",
-//     image: "/teams/rajhakanisir.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Mr. Rakesh Nayi",
-//     role: "Office Assistant",
-//     image: "/teams/rakesh_nayi.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Ms. Dhara Dabhi",
-//     role: "Office Assistant",
-//     image: "/teams/dhara_dabhi.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Mr. Siddharaj Solanki",
-//     role: "Office Assistant",
-//     image: "/teams/siddharaj_solanki.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
+const advisors = [
+  {
+    name: "Dr Mihir Shahh",
+    role: "Advisor GIC, GTU ",
+    image: "/teams/mihirsir.jpg",
+    twitter: "https://twitter.com/",
+    linkedin: "https://www.linkedin.com/in/mihir-shah-6b2b88330",
+  },
 
-//   {
-//     name: "Mr. Yajuvendrasingh Chauhan",
-//     role: "Project Manager",
-//     image: "/teams/yajuvendrasir.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-//   {
-//     name: "Mr. Harshid Thummar",
-//     role: "Deputy Manager Operations",
-//     image: "/teams/harshidsir.jpg",
-//     twitter: "https://twitter.com/chiragpandey",
-//     linkedin: "https://linkedin.com/in/chiragpandey",
-//   },
-// ];
+  {
+    name: "Rahul Bhagchandani",
+    role: "Innovation Consultant, GTU",
+    image: "/teams/rahulsir.jpg",
+    twitter: "https://twitter.com/knkher",
+    linkedin: "https://www.linkedin.com/in/rahulbhagchandani/",
+  },
+];
+

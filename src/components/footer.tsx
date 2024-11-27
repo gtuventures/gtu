@@ -41,7 +41,7 @@ export default function LargeWithLogoCentered() {
           Email: info@gtuventures.com
         </Text>
 
-        <Heading as="h3" size="lg" mt={8} textAlign="center">
+        {/* <Heading as="h3" size="lg" mt={8} textAlign="center">
           Follow Us
         </Heading>
 
@@ -55,7 +55,7 @@ export default function LargeWithLogoCentered() {
           <Link href="#">
             <Icon as={FiInstagram} boxSize={6} />
           </Link>
-        </Flex>
+        </Flex> */}
       </Box>
 
       <Box as="footer" bg="gray.100" py={6} color="gray.600" mt={8}>
@@ -69,10 +69,10 @@ export default function LargeWithLogoCentered() {
 
           <Text>&copy; 2024 GTU Ventures. All rights reserved.</Text>
 
-          <Flex gap={4} mt={{ base: 4, md: 0 }}>
+          {/* <Flex gap={4} mt={{ base: 4, md: 0 }}>
             <Link href="#">Privacy Policy</Link>
             <Link href="#">Terms of Service</Link>
-          </Flex>
+          </Flex> */}
         </Flex>
       </Box>
     </>

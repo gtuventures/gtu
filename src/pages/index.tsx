@@ -99,7 +99,7 @@ export default function Component() {
             overflow="hidden"
           >
             <Image
-              src="/about-aic-gisc.png"
+              src="/gtulandscape.png"
               alt="Modern startup incubator hallway"
               position="absolute"
               inset="0"

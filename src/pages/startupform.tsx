@@ -164,14 +164,14 @@ function formm() {
             <Card variant="outline">
               <CardBody>
                 <Heading size="md" fontSize="26px">
-                  Startup Registration for GTU Ventures.{" "}
+                  Apply for Startup support at GTU Ventures{" "}
                 </Heading>
                 <br />
                 <FormControl isRequired>
                   <FormLabel>Startup Name</FormLabel>
                   <Input
-                    {...register("startupname", {
-                      required: "Enter startup Name",
+                    {...register("Start", {
+                      required: "Enter Startup Name",
                     })}
                     name="startupname"
                     placeholder="startupname"
@@ -201,10 +201,10 @@ function formm() {
                 </FormControl>
                 <br />
                 <FormControl isRequired>
-                  <FormLabel>email</FormLabel>
+                  <FormLabel>Email</FormLabel>
                   <Input
                     {...register("email", {
-                      required: "Enter email",
+                      required: "Enter Email",
                     })}
                     name="email"
                     placeholder="name@startup.com"
@@ -250,19 +250,31 @@ function formm() {
                 </FormControl>{" "}
                 <br />
                 <FormControl isRequired>
-                  <FormLabel> Have you raised any fund ?</FormLabel>
+                  <FormLabel>
+                    {" "}
+                    Have you raised any funding for your startup?
+                  </FormLabel>
                   <b>
                     {" "}
-                    <small>If yes ,mention amount </small>
+                    <small>If yes, mention amount </small>
                   </b>
                   <Input
                     {...register("fund", {
                       required: true,
                     })}
                     name="fund"
-                    placeholder="Funds raised"
+                    placeholder="Funding raised in INR"
                   />
-                </FormControl>
+                </FormControl><br />
+                <FormControl>
+                  <FormLabel> Funding Agency/Investor name</FormLabel>
+                  {/* <Text fontSize="xs">if any</Text> */}
+                  <Input
+                    {...register("fundingagency", { required: false })}
+                    name="fundingagency"
+                    placeholder="Name of funding agency"
+                  />
+                </FormControl>{" "}
                 <br />
                 <FormControl>
                   <FormLabel>Website</FormLabel>
@@ -288,7 +300,7 @@ function formm() {
                 </FormControl>
                 <br />
                 <FormControl isRequired>
-                  <FormLabel>Is your startup registered ?</FormLabel>
+                  <FormLabel>Is your startup registered?</FormLabel>
                   <Select
                     {...register("registeration", {
                       required: "Enter stage of startup",
@@ -439,15 +451,6 @@ function formm() {
                   />
                 </FormControl> */}
                 {/* <br /> */}
-                <FormControl>
-                  <FormLabel> Funding agency name</FormLabel>
-                  {/* <Text fontSize="xs">if any</Text> */}
-                  <Input
-                    {...register("fundingagency", { required: false })}
-                    name="fundingagency"
-                    placeholder="Name of funding agency"
-                  />
-                </FormControl>{" "}
                 <br />
                 <FormControl>
                   <FormLabel>Pitch-deck Link </FormLabel>

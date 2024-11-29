@@ -1,28 +1,28 @@
+import { useState } from "react";
 import {
   Box,
-  Button,
   Flex,
-  Heading,
-  Icon,
   Link,
-  useDisclosure,
+  Button,
+  Icon,
   Drawer,
-  DrawerBody,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   DrawerHeader,
+  DrawerBody,
   VStack,
   Divider,
+  Heading,
+  Image,
 } from "@chakra-ui/react";
-import { FiMenu } from "react-icons/fi";
-import { FiTwitter, FiFacebook, FiLinkedin } from "react-icons/fi";
-import { Image } from "@chakra-ui/react";
-import { useState } from "react";
+import { FiMenu, FiTwitter, FiFacebook, FiLinkedin } from "react-icons/fi";
+import { useDisclosure } from "@chakra-ui/hooks";
 
 export default function EnhancedNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   let timeoutId: string | number | NodeJS.Timeout | undefined;
 
   const handleMouseEnter = () => {
@@ -30,14 +30,17 @@ export default function EnhancedNavbar() {
   };
 
   const handleMouseLeave = () => {
-    // Use a timeout to delay hiding the dropdown
     timeoutId = setTimeout(() => {
       setDropdownVisible(false);
-    }, 2000); // 500 ms delay
+    }, 2000);
   };
 
   const handleMouseEnterDropdown = () => {
-    clearTimeout(timeoutId); // Clear timeout if mouse enters dropdown
+    clearTimeout(timeoutId);
+  };
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
   };
 
   return (
@@ -72,7 +75,6 @@ export default function EnhancedNavbar() {
             fontWeight="semibold"
             _hover={{ color: "purple.300" }}
           >
-            {" "}
             Contact Us
           </Link>
           <Box
@@ -81,13 +83,14 @@ export default function EnhancedNavbar() {
             onMouseLeave={handleMouseLeave}
           >
             <Link
-              href="/aboutus"
+              href="#"
               fontWeight="semibold"
               _hover={{ color: "purple.300" }}
+              onClick={toggleDropdown}
             >
               About
             </Link>
-            {dropdownVisible && (
+            {dropdownOpen && (
               <Box
                 position="absolute"
                 top="100%"
@@ -95,7 +98,7 @@ export default function EnhancedNavbar() {
                 bg="white"
                 boxShadow="md"
                 borderRadius="md"
-                zIndex={10} // Ensure the dropdown is above other elements
+                zIndex={10}
                 onMouseEnter={handleMouseEnterDropdown}
                 onMouseLeave={handleMouseLeave}
               >
@@ -122,21 +125,11 @@ export default function EnhancedNavbar() {
               </Box>
             )}
           </Box>
-
-          {/* <Link
-            href="/events"
-            fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
-          >
-            {" "}
-            Events{" "}
-          </Link> */}
           <Link
             href="/startups"
             fontWeight="semibold"
             _hover={{ color: "purple.300" }}
           >
-            {" "}
             Startups
           </Link>
           <Button colorScheme="purple">
@@ -145,8 +138,7 @@ export default function EnhancedNavbar() {
               fontWeight="semibold"
               _hover={{ color: "purple.300" }}
             >
-              {" "}
-              Apply Now{" "}
+              Apply Now
             </Link>
           </Button>
         </Flex>
@@ -167,11 +159,11 @@ export default function EnhancedNavbar() {
           <DrawerContent bg="white" color="purple">
             <DrawerCloseButton />
             <DrawerHeader borderBottomWidth="1px">
-              <Heading size="md"> GTU Ventures </Heading>
+              <Heading size="md">GTU Ventures</Heading>
             </DrawerHeader>
             <DrawerBody>
-              <VStack align="start" spacing={6} mt={4}>
-                <Link
+              <VStack align="start" spacing={6} mt={4} px={20}>
+                {/* <Link
                   href="/aboutus"
                   w="full"
                   textAlign="center"
@@ -181,9 +173,73 @@ export default function EnhancedNavbar() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  {" "}
-                  About Us{" "}
-                </Link>
+                  About Us
+                </Link> */}
+                <Box
+                  position="relative"
+                  w="full"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <Link
+                    href="#"
+                    w="full"
+                    textAlign="center"
+                    py={3}
+                    px={30}
+                    fontWeight="semibold"
+                    bg="white"
+                    borderRadius="md"
+                    _hover={{ bg: "purple.300" }}
+                    onClick={toggleDropdown}
+                  >
+                    About
+                  </Link>
+                  {dropdownOpen && (
+                    <Box
+                      position="absolute"
+                      top="100%"
+                      left={0}
+                      px={8}
+                      py={8}
+                      w="full"
+                      bg="white"
+                      boxShadow="md"
+                      borderRadius="md"
+                      zIndex={10}
+                      onMouseEnter={handleMouseEnterDropdown}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <Link
+                        href="/aboutus"
+                        w="full"
+                        textAlign="center"
+                        py={3}
+                        fontWeight="semibold"
+                        bg="white"
+                        borderRadius="md"
+                        _hover={{ bg: "purple.100" }}
+                      >
+                        About
+                      </Link>
+                      <br />
+                      <br />
+                      {/* <br /> */}
+                      <Link
+                        href="/teams"
+                        w="full"
+                        textAlign="center"
+                        py={3}
+                        fontWeight="semibold"
+                        bg="white"
+                        borderRadius="md"
+                        _hover={{ bg: "purple.100" }}
+                      >
+                        Team
+                      </Link>
+                    </Box>
+                  )}
+                </Box>
                 <Link
                   href="/startupform"
                   w="full"
@@ -194,34 +250,7 @@ export default function EnhancedNavbar() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  {" "}
-                  Register Now{" "}
-                </Link>
-                {/* <Link
-                  href="/events"
-                  w="full"
-                  textAlign="center"
-                  py={3}
-                  fontWeight="semibold"
-                  bg="white"
-                  borderRadius="md"
-                  _hover={{ bg: "purple.300" }}
-                >
-                  {" "}
-                  Events{" "}
-                </Link>{" "} */}
-                <Link
-                  href="/teams"
-                  w="full"
-                  textAlign="center"
-                  py={3}
-                  fontWeight="semibold"
-                  bg="white"
-                  borderRadius="md"
-                  _hover={{ bg: "purple.300" }}
-                >
-                  {" "}
-                  Teams
+                  Register Now
                 </Link>
                 <Link
                   href="/startups"
@@ -233,13 +262,12 @@ export default function EnhancedNavbar() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  {" "}
-                  Startups Incubated with Us{" "}
+                  Startups Incubated with Us
                 </Link>
               </VStack>
               <Divider mt={6} borderColor="#E2E8F0" />
               <VStack align="start" spacing={4} mt={6}>
-                <Heading size="sm"> Follow Us </Heading>
+                <Heading size="sm">Follow Us</Heading>
                 <Flex gap={3}>
                   <Button
                     as="a"
@@ -251,8 +279,7 @@ export default function EnhancedNavbar() {
                     _hover={{ bg: "#1A91DA" }}
                     leftIcon={<Icon as={FiTwitter} />}
                   >
-                    {" "}
-                    Twitter{" "}
+                    Twitter
                   </Button>
                   <Button
                     as="a"
@@ -264,8 +291,7 @@ export default function EnhancedNavbar() {
                     _hover={{ bg: "#365899" }}
                     leftIcon={<Icon as={FiFacebook} />}
                   >
-                    {" "}
-                    Facebook{" "}
+                    Facebook
                   </Button>
                   <Button
                     as="a"
@@ -277,8 +303,7 @@ export default function EnhancedNavbar() {
                     _hover={{ bg: "#005582" }}
                     leftIcon={<Icon as={FiLinkedin} />}
                   >
-                    {" "}
-                    LinkedIn{" "}
+                    LinkedIn
                   </Button>
                 </Flex>
               </VStack>

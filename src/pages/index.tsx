@@ -157,39 +157,47 @@ export default function Component() {
           <Box id="about" py={{ base: 12, md: 24, lg: 32 }}>
             <Flex
               direction={{ base: "column", md: "row" }}
-              align="center"
-              gap={6}
-              px={{ base: 8, md: 95 }}
+              align="start"
+              gap={8}
+              px={{ base: 8, md: 130 }}
             >
-              <Box flex="1">
+              <Box flex="1" maxW="xl">
                 <Heading as="h2" size="xl" fontWeight="bold">
                   GTU Ventures
                 </Heading>
                 <Text mt={4}>
-                  GTU Ventures is a leading investment and consulting firm
-                  dedicated to helping entrepreneurs and small businesses
-                  succeed.
+                  Gujarat Technological University (GTU), established in 2007,
+                  has consistently been at the forefront of fostering
+                  innovation, entrepreneurship, and skills development in
+                  Gujarat. With a rich history of supporting over 750 startups
+                  and generating thousands of jobs, GTU has carved its niche as
+                  a leader in the startup ecosystem of the state. The launch of GTU Ventures aligns
+                  with the broader vision of scaling up the university’s
+                  contributions to the state’s economic development, supporting
+                  Hon'ble Prime Minister Shri Narendra Modi's vision for a
+                  Viksit Bharat@2047.
                 </Text>
                 <Text mt={4}>
-                  Our mission is to empower entrepreneurs and drive innovation
-                  by providing access to capital, strategic guidance, and
-                  industry expertise.
+                  As part of our ongoing efforts to meet the ever-evolving
+                  demands of the industry and global education trends, GTU has
+                  unveiled the GTU Ventures, an umbrella initiative bringing
+                  together all of the university's efforts for innovation,
+                  entrepreneurship, and industry collaborations.
                 </Text>
                 <Text mt={4}>
-                  Vision is to be the leading Incubator Center in the nation
-                  promoting entrepreneurship and creating innovative ideas to
-                  transform education, projects, and present them into
-                  successful business opportunities.
+                  The launch of GTU Ventures aligns with the broader vision of
+                  scaling up the university’s contributions to the state’s
+                  economic development, supporting Hon'ble Prime Minister Shri
+                  Narendra Modi's vision for a Viksit Bharat@2047.
                 </Text>
-                <b>Register Today & Get Benefites of GTU Ventures !</b>
               </Box>
               <Image
                 src="/incub12.jpeg"
                 alt="GTU Ventures"
                 rounded="lg"
                 objectFit="cover"
-                width={{ base: "100%", md: "500px" }}
-                height="auto"
+                maxW={{ base: "100%", md: "500px" }}
+                h="auto"
               />
             </Flex>
           </Box>

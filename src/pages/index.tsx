@@ -196,7 +196,7 @@ export default function Component() {
                 alt="GTU Ventures"
                 rounded="lg"
                 objectFit="cover"
-                maxW={{ base: "100%", md: "500px" }}
+                maxW={{ base: "100%", md: "700px" }}
                 h="auto"
               />
             </Flex>

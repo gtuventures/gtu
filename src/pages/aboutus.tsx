@@ -331,7 +331,7 @@ const boardMembers = [
 
 const advisors = [
   {
-    name: "Dr Mihir Shahh",
+    name: "Dr Mihir Shah",
     role: "Advisor GIC, GTU ",
     image: "/teams/mihirsir.jpg",
     twitter: "https://twitter.com/",

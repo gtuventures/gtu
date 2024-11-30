@@ -262,7 +262,21 @@ export default function EnhancedNavbar() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  Startups Incubated with Us
+                  Startups Incubated 
+                </Link>
+                {/* </Link> */}
+                {/* <br /> */}
+                <Link
+                  href="/contactus"
+                  w="full"
+                  textAlign="center"
+                  py={3}
+                  fontWeight="semibold"
+                  bg="white"
+                  borderRadius="md"
+                  _hover={{ bg: "purple.300" }}
+                >
+                  Contact Us
                 </Link>
               </VStack>
               <Divider mt={6} borderColor="#E2E8F0" />

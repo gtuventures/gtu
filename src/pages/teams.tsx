@@ -120,7 +120,7 @@ export default function Component() {
                 {/* Social Media Icons with Links */}
                 <Flex gap={4}>
                   <a
-                    href="https://linkedin.com/in/tusharpanchal"
+                    href="https://www.linkedin.com/in/dr-tushar-panchal-a07a6246/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

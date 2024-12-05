@@ -164,15 +164,7 @@ export default function Component() {
                     </Text>
                   </VStack>
                   <HStack justify="center" spacing={4} pb={4}>
-                    {member.twitter && (
-                      <a
-                        href={member.twitter}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Icon as={FaTwitter} w={5} h={5} color="blue.500" />
-                      </a>
-                    )}
+                  
                     {member.linkedin && (
                       <a
                         href={member.linkedin}
@@ -248,15 +240,6 @@ export default function Component() {
                     <Text mb={4}>{member.role}</Text>
 
                     <Flex gap={4}>
-                      {member.twitter && (
-                        <a
-                          href={member.twitter}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
-                        </a>
-                      )}
                       {member.linkedin && (
                         <a
                           href={member.linkedin}
@@ -284,48 +267,49 @@ const boardMembers = [
     name: "Dr. Rajul Gajjar",
     role: "Chairperson and Vice-Chancellor, GTU",
     image: "/teams/rajul_gajjar.png",
+    linkedin: "https://in.linkedin.com/in/rajul-k-gajjar-06361124",
   },
   {
     name: "Dr. K. N. Kher",
     role: "Registrar, GTU; Director, GISC and AIC-GISC",
     image: "/teams/knkher.png",
-    twitter: "https://twitter.com/knkher",
-    linkedin: "https://linkedin.com/in/knkher",
+    // twitter: "https://twitter.com/knkher",
+    linkedin: "https://in.linkedin.com/in/kher-kanji-31437742",
   },
   {
     name: "Dr. Pankajray Patel",
     role: "Director, GISC",
     image: "/teams/pankajray_patel.png",
-    twitter: "https://twitter.com/rajulgajjar",
-    linkedin: "https://linkedin.com/in/rajulgajjar",
+    // twitter: "https://twitter.com/rajulgajjar",
+    linkedin: "#",
   },
   {
     name: "Dr. Shailesh Panchal",
     role: "Director, AIC-GISC",
     image: "/teams/shailesh_panchal.jpeg",
-    twitter: "https://twitter.com/shaileshpanchal",
-    linkedin: "https://linkedin.com/in/shaileshpanchal",
+    // twitter: "https://twitter.com/shaileshpanchal",
+    // linkedin: "https://linkedin.com/in/shaileshpanchal",
   },
   {
     name: "Dr. Sanjay Chauhan",
     role: "Director, GISC & AIC-GISC",
     image: "/teams/sanjay_chauhan.jpg",
-    twitter: "https://twitter.com/mtchhabria",
-    linkedin: "https://linkedin.com/in/mtchhabria",
+    // twitter: "https://twitter.com/mtchhabria",
+    linkedin: "https://in.linkedin.com/in/dr-sanjay-chauhan-01010b12",
   },
   {
     name: "Dr. M. T. Chhabria",
     role: "Director, AIC-GISC & I/c CEO, AIC-GISC",
     image: "/teams/chabbariyasir.png",
-    twitter: "https://twitter.com/mtchhabria",
-    linkedin: "https://linkedin.com/in/mtchhabria",
+    // twitter: "https://twitter.com/mtchhabria",
+    // linkedin: "https://linkedin.com/in/mtchhabria",
   },
   {
     name: "Dr. Vaibhav Bhatt",
     role: "Director, AIC-GISC",
     image: "/teams/vaibhav_bhatt.png",
-    twitter: "https://twitter.com/vaibhavbhatt",
-    linkedin: "https://linkedin.com/in/vaibhavbhatt",
+    // twitter: "https://twitter.com/vaibhavbhatt",
+    linkedin: "https://in.linkedin.com/in/dr-vaibhav-bhatt-51296243",
   },
 ];
 
@@ -334,7 +318,7 @@ const advisors = [
     name: "Dr Mihir Shah",
     role: "Advisor GIC, GTU ",
     image: "/teams/mihirsir.jpg",
-    twitter: "https://twitter.com/",
+    // twitter: "https://twitter.com/",
     linkedin: "https://www.linkedin.com/in/mihir-shah-6b2b88330",
   },
 
@@ -342,7 +326,7 @@ const advisors = [
     name: "Rahul Bhagchandani",
     role: "Innovation Consultant, GTU",
     image: "/teams/rahulsir.jpg",
-    twitter: "https://twitter.com/knkher",
+    // twitter: "https://twitter.com/knkher",
     linkedin: "https://www.linkedin.com/in/rahulbhagchandani/",
   },
 ];

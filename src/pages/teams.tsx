@@ -119,15 +119,15 @@ export default function Component() {
 
                 {/* Social Media Icons with Links */}
                 <Flex gap={4}>
-                  <a
+                  {/* <a
                     href="https://www.linkedin.com/in/dr-tushar-panchal-a07a6246/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
-                  </a>
+                  </a> */}
                   <a
-                    href="https://linkedin.com/in/tusharpanchal"
+                    href="https://www.linkedin.com/in/dr-tushar-panchal-a07a6246/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -196,13 +196,13 @@ export default function Component() {
 
                     {/* Social Media Icons with Links */}
                     <Flex gap={4}>
-                      <a
+                      {/* <a
                         href={member.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <Icon as={FaTwitter} w={6} h={6} cursor="pointer" />
-                      </a>
+                      </a> */}
                       <a
                         href={member.linkedin}
                         target="_blank"

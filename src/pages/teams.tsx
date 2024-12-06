@@ -35,7 +35,7 @@ export default function Component() {
         />
       </Head>
       {/* First Section: Team Introduction */}
-      <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="purple.700">
+      <Box w="full" py={{ base: 12, md: 20, lg: 20 }} bg="purple.700">
         <Container px={{ base: 4, md: 6 }} centerContent>
           <VStack spacing={4} textAlign="center" color="white">
             <Heading
@@ -54,9 +54,6 @@ export default function Component() {
       {/* New Section: Team Members with Hover Effect */}
       <Box w="full" py={{ base: 12, md: 24, lg: 32 }} bg="gray.50">
         <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
-          <Heading as="h2" size="xl" textAlign="center" mb={8}>
-            Team Members
-          </Heading>
           <Flex
             direction={{ base: "column", md: "row" }}
             wrap="wrap"
@@ -65,7 +62,7 @@ export default function Component() {
           >
             {" "}
             <Box
-              key="Dr Tushar Panchal"
+              key="Dr. Tushar Panchal"
               position="relative"
               width={{ base: "100%", md: "45%", lg: "30%" }}
               borderRadius="lg"

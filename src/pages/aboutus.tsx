@@ -265,13 +265,13 @@ export default function Component() {
 const boardMembers = [
   {
     name: "Dr. Rajul Gajjar",
-    role: "Chairperson and Vice-Chancellor, GTU",
+    role: "Vice Chancellor, GTU Chairperson GISC and AIC-GISC ",
     image: "/teams/rajul_gajjar.png",
     linkedin: "https://in.linkedin.com/in/rajul-k-gajjar-06361124",
   },
   {
     name: "Dr. K. N. Kher",
-    role: "Registrar, GTU; Director, GISC and AIC-GISC",
+    role: "Registrar, GTU Director GISC and AIC-GISC",
     image: "/teams/knkher.png",
     // twitter: "https://twitter.com/knkher",
     linkedin: "https://in.linkedin.com/in/kher-kanji-31437742",
@@ -288,7 +288,7 @@ const boardMembers = [
     role: "Director, AIC-GISC",
     image: "/teams/shailesh_panchal.jpeg",
     // twitter: "https://twitter.com/shaileshpanchal",
-    // linkedin: "https://linkedin.com/in/shaileshpanchal",
+    linkedin: "#",
   },
   {
     name: "Dr. Sanjay Chauhan",
@@ -299,10 +299,10 @@ const boardMembers = [
   },
   {
     name: "Dr. M. T. Chhabria",
-    role: "Director, AIC-GISC & I/c CEO, AIC-GISC",
+    role: "Director, AIC-GISC ",
     image: "/teams/chabbariyasir.png",
     // twitter: "https://twitter.com/mtchhabria",
-    // linkedin: "https://linkedin.com/in/mtchhabria",
+    linkedin: "#",
   },
   {
     name: "Dr. Vaibhav Bhatt",

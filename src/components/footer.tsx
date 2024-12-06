@@ -24,7 +24,7 @@ export default function LargeWithLogoCentered() {
         </Flex>
 
         <Text mt={4} textAlign="center">
-          AiC GISC{" "}
+          AIC GISC ,GISC, DIC {" "}
         </Text>
         <Text mt={2} textAlign="center">
           Phone: 9909910798

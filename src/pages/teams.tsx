@@ -47,10 +47,6 @@ export default function Component() {
             >
               Meet the team GTU Ventures
             </Heading>
-            <Text fontSize={{ base: "md", md: "xl" }} maxW="700px">
-              Our experienced team of entrepreneurs, investors, and industry
-              experts are dedicated to helping startups succeed.
-            </Text>
           </VStack>
         </Container>
       </Box>

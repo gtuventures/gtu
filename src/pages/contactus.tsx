@@ -90,7 +90,7 @@ export default function ContactUsPage() {
                       alt="GTU Ventures"
                       rounded="lg"
                       objectFit="cover"
-                      width="100%"
+                      width="80%"
                       height="auto"
                     />
                   </Box>

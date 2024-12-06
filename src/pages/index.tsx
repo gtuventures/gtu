@@ -158,49 +158,53 @@ export default function Component() {
             <Flex
               direction={{ base: "column", md: "row" }}
               align="start"
-              gap={8}
+              gap={{
+                base: 8,
+                md: 20,
+              }}
               px={{ base: 8, md: 130 }}
             >
               <Box flex="1" maxW="xl">
-                <Heading as="h2" size="xl" fontWeight="bold">
-                  GTU Ventures
-                </Heading>
-                <Text mt={4} fontSize={"xl"}>
-                  Gujarat Technological University (GTU), established in 2007,
-                  has consistently been at the forefront of fostering
-                  innovation, entrepreneurship, and skills development in
-                  Gujarat. With a rich history of supporting over 750 startups
-                  and generating thousands of jobs, GTU has carved its niche as
-                  a leader in the startup ecosystem of the state. The launch of GTU Ventures aligns
-                  with the broader vision of scaling up the university’s
-                  contributions to the state’s economic development, supporting
-                  Hon'ble Prime Minister Shri Narendra Modi's vision for a
-                  Viksit Bharat@2047.
-                </Text>
-                <Text mt={4} fontSize={"xl"}>
-                  As part of our ongoing efforts to meet the ever-evolving
-                  demands of the industry and global education trends, GTU has
-                  unveiled the GTU Ventures, an umbrella initiative bringing
-                  together all of the university's efforts for innovation,
-                  entrepreneurship, and industry collaborations.
-                </Text>
-                <Text mt={4} fontSize={"xl"}>
-                  The launch of GTU Ventures aligns with the broader vision of
-                  scaling up the university’s contributions to the state’s
-                  economic development, supporting Hon'ble Prime Minister Shri
-                  Narendra Modi's vision for a Viksit Bharat@2047.
-                </Text>
+              <Heading as="h2" size="xl" fontWeight="bold">
+                GTU Ventures
+              </Heading>
+              <Text mt={4}>
+                Gujarat Technological University (GTU), established in 2007,
+                has consistently been at the forefront of fostering
+                innovation, entrepreneurship, and skills development in
+                Gujarat. With a rich history of supporting over 750 startups
+                and generating thousands of jobs, GTU has carved its niche as
+                a leader in the startup ecosystem of the state. The launch of GTU Ventures aligns
+                with the broader vision of scaling up the university’s
+                contributions to the state’s economic development, supporting
+                Hon'ble Prime Minister Shri Narendra Modi's vision for a
+                Viksit Bharat@2047.
+              </Text>
+              <Text mt={4}>
+                As part of our ongoing efforts to meet the ever-evolving
+                demands of the industry and global education trends, GTU has
+                unveiled the GTU Ventures, an umbrella initiative bringing
+                together all of the university's efforts for innovation,
+                entrepreneurship, and industry collaborations.
+              </Text>
+              <Text mt={4}>
+                The launch of GTU Ventures aligns with the broader vision of
+                scaling up the university’s contributions to the state’s
+                economic development, supporting Hon'ble Prime Minister Shri
+                Narendra Modi's vision for a Viksit Bharat@2047.
+              </Text>
               </Box>
+              <Box mt={{ base: 8, md: 0 }}>
               <Image
                 src="/incub12.jpeg"
                 alt="GTU Ventures"
                 rounded="lg"
                 objectFit="cover"
-                maxW={{ base: "100%", md: "700px" }}
+                maxW={{ base: "100%", md: "550px" }}
                 h="auto"
               />
-            </Flex>
-          </Box>
+              </Box>
+            </Flex></Box>
 
           <ImageCarousel />
           {/* Services Section */}
@@ -253,7 +257,7 @@ export default function Component() {
                       alt="GTU Ventures"
                       rounded="lg"
                       objectFit="cover"
-                      width="90%"
+                      width="80%"
                       height="auto"
                     />
                   </Box>

@@ -113,7 +113,7 @@ export default function EnhancedNavbar() {
                   fontWeight="semibold"
                   _hover={{ bg: "purple.100" }}
                 >
-                  Teams
+                  Team
                 </Link>
               </Box>
             )}

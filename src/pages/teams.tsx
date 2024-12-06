@@ -237,6 +237,13 @@ const teamMembers = [
     linkedin: "https://in.linkedin.com/in/akanksha-gupta-0592947",
   },
   {
+    name: "Ms. Priyanka Makwana",
+    role: "Manager Technical, AIC-GISC",
+    image: "/teams/priyanka.jpg",
+    // twitter: "https://twitter.com/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/makwana-p-452b40110",
+  },
+  {
     name: "Mr. Neelesh Sharma",
     role: "Coordinator, SSIP",
     image: "/teams/neelesh_sharma.jpg",

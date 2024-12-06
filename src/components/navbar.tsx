@@ -70,13 +70,6 @@ export default function EnhancedNavbar() {
 
         {/* Desktop Links */}
         <Flex display={{ base: "none", md: "flex" }} gap={6} align="center">
-          <Link
-            href="/contactus"
-            fontWeight="semibold"
-            _hover={{ color: "purple.300" }}
-          >
-            Contact Us
-          </Link>
           <Box
             position="relative"
             onMouseEnter={handleMouseEnter}
@@ -110,7 +103,7 @@ export default function EnhancedNavbar() {
                   fontWeight="semibold"
                   _hover={{ bg: "purple.100" }}
                 >
-                  About Us
+                  About 
                 </Link>
                 <Link
                   href="/teams"
@@ -131,6 +124,13 @@ export default function EnhancedNavbar() {
             _hover={{ color: "purple.300" }}
           >
             Startups
+          </Link>
+          <Link
+            href="/contactus"
+            fontWeight="semibold"
+            _hover={{ color: "purple.300" }}
+          >
+            Contact Us
           </Link>
           <Button colorScheme="purple">
             <Link
@@ -262,7 +262,7 @@ export default function EnhancedNavbar() {
                   borderRadius="md"
                   _hover={{ bg: "purple.300" }}
                 >
-                  Startups Incubated 
+                  Startups Incubated
                 </Link>
                 {/* </Link> */}
                 {/* <br /> */}

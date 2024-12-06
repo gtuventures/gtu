@@ -45,7 +45,7 @@ export default function Component() {
               lineHeight="tight"
               mb={2}
             >
-              Meet the GTU Ventures Team
+              Meet the team GTU Ventures
             </Heading>
             <Text fontSize={{ base: "md", md: "xl" }} maxW="700px">
               Our experienced team of entrepreneurs, investors, and industry
@@ -92,7 +92,7 @@ export default function Component() {
                 <Heading as="h3" size="md">
                   Dr Tushar Panchal
                 </Heading>
-                <Text color="gray.500">Group CEO, GIC</Text>
+                <Text color="gray.500">Group CEO, GTU Ventures</Text>
               </VStack>
 
               {/* Hidden overlay with social media icons on hover */}
@@ -221,143 +221,131 @@ export default function Component() {
     </Box>
   );
 }
-
-// Data for board members
-
 const teamMembers = [
-  // {
-  //   name: "Dr Tushar Panchal",
-  //   role: "Group CEO, GIC",
-  //   image: "/teams/tushar_panchal.jpg",
-  //   twitter: "https://twitter.com/tusharpanchal",
-  //   linkedin: "https://linkedin.com/in/tusharpanchal",
-  // },
   {
     name: "Mr Raj Hakani",
-    role: "Assistant Professor, DIC",
+    role: "Coordinator, GIC",
     image: "/teams/rajhakanisir.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/raj-hakani-34a68a35",
   },
   {
     name: "Kamlendra Singh",
-    role: "Incubation Manager, AiC GISC",
+    role: "Incubation Manager, AIC-GISC",
     image: "/teams/kamlendra_singh.png",
     twitter: "https://twitter.com/kamlendrasingh",
-    linkedin: "https://linkedin.com/in/kamlendrasingh",
+    linkedin: "https://in.linkedin.com/in/kamlendra-singh-7a2b58244",
   },
   {
     name: "Ms. Akanksha Gupta",
-    role: "OSD Incubation & Administrator, GISC GTU",
+    role: "OSD Incubation & Administrator, GISC",
     image: "/teams/akansha_gupta.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/akanksha-gupta-0592947",
   },
   {
     name: "Mr. Neelesh Sharma",
-    role: "Assistant Professor, DIC",
+    role: "Coordinator, SSIP",
     image: "/teams/neelesh_sharma.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/neeleshksharma",
   },
   {
     name: "Mr. Hemik D Mehta",
-    role: "Regional Innovation & Start-up Coordinator",
+    role: "Regional Innovation & Start-up Coordinator, GISC",
     image: "/teams/hemik_mehta.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/hemik-mehta-a2b693163",
   },
   {
     name: "Mr. Yajuvendrasingh Chauhan",
-    role: "Project Manager",
+    role: "Project Manager, AIC-GISC",
     image: "/teams/yajuvendrasir.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/yajuvendrasingh-chauhan",
   },
   {
     name: "Mr. Kalpesh Maiyad",
-    role: "Incubation Associate",
+    role: "Incubation Associate, GISC",
     image: "/teams/kalpesh_maiyad.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/kalpesh-ahir-03072059",
   },
   {
     name: "Ms. Manali Patel",
-    role: "Incubation Associate",
+    role: "Incubation Associate, GISC",
     image: "/teams/Manali_patel.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://www.linkedin.com/in/manali-patel-250177338/",
   },
   {
     name: "Mr. Vishal Rathod",
-    role: "Admin (Incubation)",
+    role: "Admin-Incubation, GISC",
     image: "/teams/vishal_rathod.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "NA",
   },
   {
     name: "Mr. Harshid Thummar",
-    role: "Deputy Manager Operations",
+    role: "Deputy Manager Operations, AIC-GISC",
     image: "/teams/harshidsir.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/harshid-thummar",
   },
   {
     name: "Nidhi Joshi",
-    role: "Executive Account & Admin",
+    role: "Executive Account & Admin, AIC-GISC",
     image: "/teams/nidhi_joshi.png",
     twitter: "https://twitter.com/nidhijoshi",
-    linkedin: "https://linkedin.com/in/nidhijoshi",
+    linkedin: "NA",
   },
   {
     name: "Ms. Pina Kori",
-    role: "Accountant",
+    role: "Accountant, GISC",
     image: "/teams/pina_kori.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/vishal-rathod-756b1a282",
   },
   {
     name: "Chirag Pandey",
-    role: "Project Assistant",
+    role: "Project Assistant, AIC-GISC",
     image: "/teams/chirag_pandey.png",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/chirag-pandey-168156164",
   },
   {
     name: "Ms. Nidhi Chaudhari",
-    role: "Accountant",
+    role: "Accountant, GISC",
     image: "/teams/nidhi_chaudhari.png",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "NA",
   },
   {
-    name: "Mr. Mahavirsingh Makwana", // Added back
-    role: "Incubation Manager, GISC GTU",
+    name: "Mr. Mahavirsingh Makwana",
+    role: "Incubation Manager, GISC",
     image: "/teams/mahavirsinh_makwana.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/mahavirsingh-makwana-0a951b272",
   },
   {
     name: "Mr. Rakesh Nayi",
-    role: "Office Assistant",
+    role: "Office Assistant, GISC",
     image: "/teams/rakesh_nayi.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "NA",
   },
   {
     name: "Mr. Siddharaj Solanki",
-    role: "Office Assistant",
+    role: "Office Assistant, GISC",
     image: "/teams/siddharaj_solanki.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "https://in.linkedin.com/in/siddharaj-solanki-337115237",
   },
   {
     name: "Ms. Dhara Dabhi",
-    role: "Office Assistant",
+    role: "Office Assistant, GISC",
     image: "/teams/dhara_dabhi.jpg",
     twitter: "https://twitter.com/chiragpandey",
-    linkedin: "https://linkedin.com/in/chiragpandey",
+    linkedin: "NA",
   },
 ];
-
-// Data for team members

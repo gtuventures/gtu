@@ -165,7 +165,7 @@ export default function Component() {
                 <Heading as="h2" size="xl" fontWeight="bold">
                   GTU Ventures
                 </Heading>
-                <Text mt={4}>
+                <Text mt={4} fontSize={"xl"}>
                   Gujarat Technological University (GTU), established in 2007,
                   has consistently been at the forefront of fostering
                   innovation, entrepreneurship, and skills development in
@@ -177,14 +177,14 @@ export default function Component() {
                   Hon'ble Prime Minister Shri Narendra Modi's vision for a
                   Viksit Bharat@2047.
                 </Text>
-                <Text mt={4}>
+                <Text mt={4} fontSize={"xl"}>
                   As part of our ongoing efforts to meet the ever-evolving
                   demands of the industry and global education trends, GTU has
                   unveiled the GTU Ventures, an umbrella initiative bringing
                   together all of the university's efforts for innovation,
                   entrepreneurship, and industry collaborations.
                 </Text>
-                <Text mt={4}>
+                <Text mt={4} fontSize={"xl"}>
                   The launch of GTU Ventures aligns with the broader vision of
                   scaling up the university’s contributions to the state’s
                   economic development, supporting Hon'ble Prime Minister Shri
@@ -253,7 +253,7 @@ export default function Component() {
                       alt="GTU Ventures"
                       rounded="lg"
                       objectFit="cover"
-                      width="100%"
+                      width="90%"
                       height="auto"
                     />
                   </Box>

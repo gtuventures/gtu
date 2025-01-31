@@ -284,13 +284,6 @@ const boardMembers = [
     linkedin: "#",
   },
   {
-    name: "Dr. Shailesh Panchal",
-    role: "Director, AIC-GISC",
-    image: "/teams/shailesh_panchal.jpeg",
-    // twitter: "https://twitter.com/shaileshpanchal",
-    linkedin: "#",
-  },
-  {
     name: "Dr. Sanjay Chauhan",
     role: "Director, GISC & AIC-GISC",
     image: "/teams/sanjay_chauhan.jpg",

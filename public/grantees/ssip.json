@@ -1,0 +1,830 @@
+{
+    "Sheet11": [
+        {
+            "S No": 1,
+            "Approval Date": "13.4.23",
+            "Innovation": "SUPERFOOD HEALTH DRINK ",
+            "Innovator": "MANDAL NITISHKUMAR NANDIAL",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 2,
+            "Approval Date": "13.4.23",
+            "Innovation": "ANTIFUNGAL MICROSONGE GEL",
+            "Innovator": "RITI PATEL",
+            "Sanctioned Grant": 180000
+        },
+        {
+            "S No": 3,
+            "Approval Date": "13.4.23",
+            "Innovation": "RICHGROW",
+            "Innovator": "NIKITA BANDIYAVADARA",
+            "Sanctioned Grant": 180000
+        },
+        {
+            "S No": 4,
+            "Approval Date": "13.4.23",
+            "Innovation": "DESHEE GUIDE",
+            "Innovator": "RAVIN MALAM",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 5,
+            "Approval Date": "13.4.23",
+            "Innovation": "FILM FORMING SYSTEM",
+            "Innovator": "GADHVI CHELSI",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 6,
+            "Approval Date": "13.4.23",
+            "Innovation": "BAHVI PRAKRUTIK PHARMACETUICALS",
+            "Innovator": "BHAVINKUMAR GAYAKVAD",
+            "Sanctioned Grant": 200000
+        },
+        {
+            "S No": 7,
+            "Approval Date": "13.4.23",
+            "Innovation": "PAWFOODZ",
+            "Innovator": "HASSAN HARSOLIYA",
+            "Sanctioned Grant": 200000
+        },
+        {
+            "S No": 8,
+            "Approval Date": "13.4.23",
+            "Innovation": "SOFTSHINE PAWZ",
+            "Innovator": "Pabari Nirali\nHEMANGI PANDEY",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 9,
+            "Approval Date": "13.4.23",
+            "Innovation": "NUTRILEKSHA",
+            "Innovator": "PURVI THAKOR",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 10,
+            "Approval Date": "13.4.23",
+            "Innovation": "O-IGINE",
+            "Innovator": "PURVI THAKOR",
+            "Sanctioned Grant": 180000
+        },
+        {
+            "S No": 11,
+            "Approval Date": "8.6.23",
+            "Innovation": "IOCONICS",
+            "Innovator": "AMAN PATEL",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 12,
+            "Approval Date": "8.6.23",
+            "Innovation": "ROGAN",
+            "Innovator": "KSHTIJ PATEL",
+            "Sanctioned Grant": 75000
+        },
+        {
+            "S No": 13,
+            "Approval Date": "8.6.23",
+            "Innovation": "BOOM GARAGES",
+            "Innovator": "AKASH SHAH",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 14,
+            "Approval Date": "8.6.23",
+            "Innovation": "ATOC",
+            "Innovator": "HEMAL PATEL",
+            "Sanctioned Grant": 60000
+        },
+        {
+            "S No": 15,
+            "Approval Date": "8.6.23",
+            "Innovation": "NEWTONS APPLE",
+            "Innovator": "MANDAR WAGMARE",
+            "Sanctioned Grant": 75000
+        },
+        {
+            "S No": 16,
+            "Approval Date": "8.6.23",
+            "Innovation": "NORTH STAR DIAGNOSTICS",
+            "Innovator": "DR. BANSARI MAHADEVIA",
+            "Sanctioned Grant": 80000
+        },
+        {
+            "S No": 17,
+            "Approval Date": "8.6.23",
+            "Innovation": "SID CLINIC",
+            "Innovator": "DR. YASH BHATT",
+            "Sanctioned Grant": 60000
+        },
+        {
+            "S No": 18,
+            "Approval Date": "8.6.23",
+            "Innovation": "AIMSTER- INTELLIGENTPAINTING MACHINE",
+            "Innovator": "MITESH MARU",
+            "Sanctioned Grant": 220000
+        },
+        {
+            "S No": 19,
+            "Approval Date": "8.6.23",
+            "Innovation": "HEAVITY AUTOMATION (SHIN UP MOBILITY)",
+            "Innovator": "NIKKI THAKRAR",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 20,
+            "Approval Date": "8.6.23",
+            "Innovation": "SMART ROAD PROGRESS MONITORING SYSTEM",
+            "Innovator": "HIRAKRAJ BAPAT",
+            "Sanctioned Grant": 80000
+        },
+        {
+            "S No": 21,
+            "Approval Date": "8.6.23",
+            "Innovation": "ARDENT SPORT ",
+            "Innovator": "SHUBHAM SONI",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 22,
+            "Approval Date": "8.6.23",
+            "Innovation": "BETA MG",
+            "Innovator": "AYUSH PANARA",
+            "Sanctioned Grant": 75000
+        },
+        {
+            "S No": 23,
+            "Approval Date": "8.6.23",
+            "Innovation": "SOS HOSPITALITY",
+            "Innovator": "SHUBHAM SURTI",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 24,
+            "Approval Date": "8.6.23",
+            "Innovation": "EVALUATION OF MR-PRO AND AS A PROGNOSTIC MARKER IN RESPIRATORY TRACT INFECTIONS",
+            "Innovator": "LAVANYA S",
+            "Sanctioned Grant": 80000
+        },
+        {
+            "S No": 25,
+            "Approval Date": "8.6.23",
+            "Innovation": "ARK E-BICYCLE",
+            "Innovator": "UMANGKUMAR PATEL",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 26,
+            "Approval Date": "8.6.23",
+            "Innovation": "BLUE HANGER",
+            "Innovator": "AASHVA DANDAWALA",
+            "Sanctioned Grant": 70000
+        },
+        {
+            "S No": 27,
+            "Approval Date": "8.6.23",
+            "Innovation": "INSTAMAKE TECHNOLOGIES PVT. LTD.",
+            "Innovator": "NIMESH PITHAVA",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 28,
+            "Approval Date": "8.6.23",
+            "Innovation": "TECHNO IT HUB",
+            "Innovator": "BHUMI SHARMA",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 29,
+            "Approval Date": "2.8.23",
+            "Innovation": "DEVELOPING POLYMER GEL ELECTROLYTES FOR SODIUM BATTERIES",
+            "Innovator": "MAITRI PATEL",
+            "Sanctioned Grant": 49700
+        },
+        {
+            "S No": 30,
+            "Approval Date": "2.8.23",
+            "Innovation": "SHOOTERBOOT PRO",
+            "Innovator": "YASH SHIROYA",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 31,
+            "Approval Date": "2.8.23",
+            "Innovation": "WELLNESS AI",
+            "Innovator": "KAUSHAL PANCHAL",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 32,
+            "Approval Date": "2.8.23",
+            "Innovation": "SCIPLIED - COOLBEND",
+            "Innovator": "RAHUL MEGHWAL",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 33,
+            "Approval Date": "2.8.23",
+            "Innovation": "PCB ETCHER",
+            "Innovator": "RISHI MEHTA",
+            "Sanctioned Grant": 150000
+        },
+        {
+            "S No": 34,
+            "Approval Date": "2.8.23",
+            "Innovation": "INDUSTRIAL WAREHOUSING ",
+            "Innovator": "JESAL SHAH",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 35,
+            "Approval Date": "2.8.23",
+            "Innovation": "MOTOR HEALTH MONITORING SYSTEM ",
+            "Innovator": "PATHAN YASHAR KHAN",
+            "Sanctioned Grant": 70000
+        },
+        {
+            "S No": 36,
+            "Approval Date": "2.8.23",
+            "Innovation": "FLUIDGAIT",
+            "Innovator": "PATEL OM KAUSHALBHAI",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 37,
+            "Approval Date": "2.8.23",
+            "Innovation": "ALVY DELIVERY AT YOUR FOOTSTEPS",
+            "Innovator": "KRUSHAN TRIVEDI",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 38,
+            "Approval Date": "2.8.23",
+            "Innovation": "secret Chamber of BIOFLOC",
+            "Innovator": "Parth Laxmanbhai Prajapati",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 39,
+            "Approval Date": "2.8.23",
+            "Innovation": "Bio-Wand of prospection ",
+            "Innovator": "Riya Desai",
+            "Sanctioned Grant": 80000
+        },
+        {
+            "S No": 40,
+            "Approval Date": "2.8.23",
+            "Innovation": "Marine Manure",
+            "Innovator": "Mayur Mahajan",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 41,
+            "Approval Date": "2.8.23",
+            "Innovation": "RAS Aquaponic Model for Backyards",
+            "Innovator": "Parth Laxmanbhai Prajapati",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 42,
+            "Approval Date": "2.8.23",
+            "Innovation": "Bio-range Spirulina & Collagen",
+            "Innovator": "Rutik Satishbhai Parmar",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 43,
+            "Approval Date": "2.8.23",
+            "Innovation": "BioFertilizer spray for improving crop productivity",
+            "Innovator": "Bhumi Rajguru",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 44,
+            "Approval Date": "2.8.23",
+            "Innovation": "BIOSMART DEVICE",
+            "Innovator": "NIDHI VYAS",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 45,
+            "Approval Date": "2.8.23",
+            "Innovation": "BIOINNOVATE SOLUTIONS ",
+            "Innovator": "Kartik Chauhan",
+            "Sanctioned Grant": 70000
+        },
+        {
+            "S No": 46,
+            "Approval Date": "2.8.23",
+            "Innovation": "ZALATECH",
+            "Innovator": "KARTIK CHAUHAN AND DR. DOLATSSINH ZALA",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 47,
+            "Approval Date": "2.8.23",
+            "Innovation": "BIO-I-TECH",
+            "Innovator": "KARTIK CHAUHAN AND DR. DOLATSSINH ZALA",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 48,
+            "Approval Date": "2.8.23",
+            "Innovation": "ASTHMA MAHAGEMENT WITH INNOVATE BIOSENSOR BASED ASTHAMA ATTACK MONITORING DEVICE",
+            "Innovator": "SAIF SAAD FAKHRUU",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 49,
+            "Approval Date": "2.8.23",
+            "Innovation": "SWASTHFLORA (PROZEN)",
+            "Innovator": "PURVA GOHIL ",
+            "Sanctioned Grant": 80000
+        },
+        {
+            "S No": 50,
+            "Approval Date": "2.8.23",
+            "Innovation": "NAATOTECH BIOSCIENCES",
+            "Innovator": "POOJA DOSHI",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 51,
+            "Approval Date": "2.8.23",
+            "Innovation": "NALFIA DEVICE FOR DENGUE DETECTION ",
+            "Innovator": "DR. BHUMIKA JAYANTKUMAR PRAJAPATI",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 52,
+            "Approval Date": "2.8.23",
+            "Innovation": "REMANTEK",
+            "Innovator": "SHREYA SHAH",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 53,
+            "Approval Date": "2.8.23",
+            "Innovation": "ROBUZTA",
+            "Innovator": "PRANSU MAHESHARI",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 54,
+            "Approval Date": "2.8.23",
+            "Innovation": "NOVEL DEVELOPMENT OF ANTI EMOTIONAL HERBAL POWDER",
+            "Innovator": "DENISH DINESHBHAI GHODASARA",
+            "Sanctioned Grant": 150000
+        },
+        {
+            "S No": 55,
+            "Approval Date": "2.8.23",
+            "Innovation": "GREENOMER",
+            "Innovator": "JEET LUKHI",
+            "Sanctioned Grant": 180000
+        },
+        {
+            "S No": 56,
+            "Approval Date": "2.8.23",
+            "Innovation": "GUDLILY",
+            "Innovator": "VEDANT PANCHAL",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 57,
+            "Approval Date": "2.8.23",
+            "Innovation": "ALPHATRON ELECTRIC MOBILITY PVT LTD",
+            "Innovator": "DHRUMIL THAKKAR",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 58,
+            "Approval Date": "2.8.23",
+            "Innovation": "INFINITE ELECTRIC TRICYCLE ",
+            "Innovator": "DHRUMIL THAKKAR",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 59,
+            "Approval Date": "2.8.23",
+            "Innovation": "BTP PROJECT : FLIGHT CONTROLLER",
+            "Innovator": "PAVAN VERMA ",
+            "Sanctioned Grant": 180000
+        },
+        {
+            "S No": 60,
+            "Approval Date": "2.8.23",
+            "Innovation": "JET WHEELZ",
+            "Innovator": "DR.KRISHNA SHAH",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 61,
+            "Approval Date": "2.8.23",
+            "Innovation": "PIGSO LERNING ",
+            "Innovator": "MAYANK PANCHAL",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 62,
+            "Approval Date": "2.8.23",
+            "Innovation": "BOURDEN INDUSTRIES PRIVATE LIMITED",
+            "Innovator": "MITENFRA SHARMA",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 63,
+            "Approval Date": "2.8.23",
+            "Innovation": "SAND INDIA",
+            "Innovator": "DHIREN VINODBHAI PATADIYA",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 64,
+            "Approval Date": "2.8.23",
+            "Innovation": "FAB WOOD",
+            "Innovator": "VIVEK RABARI",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 65,
+            "Approval Date": "2.8.23",
+            "Innovation": "PRAKRUTWIMI ",
+            "Innovator": "PARATIK SONAGARA",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 66,
+            "Approval Date": "2.8.23",
+            "Innovation": "TUMPUDI AUTOMATIVE PRIVATE LIMITED",
+            "Innovator": "KRISHNA CHAITANYA TUMPUDI",
+            "Sanctioned Grant": 150000
+        },
+        {
+            "S No": 67,
+            "Approval Date": "2.8.23",
+            "Innovation": "GREENROAD",
+            "Innovator": "K UMASANKAR ACHARY",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 68,
+            "Approval Date": "2.8.23",
+            "Innovation": "EDUPID",
+            "Innovator": "NIYATI SHAH",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 69,
+            "Approval Date": "2.8.23",
+            "Innovation": "RAKTSARTHI",
+            "Innovator": "SHREYAS JANI",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 70,
+            "Approval Date": "2.8.23",
+            "Innovation": "BIZLINE",
+            "Innovator": "MOHIT PATEL",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 71,
+            "Approval Date": "2.8.23",
+            "Innovation": "NATURE TROOPS",
+            "Innovator": "RAVI PATEL",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 72,
+            "Approval Date": "2.8.23",
+            "Innovation": "MOMMY DIARY",
+            "Innovator": "PRIYANKA WALA ",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 73,
+            "Approval Date": "2.8.23",
+            "Innovation": "AI STORE",
+            "Innovator": "DHARMIK CHODVADIYA",
+            "Sanctioned Grant": 80000
+        },
+        {
+            "S No": 74,
+            "Approval Date": "2.8.23",
+            "Innovation": "SAARTHI SETU",
+            "Innovator": "DIXIT PATEL",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 75,
+            "Approval Date": "2.8.23",
+            "Innovation": "FIGZEE",
+            "Innovator": "KRUSHIL KOTADIYA",
+            "Sanctioned Grant": 80000
+        },
+        {
+            "S No": 76,
+            "Approval Date": "2.8.23",
+            "Innovation": "PATHSALA EDUCATION SYSTEM",
+            "Innovator": "DHYAN SONI",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 77,
+            "Approval Date": "2.8.23",
+            "Innovation": "OTOMETA",
+            "Innovator": "SHRUSHTI GOSAI",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 78,
+            "Approval Date": "2.8.23",
+            "Innovation": "VISUALIZER TOOL ",
+            "Innovator": "RINKU PATEL",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 79,
+            "Approval Date": "2.8.23",
+            "Innovation": "DIGITAL EDUCATION FOR PHYSICS STUDENT",
+            "Innovator": "VIVEK VAGHELA",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 80,
+            "Approval Date": "15.06.24",
+            "Innovation": "LOW COST AND UNIQUE RAW MATERIAL FOR BIOMASS BRIQUETTES AND LOW COST AND MOVABLE BIOMASS BRIQUETTING PRESS",
+            "Innovator": "MURTAZA HATHI ",
+            "Sanctioned Grant": 150000
+        },
+        {
+            "S No": 81,
+            "Approval Date": "15.06.24",
+            "Innovation": "SHIV FLEXFUELS PVT. LTD.",
+            "Innovator": "AKSHIT JAYSWAL",
+            "Sanctioned Grant": 220000
+        },
+        {
+            "S No": 82,
+            "Approval Date": "15.06.24",
+            "Innovation": "PREPARATION AND EVALUATION OF NOVEL TOPICAL FORMULATION FOR THE TREATMENT OF RESISTANT FUNGAL INFECTION",
+            "Innovator": "SIDDHAPURA PRATIKKUMAR JAYANTBHAI",
+            "Sanctioned Grant": 220000
+        },
+        {
+            "S No": 83,
+            "Approval Date": "15.06.24",
+            "Innovation": "NIRJA HEALTH, EMPOWERING WOMEN'S HEALTH",
+            "Innovator": "PRUTHVI PATEL",
+            "Sanctioned Grant": 90000
+        },
+        {
+            "S No": 84,
+            "Approval Date": "15.06.24",
+            "Innovation": "IHOS BOARD",
+            "Innovator": "PRATIK PARMAR",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 85,
+            "Approval Date": "15.06.24",
+            "Innovation": "SPITTING PREVENTION SYSTEM",
+            "Innovator": "PATEL KHUSHIBEN RAMESHBHAI",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 86,
+            "Approval Date": "15.06.24",
+            "Innovation": "FORMULATION AND EVALUTION OF MOSQUITO REPELLENT CANDLE",
+            "Innovator": "GONDALIYA MAYUR ",
+            "Sanctioned Grant": 180000
+        },
+        {
+            "S No": 87,
+            "Approval Date": "15.06.24",
+            "Innovation": "REVOLUTIONISING VAGINOSIS CARE WITH EXPANSIBLE THERMAL GELLING FOAM AEROSOL (ETGFA)",
+            "Innovator": "MAHESHWARI PALAKBEN PREVINBHAI",
+            "Sanctioned Grant": 120000
+        },
+        {
+            "S No": 88,
+            "Approval Date": "15.06.24",
+            "Innovation": "SILIFY BASED SILICONE RUBBER",
+            "Innovator": "DHRUVKUMAR PATEL",
+            "Sanctioned Grant": 200000
+        },
+        {
+            "S No": 89,
+            "Approval Date": "15.06.24",
+            "Innovation": "AUTOMATED TISSUE PAPER DISPENSER",
+            "Innovator": "SARWAM MEGHPARA",
+            "Sanctioned Grant": 220000
+        },
+        {
+            "S No": 90,
+            "Approval Date": "15.06.24",
+            "Innovation": "A BREAKHROUGH MANAGEMENT IN BRONCHIAL ASTHMA",
+            "Innovator": "HIRAK RAKESHBHAI SHAH",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 91,
+            "Approval Date": "15.06.24",
+            "Innovation": "WIRE PASSER MECHANISM",
+            "Innovator": "PRUTHVI BHAVESHBHAI PATEL",
+            "Sanctioned Grant": 125000
+        },
+        {
+            "S No": 92,
+            "Approval Date": "15.06.24",
+            "Innovation": "DESIGN AND SYNTHESIS OF NOVEL PANCREATIC LIPASE INHIBITOR AS ANTI-OBESITY AGENT",
+            "Innovator": "MEMON MAHAMMADHUSSAIN J.",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 93,
+            "Approval Date": "15.06.24",
+            "Innovation": "TACTILE SMART GLOVE",
+            "Innovator": "JAHNAVI NIRGRANTH MEHTA",
+            "Sanctioned Grant": 150000
+        },
+        {
+            "S No": 94,
+            "Approval Date": "15.06.24",
+            "Innovation": "ERGOSCAN SOLUTION",
+            "Innovator": "KUSHAL DAVE,   MST ZAINEB BINTAY ALI",
+            "Sanctioned Grant": 90000
+        },
+        {
+            "S No": 95,
+            "Approval Date": "18.09.24",
+            "Innovation": "AUTONOMOUS TABLE TENNIS TRAINER \nROBOT",
+            "Innovator": "Radhe Virani",
+            "Sanctioned Grant": 140000
+        },
+        {
+            "S No": 96,
+            "Approval Date": "18.09.24",
+            "Innovation": "AURALADDERS",
+            "Innovator": "Kshitija Manishbhai Thakkar",
+            "Sanctioned Grant": 190000
+        },
+        {
+            "S No": 97,
+            "Approval Date": "18.09.24",
+            "Innovation": "GREENGATHER SOLUTIONS",
+            "Innovator": "Ayush Patel",
+            "Sanctioned Grant": 190000
+        },
+        {
+            "S No": 98,
+            "Approval Date": "18.09.24",
+            "Innovation": "VENTUREVERSE",
+            "Innovator": "Jigar Jiwani",
+            "Sanctioned Grant": 140000
+        },
+        {
+            "S No": 99,
+            "Approval Date": "18.09.24",
+            "Innovation": "CURIO",
+            "Innovator": "JESA \nKODIYATAR",
+            "Sanctioned Grant": 170000
+        },
+        {
+            "S No": 100,
+            "Approval Date": "18.09.24",
+            "Innovation": "DELIGHTING HEALTHCARE : INTRODUCING NEUROLIEF NATURALS GUMMIES.",
+            "Innovator": "NIRALI PABARI",
+            "Sanctioned Grant": 170000
+        },
+        {
+            "S No": 101,
+            "Approval Date": "18.09.24",
+            "Innovation": "SOLAR-POWERED \nEVAPORATIVE COOLING SYSTEM FOR VEGETABLE VENDING E-CART",
+            "Innovator": "KURESHI \nMOHSINRAZAKHAN YASINKHAN",
+            "Sanctioned Grant": 190000
+        },
+        {
+            "S No": 102,
+            "Approval Date": "18.09.24",
+            "Innovation": "EXPLORE AND DEVELOP NATURE BASED ALTRENATIVE TREATMENT OPTION FOR MANAGEMENT OF PILES\r",
+            "Innovator": "TRIPATHI PRINCE A",
+            "Sanctioned Grant": 160000
+        },
+        {
+            "S No": 103,
+            "Approval Date": "18.09.24",
+            "Innovation": "JIVANDROPS\r",
+            "Innovator": "PARTH SHAILESHBHAI PATEL",
+            "Sanctioned Grant": 190000
+        },
+        {
+            "S No": 104,
+            "Approval Date": "18.09.24",
+            "Innovation": "PLASTIC FREE GRADENING SOLUTION\r",
+            "Innovator": "UDAY THALA",
+            "Sanctioned Grant": 130000
+        },
+        {
+            "S No": 105,
+            "Approval Date": "18.09.24",
+            "Innovation": "UNIVERSAL ROTO\r",
+            "Innovator": "AJAY RAJPUT",
+            "Sanctioned Grant": 210000
+        },
+        {
+            "S No": 106,
+            "Approval Date": "22.10.24",
+            "Innovation": "AURORA DRIVE",
+            "Innovator": "ANANTRAJ TOMAR",
+            "Sanctioned Grant": 220000
+        },
+        {
+            "S No": 107,
+            "Approval Date": "22.10.24",
+            "Innovation": "GATE EAZY ",
+            "Innovator": "PRATHAM JANGID ",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 108,
+            "Approval Date": "22.10.24",
+            "Innovation": "ML BASED HAND HELD SPECTROSCOPE PROBE",
+            "Innovator": "RAVI SHARMA",
+            "Sanctioned Grant": 195000
+        },
+        {
+            "S No": 109,
+            "Approval Date": "22.10.24",
+            "Innovation": "READCYCLE",
+            "Innovator": "YASHVI THAKKAR",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 110,
+            "Approval Date": "22.10.24",
+            "Innovation": "CARBON SINK ",
+            "Innovator": "VISHAL NIMSE",
+            "Sanctioned Grant": 230000
+        },
+        {
+            "S No": 111,
+            "Approval Date": "22.10.24",
+            "Innovation": "AIR COOLED WINDOW SYSTEM INTEGRATED BY SOLAR ",
+            "Innovator": "AKASH RATHOD",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 112,
+            "Approval Date": "22.10.24",
+            "Innovation": "ELECTROCART",
+            "Innovator": "HIREN SONAR ",
+            "Sanctioned Grant": 250000
+        },
+        {
+            "S No": 113,
+            "Approval Date": "22.10.24",
+            "Innovation": "EV GENIUS",
+            "Innovator": "UJJAL SHAH",
+            "Sanctioned Grant": 200000
+        },
+        {
+            "S No": 114,
+            "Approval Date": "22.10.24",
+            "Innovation": "MITTLIY MADE",
+            "Innovator": "VIDHI PATEL",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 115,
+            "Approval Date": "22.10.24",
+            "Innovation": "SIS-SMART INVESTIGATION SYSTEM ",
+            "Innovator": "MEET BISHT",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 116,
+            "Approval Date": "22.10.24",
+            "Innovation": "ULTIMATE PHONICS KIT",
+            "Innovator": "SAANVI SORATHIA",
+            "Sanctioned Grant": 50000
+        },
+        {
+            "S No": 117,
+            "Approval Date": "22.10.24",
+            "Innovation": "UPGRADE YOUR COFFEE WITH PROTEIN GOODNESS!!!",
+            "Innovator": "ANUJA  ARYA ",
+            "Sanctioned Grant": 100000
+        },
+        {
+            "S No": 118,
+            "Approval Date": "22.10.24",
+            "Innovation": "YOGA MINIONS ",
+            "Innovator": "FATEMA M.ARSIWALA",
+            "Sanctioned Grant": 75000
+        }
+    ]
+}

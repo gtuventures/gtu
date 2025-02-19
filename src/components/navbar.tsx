@@ -23,6 +23,7 @@ export default function EnhancedNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [applyDropdownOpen, setApplyDropdownOpen] = useState(false);
   let timeoutId: string | number | NodeJS.Timeout | undefined;
 
   const handleMouseEnter = () => {
@@ -43,8 +44,19 @@ export default function EnhancedNavbar() {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const toggleApplyDropdown = () => {
+    setApplyDropdownOpen(!applyDropdownOpen);
+  };
+
   return (
-    <Box as="header" bg="white" color="purple" boxShadow="md">
+    <Box
+      as="header"
+      bg="white"
+      color="purple"
+      boxShadow="md"
+      position="relative"
+      zIndex="1000"
+    >
       <Flex
         align="center"
         justify="space-between"
@@ -103,7 +115,7 @@ export default function EnhancedNavbar() {
                   fontWeight="semibold"
                   _hover={{ bg: "purple.100" }}
                 >
-                  About 
+                  About
                 </Link>
                 <Link
                   href="/teams"
@@ -132,15 +144,48 @@ export default function EnhancedNavbar() {
           >
             Contact Us
           </Link>
-          <Button colorScheme="purple">
-            <Link
-              href="/startupform"
-              fontWeight="semibold"
-              _hover={{ color: "purple.300" }}
+          <Box position="relative">
+            <Button
+              colorScheme="purple"
+              onClick={toggleApplyDropdown}
+              rightIcon={<Icon as={FiMenu} boxSize={4} />}
             >
               Apply Now
-            </Link>
-          </Button>
+            </Button>
+            {applyDropdownOpen && (
+              <Box
+                position="absolute"
+                top="100%"
+                left={0}
+                bg="white"
+                boxShadow="md"
+                borderRadius="md"
+                zIndex={10}
+                minW="200px"
+              >
+                <Link
+                  href="/startupform"
+                  display="block"
+                  px={4}
+                  py={2}
+                  fontWeight="semibold"
+                  _hover={{ bg: "purple.100" }}
+                >
+                  Apply Now
+                </Link>
+                <Link
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScmNtEOyeGDp4EET90varSeX5nyuY2xbI3jtBF8P9JyqpD80g/viewform?pli=1"
+                  display="block"
+                  px={4}
+                  py={2}
+                  fontWeight="semibold"
+                  _hover={{ bg: "purple.100" }}
+                >
+                  Apply with Google Form
+                </Link>
+              </Box>
+            )}
+          </Box>
         </Flex>
 
         {/* Mobile Menu Button */}
@@ -240,18 +285,57 @@ export default function EnhancedNavbar() {
                     </Box>
                   )}
                 </Box>
-                <Link
-                  href="/startupform"
-                  w="full"
-                  textAlign="center"
-                  py={3}
-                  fontWeight="semibold"
-                  bg="white"
-                  borderRadius="md"
-                  _hover={{ bg: "purple.300" }}
-                >
-                  Register Now
-                </Link>
+                <Box position="relative" w="full">
+                  <Button
+                    w="full"
+                    colorScheme="purple"
+                    onClick={toggleApplyDropdown}
+                  >
+                    Apply Now
+                  </Button>
+                  {applyDropdownOpen && (
+                    <Box
+                      position="absolute"
+                      top="100%"
+                      left={0}
+                      px={8}
+                      py={4}
+                      w="full"
+                      bg="white"
+                      boxShadow="md"
+                      borderRadius="md"
+                      zIndex={10}
+                    >
+                      <Link
+                        href="/startupform"
+                        w="full"
+                        textAlign="center"
+                        py={3}
+                        fontWeight="semibold"
+                        bg="white"
+                        borderRadius="md"
+                        _hover={{ bg: "purple.100" }}
+                        display="block"
+                      >
+                        Apply Now
+                      </Link>
+                      <Link
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScmNtEOyeGDp4EET90varSeX5nyuY2xbI3jtBF8P9JyqpD80g/viewform?pli=1"
+                        w="full"
+                        textAlign="center"
+                        py={3}
+                        fontWeight="semibold"
+                        bg="white"
+                        borderRadius="md"
+                        _hover={{ bg: "purple.100" }}
+                        display="block"
+                        mt={2}
+                      >
+                        Apply with Google Form
+                      </Link>
+                    </Box>
+                  )}
+                </Box>
                 <Link
                   href="/startups"
                   w="full"

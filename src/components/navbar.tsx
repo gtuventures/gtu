@@ -144,6 +144,13 @@ export default function EnhancedNavbar() {
           >
             Contact Us
           </Link>
+          <Link
+            href="/startup-guide"
+            fontWeight="semibold"
+            _hover={{ color: "purple.300" }}
+          >
+            Support
+          </Link>
           <Box position="relative">
             <Button
               colorScheme="purple"
@@ -361,6 +368,18 @@ export default function EnhancedNavbar() {
                   _hover={{ bg: "purple.300" }}
                 >
                   Contact Us
+                </Link>
+                <Link
+                  href="/startup-guide"
+                  w="full"
+                  textAlign="center"
+                  py={3}
+                  fontWeight="semibold"
+                  bg="white"
+                  borderRadius="md"
+                  _hover={{ bg: "purple.300" }}
+                >
+                  Support
                 </Link>
               </VStack>
               <Divider mt={6} borderColor="#E2E8F0" />

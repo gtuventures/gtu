@@ -57,12 +57,12 @@ const StatItem = ({
           <Text fontSize="4xl" fontWeight="bold" color="gray.800">
             {description} {count.toLocaleString("en-IN")}
           </Text>
-          <Text fontSize="xs" fontWeight="light" ml={3}>
+          <Text fontSize="lg" fontWeight="medium" ml={3}>
             {cr}
           </Text>
         </Box>
         <Text fontSize="xl" mb={1} color="gray.700" textAlign="center">
-            <Text noOfLines={2}>{label}</Text>
+          <Text noOfLines={2}>{label}</Text>
         </Text>
         {/* <Text fontSize="sm" color="gray.600" textAlign="center">
           {description}
@@ -99,7 +99,7 @@ export default function StartupStats() {
         >
           Impact by GTU Ventures
         </Heading>
-<br />
+        <br />
         {/* Responsive Grid Layout */}
         <Grid
           templateColumns={{
@@ -114,7 +114,7 @@ export default function StartupStats() {
             value={430000}
             description=""
             color={pastelColors[0]}
-            cr="" 
+            cr=""
           />
           <StatItem
             label="Students Projects Approved"
@@ -177,7 +177,7 @@ export default function StartupStats() {
             value={10000}
             description=""
             color={pastelColors[3]}
-            cr={"Sq. Ft."}  
+            cr={"Sq. Ft."}
           />
         </Grid>
       </Box>

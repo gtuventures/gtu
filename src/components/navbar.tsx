@@ -151,6 +151,13 @@ export default function EnhancedNavbar() {
           >
             Support
           </Link>
+          <Link
+            href="/ssip"
+            fontWeight="semibold"
+            _hover={{ color: "purple.300" }}
+          >
+            SSIP
+          </Link>
           <Box position="relative">
             <Button
               colorScheme="purple"
@@ -380,6 +387,18 @@ export default function EnhancedNavbar() {
                   _hover={{ bg: "purple.300" }}
                 >
                   Support
+                </Link>
+                <Link
+                  href="/ssip"
+                  w="full"
+                  textAlign="center"
+                  py={3}
+                  fontWeight="semibold"
+                  bg="white"
+                  borderRadius="md"
+                  _hover={{ bg: "purple.300" }}
+                >
+                  SSIP
                 </Link>
               </VStack>
               <Divider mt={6} borderColor="#E2E8F0" />

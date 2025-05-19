@@ -1,10 +1,18 @@
 // pages/startups.tsx
 import { useEffect, useState } from "react";
-import { Box, Grid, Text, Stack, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  Text,
+  Stack,
+  Heading,
+  Button as ChakraButton,
+} from "@chakra-ui/react";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import supabase from "../../supabase";
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
+import * as XLSX from "xlsx";
 
 // Define your types for the startup data
 interface Startup {
@@ -47,17 +55,52 @@ const StartupsPage = () => {
     fetchStartups();
   }, []);
 
+  const downloadExcel = () => {
+    // Create a new workbook
+    const wb = XLSX.utils.book_new();
+
+    // Convert startups data to worksheet
+    const ws = XLSX.utils.json_to_sheet(
+      startups.map((startup) => ({
+        "Startup Name": startup.startupname,
+        Description: startup.discription,
+        Email: startup.email,
+        "Co-email": startup.coemail,
+        State: startup.State,
+        District: startup.District,
+        Fund: startup.fund,
+        Website: startup.website,
+        Mobile: startup.mobile,
+        Registration: startup.registration,
+        Incubation: startup.incubation,
+        Support: startup.support,
+        Team: startup.team,
+        "Funding Agency": startup.fundingagency,
+        Drive: startup.drive,
+      }))
+    );
+
+    // Add the worksheet to the workbook
+    XLSX.utils.book_append_sheet(wb, ws, "Startups");
+
+    // Generate Excel file and trigger download
+    XLSX.writeFile(wb, "startups_data.xlsx");
+  };
+
   return (
     <>
       <Box py={10} px={5} bg="pastelPink.50" minHeight="100vh">
         <Heading mb={8} color="pastelPink.800" textAlign="center">
           Startups
         </Heading>
-        <Link href="/contactAdmin">
-          {" "}
-          <Button>See Queries ↗️</Button>
-        </Link>
-        <br />
+        <Box mb={4} display="flex" gap={4} justifyContent="center">
+          <Link href="/contactAdmin">
+            <Button>See Queries ↗️</Button>
+          </Link>
+          <ChakraButton onClick={downloadExcel} colorScheme="green">
+            Download Excel 📥
+          </ChakraButton>
+        </Box>
         <Grid
           templateColumns={{
             base: "repeat(1, 1fr)", // 1 column for mobile devices

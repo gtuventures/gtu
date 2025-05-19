@@ -90,7 +90,7 @@ export default function StartupStats() {
     >
       <Box maxW="7xl" mx="auto">
         <Heading
-          as="h2"
+          as="h2" 
           fontSize="4xl"
           fontWeight="extrabold"
           textAlign="center"
@@ -153,7 +153,7 @@ export default function StartupStats() {
           />
           <StatItem
             label="Patents Granted to Startups"
-            value={102}
+            value={214}
             description=""
             color={pastelColors[1]}
             cr={""}

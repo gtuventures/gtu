@@ -14,7 +14,6 @@ import { Button } from "@chakra-ui/react";
 import Link from "next/link";
 import * as XLSX from "xlsx";
 
-// Define your types for the startup data
 interface Startup {
   id: number;
   startupname: string;

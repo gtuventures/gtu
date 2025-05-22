@@ -38,8 +38,6 @@ function formm() {
   // const [Image, setImage] = useState<any>(null);
   const [show, setShow] = useState(false);
 
-
-
   interface FormInputs {
     singleErrorInput: string;
   }
@@ -92,22 +90,22 @@ function formm() {
       }
     }
 
-     if (data.drive !== "") {
-       const drive = checkurl(data.drive);
-       if (drive) {
-         data.drive = drive;
-       } else {
-         toast({
-           title: "Error",
-           description: "Invalid drive link",
-           status: "error",
-           duration: 3000,
-           isClosable: true,
-         });
-         setShow(false);
-         return;
-       }
-     }
+    if (data.drive !== "") {
+      const drive = checkurl(data.drive);
+      if (drive) {
+        data.drive = drive;
+      } else {
+        toast({
+          title: "Error",
+          description: "Invalid drive link",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
+        setShow(false);
+        return;
+      }
+    }
 
     const { error } = await supabase.from("startups").insert([{ ...data }]);
 
@@ -167,6 +165,54 @@ function formm() {
                   Apply for Startup support at GTU Ventures{" "}
                 </Heading>
                 <br />
+                <Card variant="outline" mb={4}>
+                  <CardBody>
+                    <Heading size="sm" mb={2}>
+                      What is a Startup?
+                    </Heading>
+                    <Text mb={4}>
+                      A startup is an individual or early-stage entity
+                      developing an innovative product, service, or solution
+                      with the potential for scalability, impact, and value
+                      creation. It is typically driven by technology,
+                      disruption, or a validated proof of concept (PoC).
+                    </Text>
+
+                    <Heading size="sm" mb={2}>
+                      Eligibility to Apply for Incubation Support
+                    </Heading>
+                    <Text mb={2}>
+                      Anyone with an innovative idea, proof of concept (PoC), or
+                      working prototype that aligns with societal,
+                      technological, or market needs can apply. You are eligible
+                      if you fall into any of the following categories:
+                    </Text>
+                    <Stack spacing={2} mb={2}>
+                      <Text>
+                        1. Individual Innovators (students, graduates,
+                        professionals, or citizens) with an original idea or
+                        PoC.
+                      </Text>
+                      <Text>
+                        2. Students (UG/PG/PhD) from any recognized institution
+                        working on innovative solutions.
+                      </Text>
+                      <Text>
+                        3. Researchers or Faculty Members pursuing
+                        commercialization of research or innovation.
+                      </Text>
+                      <Text>
+                        4. Startups (registered or unregistered) working on a
+                        prototype, MVP, or ready-to-scale product/service.
+                      </Text>
+                      <Text>
+                        5. Companies registered as Private Limited, LLP, or
+                        Partnership, preferably less than 10 years old with a
+                        turnover under INR 100 Cr (as per DPIIT norms).
+                      </Text>
+                    </Stack>
+                  </CardBody>
+                </Card>
                 <FormControl isRequired>
                   <FormLabel>Startup Name</FormLabel>
                   <Input
@@ -265,7 +311,8 @@ function formm() {
                     name="fund"
                     placeholder="Funding raised in INR"
                   />
-                </FormControl><br />
+                </FormControl>
+                <br />
                 <FormControl>
                   <FormLabel> Funding Agency/Investor name</FormLabel>
                   {/* <Text fontSize="xs">if any</Text> */}
